@@ -1,8 +1,9 @@
 #include "byte_stream.hh"
+#include <iostream>
 
 using namespace std;
 // #define MAX_LEN 1024 
-ByteStream::ByteStream( uint64_t capacity ) : capacity_( capacity ) {}
+ByteStream::ByteStream( uint64_t capacity ) : capacity_( capacity ) ,isclosed(false){}
 
 void Writer::push( string data )
 {
@@ -60,6 +61,12 @@ void Reader::pop( uint64_t len )
 
 bool Reader::is_finished() const
 {
+  if(isclosed){
+    std::cout<<"isclosed"<<std::endl;
+  }
+  if(buffer.size()==0){
+    std::cout<<"buffer.size()==0"<<std::endl;
+  }
   return isclosed&&(buffer.size()==0); // Your code here.
 }
 
