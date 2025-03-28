@@ -38,3 +38,11 @@
 * 通过
 ![图片](./imgs/check0webget.png)
 ## in-memory reliable byte stream
+过程相比之前有了一些痛苦的地方，总的来说还是比较简单的也涨了一点芝士
+* queue<br />
+    很显然需要一个先进先出的数据结构，所以采用队列实现（不需要随机访问，而需要快速的从队首pop元素和从队尾存入一个元素。
+* string_view<br />
+    这是一个不需要复制字符串但是能访问字符串的类，它甚至可以接受一个c字符串，根据GPT所言，const std::string &是做不到这种的。需要注意的是，它并不会复制一个字符串，因此如果用一个临时变量来构造它会出现很危险的事情。比如string_view{queue.front().substr}，这里的substr只会返回一个临时的字符串
+* peek<br />
+    这是这个问题的真正关键，也是决定了速度。
+    这里涉及了一个string_view::remove_prefix的概念，记录队首被删掉的字符，如果整个字符被删掉再pop出来
