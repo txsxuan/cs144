@@ -63,7 +63,6 @@ double speed_test( fstream& debug_output,
   }
 
   const auto stop_time = steady_clock::now();
-  // cout<<output_data;
   if ( data != output_data ) {
     throw runtime_error( "Mismatch between data written and read" );
   }
