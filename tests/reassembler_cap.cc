@@ -135,6 +135,7 @@ int main()
       test.execute( BytesPending( 0 ) );
 
       test.execute( Insert { "c", 2 }.is_last() );
+
       test.execute( IsFinished { false } );
       test.execute( Insert { "abc", 0 }.is_last() );
       test.execute( IsFinished { false } );
