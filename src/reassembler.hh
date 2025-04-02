@@ -1,7 +1,7 @@
 #pragma once
 
 #include "byte_stream.hh"
-#include  <map>
+#include <map>
 class Reassembler
 {
 public:
@@ -43,9 +43,9 @@ public:
 
 private:
   ByteStream output_;
-  uint64_t acknum{};
+  uint64_t acknum {};
   // uint64_t Firstunassembled{};
-  bool haslastSubstr{};
-  std::map<uint64_t,std::string> unassembled;
-  void inserthelp(uint64_t first_index,std::string data);
+  bool haslastSubstr {};
+  std::map<uint64_t, std::string> unassembled;
+  void inserthelp( uint64_t first_index, std::string data );
 };
