@@ -25,7 +25,8 @@ void Reassembler::inserthelp(uint64_t first_index,std::string data){
     uint64_t temp=std::prev(lb)->first+std::prev(lb)->second.size();//temp是第一个不在prev里面的字符的序列号
     if(temp>=first_index){//如果temp和first_index相等，那么很显然需要将整个data拼进去
       if(temp-first_index<=data.size()){//判断data是不是整个都在prev里面
-        std::prev(lb)->second.append(std::move(data.substr(temp-first_index-1)));
+        // debug("temp : {} ;{} {} {}");
+        std::prev(lb)->second.append(std::move(data.substr(temp-first_index)));
       }
       else{//否则什么都不用干
         return;
@@ -54,7 +55,14 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
       debug("closed: {}",data);
     }
   };
-  if(writer().is_closed()||first_index>=Firstunaccept){//如果写端已经关闭了就不再接收了，或者干脆大于Firstunaccept，也没什么好说的了
+  if(writer().is_closed()||first_index>=Firstunaccept||writer().available_capacity()==0){//如果写端已经关闭了就不再接收了，或者干脆大于Firstunaccept，也没什么好说的了
+    return ;
+  }
+  if(data.empty()){
+    if(acknum==first_index&&is_last_substring){
+      haslastSubstr=true;
+      return checkclose();
+    }
     return ;
   }
   if(acknum>first_index){
@@ -63,12 +71,6 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
     }
     data=data.substr(acknum-first_index);
     first_index=acknum;
-  }
-  if(data.empty()){
-      if(is_last_substring){
-        haslastSubstr=true;
-      }
-      return checkclose();
   }
   if(first_index+data.size()-1>=Firstunaccept){//说明有一部分是无法被接受进来的
     debug("{}   {}   {}",first_index,data.size(),Firstunaccept);
@@ -108,11 +110,18 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
       }
       auto previt=std::prev(it);
       int splitsize=previt->first+previt->second.size()-acknum;
+      debug("previt->first: {} ; +previt->second.size(): {} ; acknum: {} ; split {} ",previt->first,previt->second.size(),acknum,splitsize);
       if(splitsize>0){
         output_.writer().push((previt->second.substr(acknum-previt->first)));
         acknum+=splitsize;
       }
       unassembled.erase(unassembled.begin(),it);
+      if(it->first==acknum){
+        acknum+=splitsize;
+        output_.writer().push(std::move(it->second));
+        unassembled.erase(it);
+      }
+      
     }
   }
   else{
