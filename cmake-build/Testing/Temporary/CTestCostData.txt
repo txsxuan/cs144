@@ -1,0 +1,22 @@
+compile 0 0
+t_webget 1 1.34786
+byte_stream_basics 2 0.00554789
+byte_stream_capacity 2 0.00472857
+byte_stream_one_write 2 0.0047725
+byte_stream_two_writes 2 0.0048149
+byte_stream_many_writes 2 0.0248092
+byte_stream_stress_test 2 0.0486029
+no_skip 2 0.00366227
+compile 0 0
+byte_stream_speed_test 2 0.0766225
+compile with bug-checkers 1 0.0169723
+reassembler_single 1 0.00851811
+reassembler_cap 1 0.00936157
+reassembler_seq 1 0.0177698
+reassembler_dup 1 0.0325504
+reassembler_holes 1 0.0122065
+reassembler_overlapping 1 0.0119114
+reassembler_win 1 0.237406
+compile with optimization 1 0.0101901
+reassembler_speed_test 1 0.145478
+---
