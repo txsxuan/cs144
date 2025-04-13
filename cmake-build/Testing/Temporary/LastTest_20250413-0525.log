@@ -1,0 +1,36 @@
+Start testing: Apr 13 17:13 CST
+----------------------------------------------------------
+38/40 Testing: compile with optimization
+38/40 Test: compile with optimization
+Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"compile with optimization" start time: Apr 13 17:13 CST
+Output:
+----------------------------------------------------------
+ninja: no work to do.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"compile with optimization" end time: Apr 13 17:13 CST
+"compile with optimization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/40 Testing: reassembler_speed_test
+40/40 Test: reassembler_speed_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_speed_test" start time: Apr 13 17:13 CST
+Output:
+----------------------------------------------------------
+Reassembler to ByteStream with capacity=32768 reached 45.62 Gbit/s.
+Reassembler to ByteStream with capacity=32768 reached 6.12 Gbit/s.
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_speed_test" end time: Apr 13 17:13 CST
+"reassembler_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 13 17:13 CST

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-clang++"
+	BuildStamp="20250413-0525-Experimental"
+	Name="YuKi-ASUA"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/clang++"
+	CompilerVersion="18.1.3"
+	OSName="Linux"
+	Hostname="YuKi-ASUA"
+	OSRelease="6.8.0-51-generic"
+	OSVersion="#52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="154"
+	ProcessorCacheSize="24576"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="14"
+	TotalVirtualMemory="26647"
+	TotalPhysicalMemory="15610"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2364.43"
+	>
+	<Testing>
+		<StartDateTime>Apr 13 17:13 CST</StartDateTime>
+		<StartTestTime>1744535623</StartTestTime>
+		<TestList>
+			<Test>./compile_with_optimization</Test>
+			<Test>./reassembler_speed_test</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>compile with optimization</Name>
+			<Path>.</Path>
+			<FullName>./compile_with_optimization</FullName>
+			<FullCommandLine>/usr/bin/cmake "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0253587</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/cmake "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>ninja: no work to do.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>reassembler_speed_test</Name>
+			<Path>.</Path>
+			<FullName>./reassembler_speed_test</FullName>
+			<FullCommandLine>/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.261916</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJwLSk0sLk7NTcpJLVIoyVdwqixJDS4pSk3MVSjPLMlQSE4sSEzOLKm0NTYyN7NQAEokZ6SmKJiY6pkZKbgnZZboF+txBZFlhpmeIcIIAHVwLTE=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Apr 13 17:13 CST</EndDateTime>
+		<EndTestTime>1744535623</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

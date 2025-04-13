@@ -47,5 +47,6 @@ private:
   // uint64_t Firstunassembled{};
   bool haslastSubstr {};
   std::map<uint64_t, std::string> unassembled;
-  void inserthelp( uint64_t first_index, std::string data );
+  void inserthelp( uint64_t first_index, std::string &data );
+  bool newinserthelp(uint64_t first_index, std::string &data );
 };
