@@ -21,11 +21,11 @@
 	TotalVirtualMemory="26647"
 	TotalPhysicalMemory="15610"
 	LogicalProcessorsPerPhysical="1"
-	ProcessorClockFrequency="2364.43"
+	ProcessorClockFrequency="2787.99"
 	>
 	<Testing>
-		<StartDateTime>Apr 13 17:13 CST</StartDateTime>
-		<StartTestTime>1744535623</StartTestTime>
+		<StartDateTime>Apr 13 22:03 CST</StartDateTime>
+		<StartTestTime>1744552980</StartTestTime>
 		<TestList>
 			<Test>./compile_with_optimization</Test>
 			<Test>./reassembler_speed_test</Test>
@@ -37,7 +37,7 @@
 			<FullCommandLine>/usr/bin/cmake "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.0253587</Value>
+					<Value>0.0214642</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -64,7 +64,7 @@
 			<FullCommandLine>/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.261916</Value>
+					<Value>0.227671</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -79,12 +79,12 @@
 					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
 				</NamedMeasurement>
 				<Measurement>
-					<Value encoding="base64" compression="gzip">eJwLSk0sLk7NTcpJLVIoyVdwqixJDS4pSk3MVSjPLMlQSE4sSEzOLKm0NTYyN7NQAEokZ6SmKJiY6pkZKbgnZZboF+txBZFlhpmeIcIIAHVwLTE=</Value>
+					<Value encoding="base64" compression="gzip">eJwLSk0sLk7NTcpJLVIoyVdwqixJDS4pSk3MVSjPLMlQSE4sSEzOLKm0NTYyN7NQAEokZ6SmKJiY6FmaKbgnZZboF+txBZFnhp6FEdwIAHdxLTw=</Value>
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>Apr 13 17:13 CST</EndDateTime>
-		<EndTestTime>1744535623</EndTestTime>
+		<EndDateTime>Apr 13 22:03 CST</EndDateTime>
+		<EndTestTime>1744552981</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
