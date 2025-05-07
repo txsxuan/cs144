@@ -1,89 +1,33 @@
-Start testing: Apr 13 22:04 CST
+Start testing: May 07 15:46 CST
 ----------------------------------------------------------
 1/40 Testing: compile with bug-checkers
 1/40 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: Apr 13 22:04 CST
+"compile with bug-checkers" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
-[1/57] Building CXX object src/CMakeFiles/minnow_debug.dir/reassembler.cc.o
-[2/57] Linking CXX static library src/libminnow_debug.a
-[3/57] Linking CXX executable tests/wrapping_integers_extra
-[4/57] Linking CXX executable tests/wrapping_integers_cmp
-[5/57] Linking CXX executable tests/wrapping_integers_unwrap
-[6/57] Linking CXX executable tests/byte_stream_two_writes
-[7/57] Linking CXX executable tests/byte_stream_many_writes
-[8/57] Linking CXX executable tests/reassembler_single
-[9/57] Linking CXX executable tests/wrapping_integers_roundtrip
-[10/57] Linking CXX executable tests/byte_stream_basics
-[11/57] Linking CXX executable tests/reassembler_dup
-[12/57] Linking CXX executable tests/reassembler_seq
-[13/57] Linking CXX executable tests/reassembler_cap
-[14/57] Linking CXX executable tests/reassembler_overlapping
-[15/57] Linking CXX executable tests/reassembler_holes
-[16/57] Linking CXX executable tests/recv_transmit
-[17/57] Linking CXX executable tests/byte_stream_one_write
-[18/57] Linking CXX executable tests/byte_stream_capacity
-[19/57] Linking CXX executable tests/reassembler_win
-[20/57] Linking CXX executable tests/recv_connect
-[21/57] Linking CXX executable tests/wrapping_integers_wrap
-[22/57] Linking CXX executable tests/byte_stream_stress_test
-[23/57] Linking CXX executable tests/recv_window
-[24/57] Linking CXX executable tests/no_skip
-[25/57] Linking CXX executable apps/webget
-[26/57] Linking CXX executable tests/recv_close
-[27/57] Linking CXX executable tests/recv_special
-[28/57] Linking CXX executable tests/recv_reorder
-[29/57] Linking CXX executable tests/recv_reorder_more
-[30/57] Building CXX object src/CMakeFiles/minnow_sanitized.dir/reassembler.cc.o
-[31/57] Linking CXX static library src/libminnow_sanitized.a
-[32/57] Linking CXX executable tests/wrapping_integers_cmp_sanitized
-[33/57] Linking CXX executable tests/wrapping_integers_wrap_sanitized
-[34/57] Linking CXX executable tests/wrapping_integers_extra_sanitized
-[35/57] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
-[36/57] Linking CXX executable tests/byte_stream_many_writes_sanitized
-[37/57] Linking CXX executable tests/reassembler_cap_sanitized
-[38/57] Linking CXX executable tests/reassembler_dup_sanitized
-[39/57] Linking CXX executable tests/reassembler_holes_sanitized
-[40/57] Linking CXX executable tests/reassembler_overlapping_sanitized
-[41/57] Linking CXX executable tests/byte_stream_one_write_sanitized
-[42/57] Linking CXX executable tests/recv_window_sanitized
-[43/57] Linking CXX executable tests/reassembler_single_sanitized
-[44/57] Linking CXX executable tests/recv_reorder_sanitized
-[45/57] Linking CXX executable tests/recv_transmit_sanitized
-[46/57] Linking CXX executable tests/byte_stream_capacity_sanitized
-[47/57] Linking CXX executable tests/byte_stream_two_writes_sanitized
-[48/57] Linking CXX executable tests/byte_stream_basics_sanitized
-[49/57] Linking CXX executable tests/reassembler_seq_sanitized
-[50/57] Linking CXX executable tests/reassembler_win_sanitized
-[51/57] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
-[52/57] Linking CXX executable tests/byte_stream_stress_test_sanitized
-[53/57] Linking CXX executable tests/recv_connect_sanitized
-[54/57] Linking CXX executable tests/no_skip_sanitized
-[55/57] Linking CXX executable tests/recv_reorder_more_sanitized
-[56/57] Linking CXX executable tests/recv_close_sanitized
-[57/57] Linking CXX executable tests/recv_special_sanitized
+ninja: no work to do.
 <end of output>
-Test time =   1.71 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: Apr 13 22:04 CST
-"compile with bug-checkers" time elapsed: 00:00:01
+"compile with bug-checkers" end time: May 07 15:46 CST
+"compile with bug-checkers" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/40 Testing: byte_stream_basics
 3/40 Test: byte_stream_basics
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_basics_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_basics" start time: Apr 13 22:04 CST
+"byte_stream_basics" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_basics" end time: Apr 13 22:04 CST
+"byte_stream_basics" end time: May 07 15:46 CST
 "byte_stream_basics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -91,14 +35,14 @@ Test Passed.
 4/40 Test: byte_stream_capacity
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_capacity_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_capacity" start time: Apr 13 22:04 CST
+"byte_stream_capacity" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_capacity" end time: Apr 13 22:04 CST
+"byte_stream_capacity" end time: May 07 15:46 CST
 "byte_stream_capacity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -106,14 +50,14 @@ Test Passed.
 5/40 Test: byte_stream_one_write
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_one_write_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_one_write" start time: Apr 13 22:04 CST
+"byte_stream_one_write" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_one_write" end time: Apr 13 22:04 CST
+"byte_stream_one_write" end time: May 07 15:46 CST
 "byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -121,14 +65,14 @@ Test Passed.
 6/40 Test: byte_stream_two_writes
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_two_writes_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_two_writes" start time: Apr 13 22:04 CST
+"byte_stream_two_writes" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_two_writes" end time: Apr 13 22:04 CST
+"byte_stream_two_writes" end time: May 07 15:46 CST
 "byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -136,14 +80,14 @@ Test Passed.
 7/40 Test: byte_stream_many_writes
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_many_writes_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_many_writes" start time: Apr 13 22:04 CST
+"byte_stream_many_writes" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.05 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_many_writes" end time: Apr 13 22:04 CST
+"byte_stream_many_writes" end time: May 07 15:46 CST
 "byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -151,14 +95,14 @@ Test Passed.
 8/40 Test: byte_stream_stress_test
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_stress_test_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_stress_test" start time: Apr 13 22:04 CST
+"byte_stream_stress_test" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.11 sec
+Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_stress_test" end time: Apr 13 22:04 CST
+"byte_stream_stress_test" end time: May 07 15:46 CST
 "byte_stream_stress_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -166,14 +110,14 @@ Test Passed.
 9/40 Test: reassembler_single
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_single_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_single" start time: Apr 13 22:04 CST
+"reassembler_single" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_single" end time: Apr 13 22:04 CST
+"reassembler_single" end time: May 07 15:46 CST
 "reassembler_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -181,14 +125,14 @@ Test Passed.
 10/40 Test: reassembler_cap
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_cap_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_cap" start time: Apr 13 22:04 CST
+"reassembler_cap" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_cap" end time: Apr 13 22:04 CST
+"reassembler_cap" end time: May 07 15:46 CST
 "reassembler_cap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -196,14 +140,14 @@ Test Passed.
 11/40 Test: reassembler_seq
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_seq_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_seq" start time: Apr 13 22:04 CST
+"reassembler_seq" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_seq" end time: Apr 13 22:04 CST
+"reassembler_seq" end time: May 07 15:46 CST
 "reassembler_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -211,14 +155,14 @@ Test Passed.
 12/40 Test: reassembler_dup
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_dup_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_dup" start time: Apr 13 22:04 CST
+"reassembler_dup" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_dup" end time: Apr 13 22:04 CST
+"reassembler_dup" end time: May 07 15:46 CST
 "reassembler_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -226,14 +170,14 @@ Test Passed.
 13/40 Test: reassembler_holes
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_holes_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_holes" start time: Apr 13 22:04 CST
+"reassembler_holes" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_holes" end time: Apr 13 22:04 CST
+"reassembler_holes" end time: May 07 15:46 CST
 "reassembler_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -241,14 +185,14 @@ Test Passed.
 14/40 Test: reassembler_overlapping
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_overlapping_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_overlapping" start time: Apr 13 22:04 CST
+"reassembler_overlapping" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_overlapping" end time: Apr 13 22:04 CST
+"reassembler_overlapping" end time: May 07 15:46 CST
 "reassembler_overlapping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -256,14 +200,14 @@ Test Passed.
 15/40 Test: reassembler_win
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_win_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_win" start time: Apr 13 22:04 CST
+"reassembler_win" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_win" end time: Apr 13 22:04 CST
+"reassembler_win" end time: May 07 15:46 CST
 "reassembler_win" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -271,14 +215,14 @@ Test Passed.
 37/40 Test: no_skip
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/no_skip_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"no_skip" start time: Apr 13 22:04 CST
+"no_skip" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"no_skip" end time: Apr 13 22:04 CST
+"no_skip" end time: May 07 15:46 CST
 "no_skip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -286,18 +230,18 @@ Test Passed.
 38/40 Test: compile with optimization
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with optimization" start time: Apr 13 22:04 CST
+"compile with optimization" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
-[1/4] Building CXX object src/CMakeFiles/minnow_optimized.dir/reassembler.cc.o
-[2/4] Linking CXX static library src/libminnow_optimized.a
-[3/4] Linking CXX executable tests/byte_stream_speed_test
-[4/4] Linking CXX executable tests/reassembler_speed_test
+[1/4  25% :: 0.614] Building CXX object src/CMakeFiles/minnow_optimized.dir/wrapping_integers.cc.o
+[2/4  50% :: 0.659] Linking CXX static library src/libminnow_optimized.a
+[4/4  75% :: 0.747] Linking CXX executable tests/byte_stream_speed_test
+[4/4 100% :: 0.750] Linking CXX executable tests/reassembler_speed_test
 <end of output>
-Test time =   0.74 sec
+Test time =   0.76 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with optimization" end time: Apr 13 22:04 CST
+"compile with optimization" end time: May 07 15:46 CST
 "compile with optimization" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -305,17 +249,17 @@ Test Passed.
 39/40 Test: byte_stream_speed_test
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_speed_test"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"byte_stream_speed_test" start time: Apr 13 22:04 CST
+"byte_stream_speed_test" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
-ByteStream with capacity=32768, write_size=1500, read_size=4096 reached 28.01 Gbit/s.
-ByteStream with capacity=32768, write_size=1500, read_size=128 reached 22.97 Gbit/s.
-ByteStream with capacity=32768, write_size=1500, read_size=32 reached 16.71 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=4096 reached 14.98 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=128 reached 12.41 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=32 reached 11.42 Gbit/s.
 <end of output>
-Test time =   0.16 sec
+Test time =   0.19 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_speed_test" end time: Apr 13 22:04 CST
+"byte_stream_speed_test" end time: May 07 15:46 CST
 "byte_stream_speed_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -323,17 +267,17 @@ Test Passed.
 40/40 Test: reassembler_speed_test
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"reassembler_speed_test" start time: Apr 13 22:04 CST
+"reassembler_speed_test" start time: May 07 15:46 CST
 Output:
 ----------------------------------------------------------
-Reassembler to ByteStream with capacity=32768 reached 59.29 Gbit/s.
-Reassembler to ByteStream with capacity=32768 reached 13.52 Gbit/s.
+Reassembler to ByteStream with capacity=32768 reached 51.17 Gbit/s.
+Reassembler to ByteStream with capacity=32768 reached 5.97 Gbit/s.
 <end of output>
-Test time =   0.15 sec
+Test time =   0.19 sec
 ----------------------------------------------------------
 Test Passed.
-"reassembler_speed_test" end time: Apr 13 22:04 CST
+"reassembler_speed_test" end time: May 07 15:46 CST
 "reassembler_speed_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 13 22:04 CST
+End testing: May 07 15:46 CST

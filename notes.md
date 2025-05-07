@@ -49,15 +49,42 @@
 
 # check1
 ## 使用socket发送udp报文<br />
-    这个任务非常的简单，唯一掌握的新知识就是报文要一个一个字节的写，同时，checksum为0可以认为是不需要检验，否则都需要手动计算，还有length字段一定不能错！
+这个任务非常的简单，唯一掌握的新知识就是报文要一个一个字节的写，同时，checksum为0可以认为是不需要检验，否则都需要手动计算，还有length字段一定不能错！
+
 ![图片](./imgs/udplen.png)
 ## ressembler
-    目前写的最红温的一个部分，写了一大堆代码，遇到各种问题（其实大部分是因为没有充分理解需求导致的），打算之后看看大佬的实现，这里测试过了，先不管了。
+目前写的最红温的一个部分，写了一大堆代码，遇到各种问题（其实大部分是因为没有充分理解需求导致的），打算之后看看大佬的实现，这里测试过了，先不管了。
+
 ![图片](./imgs/check1test.png)
 最大的收获是阅读了一部分测试的代码，有空的话需要学习这部分测试代码
 
 > 2025-04-13 13:40<br />
 
 换成了ubuntu真机，本周开始继续努力
+成功修改了部分代码，简洁了其实现——原来的版本是当有合适的数据报到来时先将数据写入，再去判断缓存中的数据是否需要修改。现在略加改进，每次到来一个新的数据报时，将其与缓存中的数据合并，再决定是否需要上传。
 
+> 2025-05-07 09:22 by konakona<br>
 
+清明之后成功摆烂了一个月，什么都没干（），感觉多少有点幽默了。现在重新捡起来，今天目标完成check2.
+# check2
+## Translating between 64-bit indexes and 32-bit seqnos
+在check1中我实现了用于处理编号从0开始的以64位二进制存储的数据报的ressembler（似乎是复用和解复用？）。如果在实际场景中，数据报也用64位二进制存储的话，基本可以认为是永远不会重复的。`A 64-bit index is
+big enough that we can treat it as never overflowing`
+但是，为了节省空间，我们实际上只能用32位的二进制来存储，这意味者我至少需要解决以下问题
+* `Your implementation needs to plan for 32-bit integers to wrap around.`
+    32位的seqno必然会循环，所以$2^{32}-1$之后的数据流的index应该是$0$，也就是说我需要对真实的64位的absseqno取模。同时，为了防止一些不可预料的事情发生，或许需要控制发送窗口的大小。
+* ` TCP sequence numbers start at a random value`
+    为了足够的区分，比如让每一次建立连接都看起来不同，TCP的seqno选择从一个随机数开始，按照之前上课所学，TCP的三次握手本质上就是在确认二者的seqno起始，相当于各自维护一边，从而维护整个连接的。数据流从zero point开始，而这个zero point是$2^{32}-1$以内的一个随机数，又被成为SYN或者ISN(Initial SequenceNumber)，之后数据流中的seqno就是$(SYN+1) \ mod\ 2^{32},(SYN+2) \ mod\ 2^{32}...$
+* `The logical beginning and ending each occupy one sequence number`
+    为了确保一个流被完整地接收,需要额外维护数据流的开始和结束，分别给他们一个seqno，即使他们不包含任何有效的数据。数据流的开始就是SYN，结束则是FIN.` Keep
+in mind that SYN and FIN aren’t part of the stream itself and aren’t “bytes”——they represent the beginning and ending of the byte stream itself.`
+基于上述讨论，实际上已经可以确定接下来需要做的事，那就是写一个Wrapper32，它至少需要满足上述三个要求，除此之外，Wrapper32还需要提供seqno，absolute seqno，和stream index之间的转换。
+例如
+
+|*elment*|*SYN*|c|a|t|FIN|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|**seqno**|$2^{32}-2$|$2^{32}-1$|$0$|$1$|$2$|
+|**absolute seqno**|$0$|$1$|$2$|$3$|$4$|
+|**stream index**||0|1|2||
+
+关于absolute seqno和stream index的转换其实很简单，无非就是加上或减去1，但是涉及到seqno就比较麻烦了，不但要考虑到SYN，还要考虑一个seqno可能对应很多的abs seqno，因此必须提供相关的接口。
