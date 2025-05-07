@@ -1,6 +1,7 @@
 #pragma once
 
 #include "byte_stream.hh"
+#include <cstdint>
 #include <map>
 class Reassembler
 {
@@ -40,7 +41,7 @@ public:
 
   // Access output stream writer, but const-only (can't write from outside)
   const Writer& writer() const { return output_.writer(); }
-
+    uint64_t getacknum() const{return acknum;}
 private:
   ByteStream output_;
   uint64_t acknum {};

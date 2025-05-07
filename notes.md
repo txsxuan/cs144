@@ -88,3 +88,4 @@ in mind that SYN and FIN aren’t part of the stream itself and aren’t “byte
 |**stream index**||0|1|2||
 
 关于absolute seqno和stream index的转换其实很简单，无非就是加上或减去1，但是涉及到seqno就比较麻烦了，不但要考虑到SYN，还要考虑一个seqno可能对应很多的abs seqno，因此必须提供相关的接口。
+学了这么久，猛地发现自己白学了（，我在今天才意识到，类的公有私有和类的实例是无关的，也就是说即使是私有的

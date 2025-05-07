@@ -1,26 +1,24 @@
 compile 0 0
 t_webget 2 1.4589
-byte_stream_basics 71 0.000221152
-byte_stream_capacity 71 0.000180978
-byte_stream_one_write 71 0.000170987
-byte_stream_two_writes 71 0.000236096
-byte_stream_many_writes 71 0.000843452
-byte_stream_stress_test 71 0.00164022
-no_skip 41 0.000220469
+byte_stream_basics 75 0.000165582
+byte_stream_capacity 75 0.000173206
+byte_stream_one_write 75 0.000174154
+byte_stream_two_writes 75 0.000138834
+byte_stream_many_writes 75 0.000833721
+byte_stream_stress_test 75 0.00147701
+no_skip 41 0
 compile 0 0
-byte_stream_speed_test 41 0.00471655
+byte_stream_speed_test 41 0
 compile 0 0
-reassembler_single 70 0.000182714
-reassembler_cap 70 0.000252383
-reassembler_seq 70 0.000245244
-reassembler_dup 70 0.00049715
-reassembler_holes 67 0.000219546
-reassembler_overlapping 44 0.000349636
-reassembler_win 44 0.00553537
+reassembler_single 74 0.000119838
+reassembler_cap 74 0.000157224
+reassembler_seq 74 0.000209553
+reassembler_dup 74 0.000456796
+reassembler_holes 71 0.000158329
+reassembler_overlapping 48 0.000271251
+reassembler_win 48 0.00460324
 compile 0 0
-reassembler_speed_test 47 0.00403509
-compile 0 0
-compile 0 0
+reassembler_speed_test 47 0
 compile 0 0
 compile 0 0
 compile 0 0
@@ -35,17 +33,19 @@ compile 0 0
 compile 0 0
 compile 0 0
 compile 0 0
-wrapping_integers_cmp 5 0.00269317
 compile 0 0
-wrapping_integers_wrap 4 0.00187222
 compile 0 0
-wrapping_integers_unwrap 3 0.0021552
+wrapping_integers_cmp 9 0.00139172
 compile 0 0
-wrapping_integers_roundtrip 1 0.147411
+wrapping_integers_wrap 8 0.000952626
 compile 0 0
-wrapping_integers_extra 1 0.0907592
+wrapping_integers_unwrap 7 0.00109001
 compile 0 0
-recv_connect 0 0
+wrapping_integers_roundtrip 5 0.03047
+compile 0 0
+wrapping_integers_extra 5 0.0185419
+compile 0 0
+recv_connect 1 0.0126146
 compile 0 0
 recv_transmit 0 0
 compile 0 0
@@ -268,6 +268,15 @@ compile 0 0
 compile 0 0
 compile 0 0
 compile 0 0
-compile with bug-checkers 1 0.0244627
-compile with optimization 1 0.763355
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile with bug-checkers 1 1.40608
+compile with optimization 0 0
 ---
+recv_transmit
