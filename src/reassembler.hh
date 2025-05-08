@@ -41,11 +41,11 @@ public:
 
   // Access output stream writer, but const-only (can't write from outside)
   const Writer& writer() const { return output_.writer(); }
-    // uint64_t getacknum() const{return acknum;}
+  // uint64_t getacknum() const{return acknum;}
 private:
   ByteStream output_;
-//   uint64_t acknum {};
+  //   uint64_t acknum {};
   bool haslastSubstr {};
   std::map<uint64_t, std::string> unassembled;
-  bool newinserthelp(uint64_t first_index, std::string &data );
+  bool newinserthelp( uint64_t first_index, std::string& data );
 };

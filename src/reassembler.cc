@@ -3,42 +3,42 @@
 #include <cassert>
 #include <iterator>
 
-
-bool Reassembler::newinserthelp( uint64_t first_index, std::string &data ){
-    if(!unassembled.empty()){
-        auto ub = unassembled.upper_bound( first_index + data.size() ); // ub包括之后的都和data没关系了
-        auto lb = unassembled.lower_bound( first_index ); // lb到ub之间的字符串全部需要拼起来。
-        if(ub!=unassembled.begin()){
-            // debug("{} {}", lb->second,std::prev(ub)->second);
-            if ( lb != ub ) { // ub之前的和lb前面的不是同一块,那样需要考虑是否要将这部分拼进去
-                if ( std::prev( ub )->first + std::prev( ub )->second.size() > ( first_index + data.size() ) ) {
-                  data.append(
-                    std::move( std::prev( ub )->second.substr( ( first_index + data.size() - std::prev( ub )->first ) ) ) ); //
-                }
-            }
-            if ( lb != unassembled.begin() ) { // lb之后的字符串全部都在ta里面
-                uint64_t temp
-                  = std::prev( lb )->first + std::prev( lb )->second.size(); // temp是第一个不在prev里面的字符的序列号
-                if ( temp >= first_index ) { // 如果temp和first_index相等，那么很显然需要将整个data拼进去
-                  if ( temp - first_index <= data.size() ) { // 判断data是不是整个都在prev里面
-                    std::prev( lb )->second.append( std::move( data.substr( temp - first_index ) ) );
-                  }
-                unassembled.erase( lb, ub );
-                  return true;
-                } 
-            } 
-            unassembled.erase( lb, ub );                      
+bool Reassembler::newinserthelp( uint64_t first_index, std::string& data )
+{
+  if ( !unassembled.empty() ) {
+    auto ub = unassembled.upper_bound( first_index + data.size() ); // ub包括之后的都和data没关系了
+    auto lb = unassembled.lower_bound( first_index ); // lb到ub之间的字符串全部需要拼起来。
+    if ( ub != unassembled.begin() ) {
+      // debug("{} {}", lb->second,std::prev(ub)->second);
+      if ( lb != ub ) { // ub之前的和lb前面的不是同一块,那样需要考虑是否要将这部分拼进去
+        if ( std::prev( ub )->first + std::prev( ub )->second.size() > ( first_index + data.size() ) ) {
+          data.append( std::move(
+            std::prev( ub )->second.substr( ( first_index + data.size() - std::prev( ub )->first ) ) ) ); //
         }
+      }
+      if ( lb != unassembled.begin() ) { // lb之后的字符串全部都在ta里面
+        uint64_t temp
+          = std::prev( lb )->first + std::prev( lb )->second.size(); // temp是第一个不在prev里面的字符的序列号
+        if ( temp >= first_index ) { // 如果temp和first_index相等，那么很显然需要将整个data拼进去
+          if ( temp - first_index <= data.size() ) { // 判断data是不是整个都在prev里面
+            std::prev( lb )->second.append( std::move( data.substr( temp - first_index ) ) );
+          }
+          unassembled.erase( lb, ub );
+          return true;
+        }
+      }
+      unassembled.erase( lb, ub );
     }
-    if(output_.writer().bytes_pushed()<first_index){
-        unassembled[first_index]=std::move(data);
-        return true;        
-    }
-    return false;
+  }
+  if ( output_.writer().bytes_pushed() < first_index ) {
+    unassembled[first_index] = std::move( data );
+    return true;
+  }
+  return false;
 }
 void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_substring )
 {
-    debug("index = {} , data = {} , FIN = {} \n",first_index,data,is_last_substring);
+  debug( "index = {} , data = {} , FIN = {} \n", first_index, data, is_last_substring );
   uint64_t Firstunaccept = ( output_.writer().bytes_pushed() + writer().available_capacity() );
   const auto checkclose = [&]() {
     if (
@@ -73,7 +73,7 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
   } else if ( is_last_substring ) {
     haslastSubstr = true;
   }
-  if(!newinserthelp(first_index,data)){
+  if ( !newinserthelp( first_index, data ) ) {
     output_.writer().push( move( data ) );
   }
   return checkclose();
