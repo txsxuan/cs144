@@ -1,5 +1,6 @@
 #include "reassembler.hh"
 #include "debug.hh"
+#include <cassert>
 #include <iterator>
 
 
@@ -29,7 +30,7 @@ bool Reassembler::newinserthelp( uint64_t first_index, std::string &data ){
             unassembled.erase( lb, ub );                      
         }
     }
-    if(acknum<first_index){
+    if(output_.writer().bytes_pushed()<first_index){
         unassembled[first_index]=std::move(data);
         return true;        
     }
@@ -37,8 +38,8 @@ bool Reassembler::newinserthelp( uint64_t first_index, std::string &data ){
 }
 void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_substring )
 {
-
-  uint64_t Firstunaccept = ( acknum + writer().available_capacity() );
+    debug("index = {} , data = {} , FIN = {} \n",first_index,data,is_last_substring);
+  uint64_t Firstunaccept = ( output_.writer().bytes_pushed() + writer().available_capacity() );
   const auto checkclose = [&]() {
     if (
       haslastSubstr
@@ -54,18 +55,18 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
     return;
   }
   if ( data.empty() ) {
-    if ( acknum == first_index && is_last_substring ) {
+    if ( output_.writer().bytes_pushed() == first_index && is_last_substring ) {
       haslastSubstr = true;
       return checkclose();
     }
     return;
   }
-  if ( acknum > first_index ) {
-    if ( acknum >= first_index + data.size() ) {
+  if ( output_.writer().bytes_pushed() > first_index ) {
+    if ( output_.writer().bytes_pushed() >= first_index + data.size() ) {
       return;
     }
-    data = data.substr( acknum - first_index );
-    first_index = acknum;
+    data = data.substr( output_.writer().bytes_pushed() - first_index );
+    first_index = output_.writer().bytes_pushed();
   }
   if ( first_index + data.size() - 1 >= Firstunaccept ) { // 说明有一部分是无法被接受进来的
     data.resize( Firstunaccept - first_index );
@@ -73,7 +74,6 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
     haslastSubstr = true;
   }
   if(!newinserthelp(first_index,data)){
-    acknum+=data.size();
     output_.writer().push( move( data ) );
   }
   return checkclose();
