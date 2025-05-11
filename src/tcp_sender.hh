@@ -4,7 +4,6 @@
 #include "tcp_receiver_message.hh"
 #include "tcp_sender_message.hh"
 #include "wrapping_integers.hh"
-
 #include <cstdint>
 #include <functional>
 #include <optional>
@@ -71,6 +70,9 @@ private:
             expired=(timehold>=RTO);
 
         }
+        uint64_t getTime() const {return timehold;}
+        uint64_t getRTO() const {return RTO;}
+        uint64_t getinitial() const {return  initial_RTO_ms_;}
         bool isstart=false;
         bool expired=false;
         uint64_t RTO;

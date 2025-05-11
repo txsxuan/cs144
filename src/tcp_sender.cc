@@ -100,7 +100,8 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
     if(ack>windowLeft&&ack<=seq.unwrap(isn_, windowLeft)){
         timer.turn_off();
         retransmissions=0;
-        while(msgq.front().seqno.unwrap(isn_, windowLeft)<=ack){
+        while(msgq.front().seqno.unwrap(isn_, windowLeft)<ack){
+            debug("seq = {}", msgq.front().seqno.getRaw());
             windowLeft+=msgq.front().sequence_length();
             msgq.pop();
         }
@@ -121,11 +122,15 @@ void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& trans
     }
     if(timer.is_start()){
         timer.update(ms_since_last_tick);
+        debug("time = {} ,RTO = {} ,initial = {}", timer.getTime(),timer.getRTO(),timer.getinitial());
         if(timer.is_expired()){
+            debug("timer is expired!");
             transmit(msgq.front());
-            if(window_size!=0){
+            debug("seqno = Wrap32<{}> {}SYN ,window_size = {}", msgq.front().seqno.getRaw(),(msgq.front().SYN)?'+':'-',window_size);
+            if(window_size!=0||msgq.front().SYN||msgq.front().FIN){
                 retransmissions++;
                 timer.back_off();
+                debug("back off");
             }
             timer.reset();
         }
