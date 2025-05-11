@@ -1,9 +1,9 @@
 Checkpoint 2 Writeup
 ====================
 
-My name: [your name here]
+My name: konakona
 
-My SUNet ID: [your sunetid here]
+My SUNet ID: 7963
 
 I collaborated with: [list sunetids here]
 

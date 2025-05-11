@@ -1,43 +1,121 @@
 #include "tcp_sender.hh"
+#include "byte_stream.hh"
 #include "debug.hh"
 #include "tcp_config.hh"
+#include "tcp_sender_message.hh"
+#include "wrapping_integers.hh"
+#include <cassert>
+#include <cstdint>
+#include <exception>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <iostream>
 
 using namespace std;
 
 // This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::sequence_numbers_in_flight() const
 {
-  debug( "unimplemented sequence_numbers_in_flight() called" );
-  return {};
+//   debug( "unimplemented sequence_numbers_in_flight() called" );
+  return seq.unwrap(isn_, windowLeft)-windowLeft;
 }
 
 // This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::consecutive_retransmissions() const
 {
-  debug( "unimplemented consecutive_retransmissions() called" );
-  return {};
+//   debug( "unimplemented consecutive_retransmissions() called" );
+  return retransmissions;
 }
 
 void TCPSender::push( const TransmitFunction& transmit )
 {
-  debug( "unimplemented push() called" );
-  (void)transmit;
+    try {
+        if(reader().has_error()){
+            throw std::runtime_error("bytes has error!");
+        }
+        debug("seq = {} , isn_ = {} , windowsize = {}", seq.unwrap(isn_, windowLeft),isn_.unwrap(isn_, windowLeft),window_size);
+        // if(reader().is_finished()){
+        //     return;
+        // }
+        if(window_size==0&&!reader().is_finished()){
+            transmit(make_empty_message());
+            return;
+        }
+        while((reader().bytes_buffered()
+                    ||seq==isn_//如果的是seq==isn_，那么无论如何都要发
+                    ||reader().is_finished()
+                    )
+                    &&window_size>0
+                        ){
+            uint16_t len=(window_size<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
+            std::string payload;
+            read(reader(),len, payload);
+            debug("seq = {} , isn_ = {} , payload = {}", seq.unwrap(isn_, windowLeft),isn_.unwrap(isn_, windowLeft),payload);
+            TCPSenderMessage msg{seq,seq==isn_,std::move(payload),reader().is_finished(),reader().has_error()};
+            seq=seq+msg.sequence_length();
+            transmit(msg);
+            window_size-=msg.sequence_length();
+            msgq.emplace(std::move(msg));
+        }
+        // if(window_size==0&&reader().bytes_buffered()){
+        //     transmit(make_empty_message());
+        // }
+        if(!msgq.empty()&&!timer.is_start()){ 
+            timer.turn_on();
+        }
+    
+    } catch (const exception& e) {
+        std::cout<<e.what()<<std::endl;
+        if(timer.is_start()){
+            timer.turn_off();
+        }
+        return;
+    }
+
 }
 
 TCPSenderMessage TCPSender::make_empty_message() const
 {
-  debug( "unimplemented make_empty_message() called" );
-  return {};
+//   debug( "unimplemented make_empty_message() called" );
+  return {seq,false,"",reader().is_finished(),reader().has_error()};
 }
 
 void TCPSender::receive( const TCPReceiverMessage& msg )
 {
-  debug( "unimplemented receive() called" );
-  (void)msg;
+    if(msg.RST){
+        reader().set_error();
+        return;
+    }
+    window_size=msg.window_size;
+    uint64_t ack=msg.ackno->unwrap(isn_, windowLeft);
+    if(ack>windowLeft){
+        timer.turn_off();
+        retransmissions=0;
+        while(msgq.front().seqno.unwrap(isn_, windowLeft)<=ack){
+            windowLeft+=msgq.front().sequence_length();
+            msgq.pop();
+        }
+        if(!msgq.empty()){
+            timer.turn_on();
+        }
+    }
 }
 
 void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& transmit )
 {
-  debug( "unimplemented tick({}, ...) called", ms_since_last_tick );
-  (void)transmit;
+    if(msgq.empty()){
+        return;
+    }
+    if(timer.is_start()){
+        timer.update(ms_since_last_tick);
+        if(timer.is_expired()){
+            transmit(msgq.front());
+            if(window_size!=0){
+                retransmissions++;
+                timer.back_off();
+            }
+            timer.reset();
+        }
+    }
 }

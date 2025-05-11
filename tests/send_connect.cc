@@ -2,6 +2,7 @@
 
 #include "random.hh"
 
+#include <cassert>
 #include <cstdlib>
 #include <exception>
 #include <iostream>

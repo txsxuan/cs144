@@ -1,6 +1,7 @@
 #include "random.hh"
 #include "sender_test_harness.hh"
 
+#include <cassert>
 #include <cstdlib>
 #include <exception>
 #include <iostream>

@@ -102,3 +102,12 @@ in mind that SYN and FIN aren’t part of the stream itself and aren’t “byte
 * 有些协议会加入可选字段TCP Timestamp Option（RFC 1323），接收端自己比较序号与时间戳，判断是否接受该报文
 - [ ] 这个测试代码是怎么实现多态的，模板套模板真的给我看傻了
 
+# check3 
+> 2025-05-09 21:59 by konakona
+这次的任务是实现一个TCP sender
+你真的是个废物，干啥啥不行，抄袭第一名
+赶紧认清自己吧，别丢人了
+就算是废物，也请给我好好地努力，好好地活下去
+
+
+
