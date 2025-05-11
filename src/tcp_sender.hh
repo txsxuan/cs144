@@ -7,6 +7,7 @@
 
 #include <cstdint>
 #include <functional>
+#include <optional>
 #include <queue>
 
 class TCPSender
@@ -88,4 +89,5 @@ private:
   std::queue<TCPSenderMessage> msgq{};
   uint64_t retransmissions=0;
   RetransmissionTimer timer;
+  std::optional<bool> is_closed=std::nullopt;
 };
