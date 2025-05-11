@@ -52,13 +52,17 @@ void TCPSender::push( const TransmitFunction& transmit )
                     )
                     &&window_size>0&&!is_closed.has_value()
                         ){
-            uint16_t len=(window_size<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
+            uint16_t len=((window_size)<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
             std::string payload;
             read(reader(),len, payload);
             debug("seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {}", seq.unwrap(isn_, windowLeft),isn_.unwrap(isn_, windowLeft),payload,writer().is_closed(),reader().is_finished());
-            TCPSenderMessage msg{seq,seq==isn_,std::move(payload),writer().is_closed(),reader().has_error()};
+            bool FIN=writer().is_closed()&&payload.size()!=window_size;
+            TCPSenderMessage msg{seq,seq==isn_,std::move(payload),FIN,reader().has_error()};
             seq=seq+msg.sequence_length();
             transmit(msg);
+            // if(window_size>msg.sequence_length()){
+            //     window_size-=msg.sequence_length();
+            // }
             window_size-=msg.sequence_length();
             msgq.emplace(std::move(msg));
             if(reader().is_finished()){
@@ -100,7 +104,8 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
     if(ack>windowLeft&&ack<=seq.unwrap(isn_, windowLeft)){
         timer.turn_off();
         retransmissions=0;
-        while(msgq.front().seqno.unwrap(isn_, windowLeft)<ack){
+        // debug("what ? {}", +msgq.front().sequence_length());
+        while(!msgq.empty()&&((msgq.front().seqno.unwrap(isn_, windowLeft))+msgq.front().sequence_length())<=ack){
             debug("seq = {}", msgq.front().seqno.getRaw());
             windowLeft+=msgq.front().sequence_length();
             msgq.pop();
