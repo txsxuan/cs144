@@ -1,5 +1,6 @@
+// #include "socket.hh"
 #include "socket.hh"
-
+#include "tcp_minnow_socket.hh"
 #include <cstdlib>
 #include <iostream>
 #include <span>
@@ -10,7 +11,7 @@ using namespace std;
 void get_URL( const string& host, const string& path )
 {
   Address serveraddr( host, "80" );
-  TCPSocket checkzSocket;
+  CS144TCPSocket checkzSocket;
   checkzSocket.connect( serveraddr );
   std::string sendBuff;
   std::string readBuff;
@@ -27,6 +28,7 @@ void get_URL( const string& host, const string& path )
   // cout<<"socket have closed!"<<endl;
   // cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
   // cerr << "Warning: get_URL() has not been implemented yet.\n";
+  checkzSocket.wait_until_closed();
 }
 
 int main( int argc, char* argv[] )
