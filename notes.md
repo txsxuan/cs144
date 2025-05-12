@@ -110,4 +110,10 @@ in mind that SYN and FIN aren’t part of the stream itself and aren’t “byte
 就算是废物，也请给我好好地努力，好好地活下去
 
 
+经过一系列测试后，我需要做的事
+* FIN是占空间的，当writer关闭了，FIN就应该被置1？我认为应该用reader.isfinished,因为有可能出现包含FIN的消息超过了原来的窗口大小；
+* 应该用一个std::optional变量来决定是否有FIN了（也就是写端是否关闭了），其实我觉得可能麻烦了，它的作用之一是表示sender的FIN是否已经被ack了，那么它应该在确定含有FIN的报文被传送出去之后才能有值（且一开始是false，这个实际上也可以用一个数字来代替，即给FIN一个序列号，只要这个seq被ack了就说明彻底结束了，可以在下个版本尝试）
+* 规定当窗口是满的时候，不能发送FIN（实际上和第一点相同），但是这里钻了个空子，那就是
+
+
 

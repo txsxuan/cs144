@@ -41,7 +41,7 @@ void TCPSender::push( const TransmitFunction& transmit )
         // if(reader().is_finished()){
         //     return;
         // }
-        if(window_size==0&&!writer().is_closed()){
+        if(window_size==0&&reader().bytes_buffered()&&!writer().is_closed()){
             debug("windowsize == 0");
             transmit(make_empty_message());
             return;
@@ -55,8 +55,13 @@ void TCPSender::push( const TransmitFunction& transmit )
             uint16_t len=((window_size)<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
             std::string payload;
             read(reader(),len, payload);
-            debug("seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {}", seq.unwrap(isn_, windowLeft),isn_.unwrap(isn_, windowLeft),payload,writer().is_closed(),reader().is_finished());
-            bool FIN=writer().is_closed()&&payload.size()!=window_size;
+            const bool FIN=reader().is_finished()&&payload.size()!=window_size;//不能在窗口满的时候加上FIN，因为它也占一位
+            debug("seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {}", 
+                seq.unwrap(isn_, windowLeft),
+                isn_.unwrap(isn_, windowLeft),
+                payload,
+                FIN,
+                reader().is_finished());
             TCPSenderMessage msg{seq,seq==isn_,std::move(payload),FIN,reader().has_error()};
             seq=seq+msg.sequence_length();
             transmit(msg);
@@ -65,7 +70,8 @@ void TCPSender::push( const TransmitFunction& transmit )
             // }
             window_size-=msg.sequence_length();
             msgq.emplace(std::move(msg));
-            if(reader().is_finished()){
+            debug("msgq.size = {}", msgq.size());
+            if(reader().is_finished()&&FIN){
                 is_closed=false;
                 break;
             }
@@ -106,7 +112,7 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
         retransmissions=0;
         // debug("what ? {}", +msgq.front().sequence_length());
         while(!msgq.empty()&&((msgq.front().seqno.unwrap(isn_, windowLeft))+msgq.front().sequence_length())<=ack){
-            debug("seq = {}", msgq.front().seqno.getRaw());
+            debug("seq = {} , size = {}", msgq.front().seqno.getRaw(),msgq.front().sequence_length());
             windowLeft+=msgq.front().sequence_length();
             msgq.pop();
         }
@@ -115,6 +121,7 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
             return;
         }
         if(is_closed.has_value()){
+            debug("is finished!");
             is_closed=reader().is_finished();
         }
     }
