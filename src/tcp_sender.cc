@@ -105,7 +105,7 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
         reader().set_error();
         return;
     }
-    window_size=msg.window_size;
+
     uint64_t ack=msg.ackno->unwrap(isn_, windowLeft);
     if(ack>windowLeft&&ack<=seq.unwrap(isn_, windowLeft)){
         timer.turn_off();
@@ -125,6 +125,7 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
             is_closed=reader().is_finished();
         }
     }
+    window_size=(msg.window_size>=sequence_numbers_in_flight())?(msg.window_size-sequence_numbers_in_flight()):0;
 }
 
 void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& transmit )
