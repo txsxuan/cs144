@@ -34,7 +34,7 @@ void TCPSender::push( const TransmitFunction& transmit )
         if(reader().has_error()){
             throw std::runtime_error("bytes has error!");
         }
-        if(is_closed.has_value()&&is_closed.value()){
+        if((is_closed.has_value()&&is_closed.value())||(!msgq.empty()&&windowLeft==0)){
             return;
         }
         debug("seq = {} , isn_ = {} , windowsize = {}", seq.unwrap(isn_, windowLeft),isn_.unwrap(isn_, windowLeft),window_size);
