@@ -1,246 +1,565 @@
-Start testing: May 13 01:01 CST
+Start testing: May 13 00:01 CST
 ----------------------------------------------------------
 1/40 Testing: compile with bug-checkers
 1/40 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: May 13 01:01 CST
+"compile with bug-checkers" start time: May 13 00:01 CST
 Output:
 ----------------------------------------------------------
-[1/2] Building CXX object apps/CMakeFiles/webget.dir/webget.cc.o
-[2/2] Linking CXX executable apps/webget
+ninja: no work to do.
 <end of output>
-Test time =   1.10 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: May 13 01:01 CST
-"compile with bug-checkers" time elapsed: 00:00:01
+"compile with bug-checkers" end time: May 13 00:01 CST
+"compile with bug-checkers" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/40 Testing: t_webget
-2/40 Test: t_webget
-Command: "/home/yukinisakuhana/program/cs144/tests/webget_t.sh" "/home/yukinisakuhana/program/cs144/cmake-build"
+3/40 Testing: byte_stream_basics
+3/40 Test: byte_stream_basics
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_basics_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"t_webget" start time: May 13 01:01 CST
+"byte_stream_basics" start time: May 13 00:01 CST
 Output:
 ----------------------------------------------------------
-DEBUG: minnow connecting to 104.196.238.229:80...
-DEBUG: index = 0 , data =  , FIN = false 
-
-DEBUG: bytes pushed 0
-
-DEBUG: minnow successfully connected to 104.196.238.229:80.
-DEBUG: index = 0 , data =  , FIN = false 
-
-DEBUG: bytes pushed 0
-
-DEBUG: index = 0 , data = HTTP/1.1 200 OK
- , FIN = false 
-
-DEBUG: bytes pushed 16
-
-DEBUG: index = 16 , data = Content-type: text/plain
- , FIN = false 
-
-DEBUG: bytes pushed 41
-
-HTTP/1.1 200 OK
-DEBUG: index = 41 , data = 
-7 , FIN = false 
-
-DEBUG: bytes pushed 43
-
-Content-type: text/plain
-DEBUG: index = 43 , data = S , FIN = false 
-
-DEBUG: bytes pushed 44
-
-
-7DEBUG: index = 44 , data = m , FIN = false 
-
-DEBUG: bytes pushed 45
-
-SDEBUG: index = 45 , data = X , FIN = false 
-
-DEBUG: bytes pushed 46
-
-mDEBUG: index = 46 , data = q , FIN = false 
-
-DEBUG: bytes pushed 47
-
-XDEBUG: index = 47 , data = W , FIN = false 
-
-DEBUG: bytes pushed 48
-
-qDEBUG: index = 48 , data = k , FIN = false 
-
-DEBUG: bytes pushed 49
-
-WDEBUG: index = 49 , data = r , FIN = false 
-
-DEBUG: bytes pushed 50
-
-kDEBUG: index = 50 , data = L , FIN = false 
-
-DEBUG: bytes pushed 51
-
-rDEBUG: index = 51 , data = K , FIN = false 
-
-DEBUG: bytes pushed 52
-
-LDEBUG: index = 52 , data = z , FIN = false 
-
-DEBUG: bytes pushed 53
-
-KDEBUG: index = 53 , data = V , FIN = false 
-
-DEBUG: bytes pushed 54
-
-zDEBUG: index = 54 , data = B , FIN = false 
-
-DEBUG: bytes pushed 55
-
-VDEBUG: index = 55 , data = C , FIN = false 
-
-DEBUG: Bbytes pushed 56
-
-DEBUG: index = 56 , data = E , FIN = false 
-
-DEBUG: bytes pushed 57
-
-CDEBUG: index = 57 , data = a , FIN = false 
-
-EDEBUG: bytes pushed 58
-
-DEBUG: index = 58 , data = l , FIN = false 
-
-aDEBUG: bytes pushed 59
-
-DEBUG: index = 59 , data = b , FIN = false 
-
-DEBUG: bytes pushed 60
-
-lDEBUG: index = 60 , data = S , FIN = false 
-
-DEBUG: bytes pushed 61
-
-bDEBUG: index = 61 , data = P , FIN = false 
-
-DEBUG: bytes pushed 62
-
-SDEBUG: index = 62 , data = q , FIN = false 
-
-DEBUG: bytes pushed 63
-
-PDEBUG: index = 63 , data = B , FIN = false 
-
-DEBUG: bytes pushed 64
-
-qDEBUG: index = 64 , data = c , FIN = false 
-
-DEBUG: bytes pushed 65
-
-BDEBUG: index = 65 , data = v , FIN = false 
-
-DEBUG: bytes pushed 66
-
-cDEBUG: index = 66 , data = s , FIN = false 
-
-DEBUG: bytes pushed 67
-
-vDEBUG: index = 67 , data = 1 , FIN = false 
-
-DEBUG: bytes pushed 68
-
-sDEBUG: index = 68 , data = 1 , FIN = false 
-
-DEBUG: bytes pushed 69
-
-1DEBUG: index = 69 , data = P , FIN = false 
-
-DEBUG: bytes pushed 70
-
-1DEBUG: index = 70 , data = w , FIN = false 
-
-DEBUG: bytes pushed 71
-
-PDEBUG: index = 71 , data = 2 , FIN = false 
-
-DEBUG: bytes pushed 72
-
-wDEBUG: index = 72 , data = 6 , FIN = false 
-
-DEBUG: bytes pushed 73
-
-2DEBUG: index = 73 , data = 3 , FIN = false 
-
-DEBUG: bytes pushed 74
-
-6DEBUG: index = 74 , data = K , FIN = false 
-
-DEBUG: bytes pushed 75
-
-3DEBUG: index = 75 , data = 7 , FIN = false 
-
-DEBUG: bytes pushed 76
-
-KDEBUG: index = 76 , data = x , FIN = false 
-
-DEBUG: bytes pushed 77
-
-7DEBUG: index = 77 , data = 4 , FIN = false 
-
-DEBUG: bytes pushed 78
-
-xDEBUG: index = 78 , data = W , FIN = false 
-
-DEBUG: bytes pushed 79
-
-4DEBUG: index = 79 , data = v , FIN = false 
-
-DEBUG: bytes pushed 80
-
-WDEBUG: index = 80 , data = 3 , FIN = false 
-
-DEBUG: bytes pushed 81
-
-vDEBUG: index = 81 , data = J , FIN = false 
-
-DEBUG: 3bytes pushed 82
-
-DEBUG: index = 82 , data = c , FIN = false 
-
-DEBUG: bytes pushed 83
-
-JDEBUG: index = 83 , data = k , FIN = false 
-
-DEBUG: bytes pushed 84
-
-cDEBUG: index = 84 , data = I , FIN = false 
-
-DEBUG: bytes pushed 85
-
-kDEBUG: index = 85 , data = 
- , FIN = false 
-
-DEBUG: bytes pushed 86
-
-IDEBUG: index = 86 , data =  , FIN = true 
-
-
-DEBUG: closed: 
-DEBUG: bytes pushed 86
-
-DEBUG: minnow inbound stream from DEBUG: minnow waiting for clean shutdown... 104.196.238.229:80 finished cleanly.
-DEBUG: minnow outbound stream to 104.196.238.229:80 finished (0 seqnos still in flight).
-DEBUG: minnow TCP connection finished cleanly.
-done.
 <end of output>
-Test time =   2.37 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_webget" end time: May 13 01:01 CST
-"t_webget" time elapsed: 00:00:02
+"byte_stream_basics" end time: May 13 00:01 CST
+"byte_stream_basics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 13 01:01 CST
+4/40 Testing: byte_stream_capacity
+4/40 Test: byte_stream_capacity
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_capacity_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_capacity" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_capacity" end time: May 13 00:01 CST
+"byte_stream_capacity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/40 Testing: byte_stream_one_write
+5/40 Test: byte_stream_one_write
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_one_write_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_one_write" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_one_write" end time: May 13 00:01 CST
+"byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/40 Testing: byte_stream_two_writes
+6/40 Test: byte_stream_two_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_two_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_two_writes" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_two_writes" end time: May 13 00:01 CST
+"byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/40 Testing: byte_stream_many_writes
+7/40 Test: byte_stream_many_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_many_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_many_writes" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_many_writes" end time: May 13 00:01 CST
+"byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/40 Testing: byte_stream_stress_test
+8/40 Test: byte_stream_stress_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_stress_test_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_stress_test" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_stress_test" end time: May 13 00:01 CST
+"byte_stream_stress_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/40 Testing: reassembler_single
+9/40 Test: reassembler_single
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_single_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_single" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_single" end time: May 13 00:01 CST
+"reassembler_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/40 Testing: reassembler_cap
+10/40 Test: reassembler_cap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_cap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_cap" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_cap" end time: May 13 00:01 CST
+"reassembler_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/40 Testing: reassembler_seq
+11/40 Test: reassembler_seq
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_seq_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_seq" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_seq" end time: May 13 00:01 CST
+"reassembler_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/40 Testing: reassembler_dup
+12/40 Test: reassembler_dup
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_dup_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_dup" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_dup" end time: May 13 00:01 CST
+"reassembler_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/40 Testing: reassembler_holes
+13/40 Test: reassembler_holes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_holes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_holes" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_holes" end time: May 13 00:01 CST
+"reassembler_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/40 Testing: reassembler_overlapping
+14/40 Test: reassembler_overlapping
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_overlapping_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_overlapping" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_overlapping" end time: May 13 00:01 CST
+"reassembler_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/40 Testing: reassembler_win
+15/40 Test: reassembler_win
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_win_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_win" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_win" end time: May 13 00:01 CST
+"reassembler_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/40 Testing: wrapping_integers_cmp
+16/40 Test: wrapping_integers_cmp
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_cmp_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_cmp" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_cmp" end time: May 13 00:01 CST
+"wrapping_integers_cmp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/40 Testing: wrapping_integers_wrap
+17/40 Test: wrapping_integers_wrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_wrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_wrap" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_wrap" end time: May 13 00:01 CST
+"wrapping_integers_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/40 Testing: wrapping_integers_unwrap
+18/40 Test: wrapping_integers_unwrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_unwrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_unwrap" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_unwrap" end time: May 13 00:01 CST
+"wrapping_integers_unwrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/40 Testing: wrapping_integers_roundtrip
+19/40 Test: wrapping_integers_roundtrip
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_roundtrip_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_roundtrip" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_roundtrip" end time: May 13 00:01 CST
+"wrapping_integers_roundtrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/40 Testing: wrapping_integers_extra
+20/40 Test: wrapping_integers_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_extra" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_extra" end time: May 13 00:01 CST
+"wrapping_integers_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/40 Testing: recv_connect
+21/40 Test: recv_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_connect" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_connect" end time: May 13 00:01 CST
+"recv_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/40 Testing: recv_transmit
+22/40 Test: recv_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_transmit" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.41 sec
+----------------------------------------------------------
+Test Passed.
+"recv_transmit" end time: May 13 00:01 CST
+"recv_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/40 Testing: recv_window
+23/40 Test: recv_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_window" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"recv_window" end time: May 13 00:01 CST
+"recv_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/40 Testing: recv_reorder
+24/40 Test: recv_reorder
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder" end time: May 13 00:01 CST
+"recv_reorder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/40 Testing: recv_reorder_more
+25/40 Test: recv_reorder_more
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_more_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder_more" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.08 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder_more" end time: May 13 00:01 CST
+"recv_reorder_more" time elapsed: 00:00:01
+----------------------------------------------------------
+
+26/40 Testing: recv_close
+26/40 Test: recv_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_close" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_close" end time: May 13 00:01 CST
+"recv_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/40 Testing: recv_special
+27/40 Test: recv_special
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_special_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_special" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"recv_special" end time: May 13 00:01 CST
+"recv_special" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/40 Testing: send_connect
+28/40 Test: send_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_connect" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_connect" end time: May 13 00:01 CST
+"send_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/40 Testing: send_transmit
+29/40 Test: send_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_transmit" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Passed.
+"send_transmit" end time: May 13 00:01 CST
+"send_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/40 Testing: send_window
+30/40 Test: send_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_window" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"send_window" end time: May 13 00:01 CST
+"send_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/40 Testing: send_ack
+31/40 Test: send_ack
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_ack_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_ack" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_ack" end time: May 13 00:01 CST
+"send_ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/40 Testing: send_close
+32/40 Test: send_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_close" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"send_close" end time: May 13 00:01 CST
+"send_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/40 Testing: send_retx
+33/40 Test: send_retx
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_retx_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_retx" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_retx" end time: May 13 00:01 CST
+"send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/40 Testing: send_extra
+34/40 Test: send_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_extra" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"send_extra" end time: May 13 00:01 CST
+"send_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/40 Testing: no_skip
+37/40 Test: no_skip
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/no_skip_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"no_skip" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"no_skip" end time: May 13 00:01 CST
+"no_skip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/40 Testing: compile with optimization
+38/40 Test: compile with optimization
+Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"compile with optimization" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+ninja: no work to do.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"compile with optimization" end time: May 13 00:01 CST
+"compile with optimization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/40 Testing: byte_stream_speed_test
+39/40 Test: byte_stream_speed_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_speed_test"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_speed_test" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+ByteStream with capacity=32768, write_size=1500, read_size=4096 reached 16.22 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=128 reached 12.47 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=32 reached 11.32 Gbit/s.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_speed_test" end time: May 13 00:01 CST
+"byte_stream_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/40 Testing: reassembler_speed_test
+40/40 Test: reassembler_speed_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_speed_test" start time: May 13 00:01 CST
+Output:
+----------------------------------------------------------
+Reassembler to ByteStream with capacity=32768 reached 51.70 Gbit/s.
+Reassembler to ByteStream with capacity=32768 reached 5.98 Gbit/s.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_speed_test" end time: May 13 00:01 CST
+"reassembler_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 13 00:01 CST

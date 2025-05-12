@@ -24,7 +24,7 @@ void get_URL( const string& host, const string& path )
     // cout<<"read from"<<host<<path<<endl;
     cout << readBuff;
   }
-//   checkzSocket.close();
+  checkzSocket.close();
   // cout<<"socket have closed!"<<endl;
   // cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
   // cerr << "Warning: get_URL() has not been implemented yet.\n";

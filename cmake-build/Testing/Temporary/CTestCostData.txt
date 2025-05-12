@@ -1,5 +1,5 @@
 compile 0 0
-t_webget 5 0.474293
+t_webget 2 1.4589
 byte_stream_basics 247 7.40544e-05
 byte_stream_capacity 247 6.40363e-05
 byte_stream_one_write 247 7.67464e-05
@@ -595,9 +595,6 @@ compile 0 0
 compile 0 0
 compile 0 0
 compile 0 0
-compile 0 0
-compile 0 0
-compile 0 0
-compile 0 0
-compile with bug-checkers 1 1.09692
+compile with bug-checkers 1 0.0299347
+compile with optimization 1 0.020899
 ---
