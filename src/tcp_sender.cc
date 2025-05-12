@@ -1,166 +1,119 @@
 #include "tcp_sender.hh"
-#include "byte_stream.hh"
-#include "debug.hh"
 #include "tcp_config.hh"
-#include "tcp_sender_message.hh"
 #include "wrapping_integers.hh"
-#include <cassert>
+
+#include <algorithm>
+#include <cstddef>
 #include <cstdint>
-#include <exception>
-#include <stdexcept>
-#include <string>
+#include <string_view>
 #include <utility>
-#include <iostream>
 
 using namespace std;
 
 uint64_t TCPSender::sequence_numbers_in_flight() const
 {
-  return seq.unwrap(isn_, windowLeft)-windowLeft;
+  return total_outstanding_;
 }
 
 uint64_t TCPSender::consecutive_retransmissions() const
 {
-  return retransmissions;
+  return total_retransmission_;
 }
 
 void TCPSender::push( const TransmitFunction& transmit )
 {
-    try {
-        if((is_closed.has_value()&&is_closed.value())
-            ||(!msgq.empty()&&windowLeft==0)){//如果链接关闭或者SYN没有被确认，都不能继续push
-            return;
-        }
-        debug("seq = {} , isn_ = {} , windowsize = {} , {} bytes remained", 
-            seq.getRaw(),
-            isn_.getRaw(),
-            window_size,
-            reader().bytes_buffered()
-        );
-        while((reader().bytes_buffered()
-                    ||seq==isn_//如果的是seq==isn_，那么无论如何都要发
-                    ||reader().is_finished()
-                    )
-                    &&!is_closed.has_value()
-                        ){
-            uint16_t len=((window_size)<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
-            if(len==0){
-                debug("len = {}",len);
-                if(!recvZero){
-                    debug("haven't received 0 !");
-                    break;
-                }
-                len=1;
-                recvZero=false;
-            }
-            // len=(len==0)?1:len;
-            std::string payload;
-            TCPSenderMessage msg=make_empty_message();
-            bool SYN;
-            bool FIN;
-            SYN=(seq==isn_);
-            len-=SYN;
-            read(reader(),len, payload);
-            FIN=reader().is_finished()&&((payload.size()+SYN)<window_size||(window_size==0&&len==1&&payload.size()==0));//不能在窗口满的时候加上FIN，因为它也占一位
-            debug("len = {} , seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {} ,window_size = {}",
-                len, 
-                seq.unwrap(isn_, windowLeft),
-                isn_.unwrap(isn_, windowLeft),
-                payload,
-                FIN,
-                reader().is_finished(),
-            window_size
-            );
-            msg.SYN=(seq==isn_);
-            msg.payload=std::move(payload);
-            msg.FIN=FIN;
-            msg.RST=reader().has_error();
-            seq=seq+msg.sequence_length();
-            transmit(msg);
-            if(window_size>=msg.sequence_length()){
-                window_size-=msg.sequence_length();
-            }
-            msgq.emplace(std::move(msg));
-            debug("msgq.size = {}", msgq.size());
-            if(reader().is_finished()&&FIN){
-                is_closed=false;
-                break;
-            }
-            debug("now window_size = {}", window_size);
-            if(window_size==0){
-                break;
-            }
-
-        }
-        if(!msgq.empty()&&!timer.is_start()){ 
-            timer.turn_on();
-        }
-    
-    } catch (const exception& e) {
-        std::cout<<e.what()<<std::endl;
-        if(timer.is_start()){
-            timer.turn_off();
-        }
-        return;
+  while ( ( window_size_ == 0 ? 1 : window_size_ ) > total_outstanding_ ) {
+    if ( FIN_sent_ ) {
+      break; // Is finished.
     }
 
+    auto msg { make_empty_message() };
+    if ( not SYN_sent_ ) {
+      msg.SYN = true;
+      SYN_sent_ = true;
+    }
+
+    const uint64_t remaining { ( window_size_ == 0 ? 1 : window_size_ ) - total_outstanding_ };
+    const size_t len { min( TCPConfig::MAX_PAYLOAD_SIZE, remaining - msg.sequence_length() ) };
+    auto&& payload { msg.payload };
+    while ( reader().bytes_buffered() != 0U and payload.size() < len ) {
+      string_view view { reader().peek() };
+      view = view.substr( 0, len - payload.size() );
+      payload += view;
+      input_.reader().pop( view.size() );
+    }
+
+    if ( not FIN_sent_ and remaining > msg.sequence_length() and reader().is_finished() ) {
+      msg.FIN = true;
+      FIN_sent_ = true;
+    }
+
+    if ( msg.sequence_length() == 0 ) {
+      break;
+    }
+
+    transmit( msg );
+    if ( not timer_.is_active() ) {
+      timer_.start();
+    }
+    next_abs_seqno_ += msg.sequence_length();
+    total_outstanding_ += msg.sequence_length();
+    outstanding_message_.emplace( move( msg ) );
+  }
 }
 
 TCPSenderMessage TCPSender::make_empty_message() const
 {
-  return {seq,false,"",false,reader().has_error()};
+  return { Wrap32::wrap( next_abs_seqno_, isn_ ), false, {}, false, input_.has_error() };
 }
 
 void TCPSender::receive( const TCPReceiverMessage& msg )
 {
-    if(msg.RST){
-        reader().set_error();
-        return;
+  if ( input_.has_error() ) {
+    return;
+  }
+  if ( msg.RST ) {
+    input_.set_error();
+    return;
+  }
+
+  window_size_ = msg.window_size;
+  if ( not msg.ackno.has_value() ) {
+    return;
+  }
+  const uint64_t recv_ack_abs_seqno { msg.ackno->unwrap( isn_, next_abs_seqno_ ) };
+  if ( recv_ack_abs_seqno > next_abs_seqno_ ) {
+    return;
+  }
+  bool has_acknowledgment { false };
+  while ( not outstanding_message_.empty() ) {
+    const auto& message { outstanding_message_.front() };
+    if ( ack_abs_seqno_ + message.sequence_length() > recv_ack_abs_seqno ) {
+      break; // Must be fully acknowledged by the TCP receiver.
     }
-    uint64_t ack=msg.ackno->unwrap(isn_, windowLeft);
-    if(ack>windowLeft&&ack<=seq.unwrap(isn_, windowLeft)){
-        timer.turn_off();
-        retransmissions=0;
-        while(!msgq.empty()&&((msgq.front().seqno.unwrap(isn_, windowLeft))+msgq.front().sequence_length())<=ack){
-            debug("seq = {} , size = {}", msgq.front().seqno.getRaw(),msgq.front().sequence_length());
-            windowLeft+=msgq.front().sequence_length();
-            msgq.pop();
-        }
-        if(!msgq.empty()){
-            timer.turn_on();
-            return;
-        }
-        if(is_closed.has_value()){
-            debug("is finished!");
-            is_closed=reader().is_finished();
-        }
-    }
-    recvZero=(msg.window_size==0);
-    timer.set_recv0(recvZero);
-    if(recvZero){
-        debug("have recv 0 !");
-    }
-    window_size=(msg.window_size>=sequence_numbers_in_flight())?(msg.window_size-sequence_numbers_in_flight()):0;
+    has_acknowledgment = true;
+    ack_abs_seqno_ += message.sequence_length();
+    total_outstanding_ -= message.sequence_length();
+    outstanding_message_.pop();
+  }
+  if ( has_acknowledgment ) {
+    total_retransmission_ = 0;
+    timer_.reload( initial_RTO_ms_ );
+    outstanding_message_.empty() ? timer_.stop() : timer_.start();
+  }
 }
 
 void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& transmit )
 {
-    if(msgq.empty()){
-        return;
+  if ( timer_.tick( ms_since_last_tick ).is_expired() ) {
+    if ( outstanding_message_.empty() ) {
+      return;
     }
-    if(timer.is_start()){
-        timer.update(ms_since_last_tick);
-        debug("time = {} ,RTO = {} ,initial = {}", timer.getTime(),timer.getRTO(),timer.getinitial());
-        if(timer.is_expired()){
-            debug("timer is expired!");
-            transmit(msgq.front());
-            debug("seqno = Wrap32<{}> {}SYN ,window_size = {}", msgq.front().seqno.getRaw(),(msgq.front().SYN)?'+':'-',window_size);
-            if(!timer.get_recv0()||msgq.front().SYN){
-                retransmissions++;
-                timer.back_off();
-                debug("back off");
-            }
-            timer.reset();
-        }
+    transmit( outstanding_message_.front() );
+    if ( window_size_ != 0 ) {
+      total_retransmission_ += 1;
+      timer_.exponential_backoff();
     }
+    timer_.reset();
+  }
 }
