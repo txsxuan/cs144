@@ -1,0 +1,156 @@
+[1/1] cd /home/yukinisakuhana/program/cs144/cmake-build && /usr/bin/ctest --output-on-failure --stop-on-failure --timeout 15 -R '^byte_stream_|^reassembler_|^wrapping|^recv|^send|^no_skip'
+FAILED: CMakeFiles/check3 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check3 
+cd /home/yukinisakuhana/program/cs144/cmake-build && /usr/bin/ctest --output-on-failure --stop-on-failure --timeout 15 -R '^byte_stream_|^reassembler_|^wrapping|^recv|^send|^no_skip'
+Test project /home/yukinisakuhana/program/cs144/cmake-build
+      Start  1: compile with bug-checkers
+ 1/37 Test  #1: compile with bug-checkers ........   Passed    0.02 sec
+      Start  3: byte_stream_basics
+ 2/37 Test  #3: byte_stream_basics ...............   Passed    0.01 sec
+      Start  4: byte_stream_capacity
+ 3/37 Test  #4: byte_stream_capacity .............   Passed    0.01 sec
+      Start  5: byte_stream_one_write
+ 4/37 Test  #5: byte_stream_one_write ............   Passed    0.01 sec
+      Start  6: byte_stream_two_writes
+ 5/37 Test  #6: byte_stream_two_writes ...........   Passed    0.01 sec
+      Start  7: byte_stream_many_writes
+ 6/37 Test  #7: byte_stream_many_writes ..........   Passed    0.05 sec
+      Start  8: byte_stream_stress_test
+ 7/37 Test  #8: byte_stream_stress_test ..........   Passed    0.10 sec
+      Start  9: reassembler_single
+ 8/37 Test  #9: reassembler_single ...............   Passed    0.01 sec
+      Start 10: reassembler_cap
+ 9/37 Test #10: reassembler_cap ..................   Passed    0.01 sec
+      Start 11: reassembler_seq
+10/37 Test #11: reassembler_seq ..................   Passed    0.01 sec
+      Start 12: reassembler_dup
+11/37 Test #12: reassembler_dup ..................   Passed    0.03 sec
+      Start 13: reassembler_holes
+12/37 Test #13: reassembler_holes ................   Passed    0.01 sec
+      Start 14: reassembler_overlapping
+13/37 Test #14: reassembler_overlapping ..........   Passed    0.01 sec
+      Start 15: reassembler_win
+14/37 Test #15: reassembler_win ..................   Passed    0.24 sec
+      Start 16: wrapping_integers_cmp
+15/37 Test #16: wrapping_integers_cmp ............   Passed    0.01 sec
+      Start 17: wrapping_integers_wrap
+16/37 Test #17: wrapping_integers_wrap ...........   Passed    0.01 sec
+      Start 18: wrapping_integers_unwrap
+17/37 Test #18: wrapping_integers_unwrap .........   Passed    0.01 sec
+      Start 19: wrapping_integers_roundtrip
+18/37 Test #19: wrapping_integers_roundtrip ......   Passed    0.14 sec
+      Start 20: wrapping_integers_extra
+19/37 Test #20: wrapping_integers_extra ..........   Passed    0.09 sec
+      Start 21: recv_connect
+20/37 Test #21: recv_connect .....................   Passed    0.01 sec
+      Start 22: recv_transmit
+21/37 Test #22: recv_transmit ....................   Passed    0.32 sec
+      Start 23: recv_window
+22/37 Test #23: recv_window ......................   Passed    0.01 sec
+      Start 24: recv_reorder
+23/37 Test #24: recv_reorder .....................   Passed    0.01 sec
+      Start 25: recv_reorder_more
+24/37 Test #25: recv_reorder_more ................   Passed    0.83 sec
+      Start 26: recv_close
+25/37 Test #26: recv_close .......................   Passed    0.01 sec
+      Start 27: recv_special
+26/37 Test #27: recv_special .....................   Passed    0.02 sec
+      Start 28: send_connect
+27/37 Test #28: send_connect .....................   Passed    0.01 sec
+      Start 29: send_transmit
+28/37 Test #29: send_transmit ....................   Passed    0.75 sec
+      Start 30: send_window
+29/37 Test #30: send_window ......................   Passed    0.13 sec
+      Start 31: send_ack
+30/37 Test #31: send_ack .........................   Passed    0.01 sec
+      Start 32: send_close
+31/37 Test #32: send_close .......................   Passed    0.01 sec
+      Start 33: send_retx
+32/37 Test #33: send_retx ........................   Passed    0.02 sec
+      Start 34: send_extra
+33/37 Test #34: send_extra .......................***Failed    0.03 sec
+
+The test "When filling window, treat a '0' window size as equal to '1' but don't back off RTO" failed after these steps:
+
+  0.	Initialized SenderAndOutput with initial_RTO_ms=6404 and ISN=Wrap32<166314577>
+  1.	TCPSender action: push
+    	  with debug output: a) “seq = 166314577 , isn_ = 166314577 , windowsize = 1 , 0 bytes remained”
+    	                     b) “seq = 0 , isn_ = 0 , payload =  ,FIN = false ,reader_is_finished = false ,window_size = 1”
+    	                     c) “msgq.size = 1”
+    	                     d) “now window_size = 0”
+  2.	TCPSender expectation: message sent with seqno=Wrap32<166314577> +SYN (no payload) -FIN -RST
+  3.	TCPSender action: push "abc" to stream, then push to TCPSender
+  4.	TCPSender expectation: nothing to send
+  5.	TCPSender expectation: make_empty_message().seqno = Wrap32<166314578>
+  6.	TCPSender expectation: sequence_numbers_in_flight = 1
+  7.	TCPSender action: receive(ack=Some(Wrap32<166314578>), win=0), then push
+    	  with debug output: a) “seq = 166314577 , size = 1”
+    	                     b) “seq = 166314578 , isn_ = 166314577 , windowsize = 0 , 3 bytes remained”
+    	                     c) “seq = 1 , isn_ = 0 , payload = a ,FIN = false ,reader_is_finished = false ,window_size = 0”
+    	                     d) “msgq.size = 1”
+    	                     e) “now window_size = 0”
+  8.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  9.	TCPSender expectation: make_empty_message().seqno = Wrap32<166314579>
+  10.	TCPSender expectation: sequence_numbers_in_flight = 1
+  11.	TCPSender action: close stream, then push
+    	  with debug output: a) “seq = 166314579 , isn_ = 166314577 , windowsize = 0 , 2 bytes remained”
+    	                     b) “window is fill and writer is closed !”
+  12.	TCPSender expectation: nothing to send
+  13.	TCPSender action: 6403 ms pass
+    	  with debug output: “time = 6403 ,RTO = 6404 ,initial = 6404”
+  14.	TCPSender expectation: nothing to send
+  15.	TCPSender action: 1 ms pass
+    	  with debug output: a) “time = 6404 ,RTO = 6404 ,initial = 6404”
+    	                     b) “timer is expired!”
+    	                     c) “seqno = Wrap32<166314578> -SYN ,window_size = 0”
+  16.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  17.	TCPSender action: 6403 ms pass
+    	  with debug output: “time = 6403 ,RTO = 6404 ,initial = 6404”
+  18.	TCPSender expectation: nothing to send
+  19.	TCPSender action: 1 ms pass
+    	  with debug output: a) “time = 6404 ,RTO = 6404 ,initial = 6404”
+    	                     b) “timer is expired!”
+    	                     c) “seqno = Wrap32<166314578> -SYN ,window_size = 0”
+  20.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  21.	TCPSender action: 6403 ms pass
+    	  with debug output: “time = 6403 ,RTO = 6404 ,initial = 6404”
+  22.	TCPSender expectation: nothing to send
+  23.	TCPSender action: 1 ms pass
+    	  with debug output: a) “time = 6404 ,RTO = 6404 ,initial = 6404”
+    	                     b) “timer is expired!”
+    	                     c) “seqno = Wrap32<166314578> -SYN ,window_size = 0”
+  24.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  25.	TCPSender action: 6403 ms pass
+    	  with debug output: “time = 6403 ,RTO = 6404 ,initial = 6404”
+  26.	TCPSender expectation: nothing to send
+  27.	TCPSender action: 1 ms pass
+    	  with debug output: a) “time = 6404 ,RTO = 6404 ,initial = 6404”
+    	                     b) “timer is expired!”
+    	                     c) “seqno = Wrap32<166314578> -SYN ,window_size = 0”
+  28.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  29.	TCPSender action: 6403 ms pass
+    	  with debug output: “time = 6403 ,RTO = 6404 ,initial = 6404”
+  30.	TCPSender expectation: nothing to send
+  31.	TCPSender action: 1 ms pass
+    	  with debug output: a) “time = 6404 ,RTO = 6404 ,initial = 6404”
+    	                     b) “timer is expired!”
+    	                     c) “seqno = Wrap32<166314578> -SYN ,window_size = 0”
+  32.	TCPSender expectation: message sent with seqno=Wrap32<166314578> -SYN payload="a" -FIN -RST
+  33.	TCPSender action: receive(ack=Some(Wrap32<166314579>), win=0), then push
+    	  with debug output: a) “seq = 166314578 , size = 1”
+    	                     b) “seq = 166314579 , isn_ = 166314577 , windowsize = 0 , 2 bytes remained”
+    	                     c) “window is fill and writer is closed !”
+  ***** Unsuccessful TCPSender expectation: message sent with seqno=Wrap32<166314579> -SYN payload="b" -FIN -RST *****
+
+Unmet Expectation: The TCPSender should have sent a message.
+
+The test "When filling window, treat a '0' window size as equal to '1' but don't back off RTO" failed because of an unmet expectation.
+
+
+97% tests passed, 1 tests failed out of 33
+
+Total Test time (real) =   2.99 sec
+
+The following tests FAILED:
+	 34 - send_extra (Failed)
+Errors while running CTest
+ninja: build stopped: subcommand failed.

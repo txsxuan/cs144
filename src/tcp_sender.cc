@@ -31,14 +31,19 @@ uint64_t TCPSender::consecutive_retransmissions() const
 void TCPSender::push( const TransmitFunction& transmit )
 {
     try {
-        if(reader().has_error()){
-            throw std::runtime_error("bytes has error!");
-        }
+        // if(reader().has_error()){
+        //     throw std::runtime_error("bytes has error!");
+        // }
         if((is_closed.has_value()&&is_closed.value())
             ||(!msgq.empty()&&windowLeft==0)){//如果链接关闭或者SYN没有被确认，都不能继续push
             return;
         }
-        debug("seq = {} , isn_ = {} , windowsize = {}", seq.getRaw(),isn_.getRaw(),window_size);
+        debug("seq = {} , isn_ = {} , windowsize = {} , {} bytes remained", 
+            seq.getRaw(),
+            isn_.getRaw(),
+            window_size,
+            reader().bytes_buffered()
+        );
         // if(window_size==0&&reader().bytes_buffered()&&!writer().is_closed()){
         //     debug("windowsize == 0");
         //     transmit(make_empty_message());
@@ -53,10 +58,13 @@ void TCPSender::push( const TransmitFunction& transmit )
                         ){
             uint16_t len=((window_size)<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
             if(len==0){
-                if(writer().is_closed()){
+                debug("len = {}",len);
+                if(!recvZero){
+                    debug("haven't received 0 !");
                     break;
                 }
                 len=1;
+                recvZero=false;
             }
             // len=(len==0)?1:len;
             std::string payload;
@@ -66,8 +74,9 @@ void TCPSender::push( const TransmitFunction& transmit )
             SYN=(seq==isn_);
             len-=SYN;
             read(reader(),len, payload);
-            FIN=reader().is_finished()&&(payload.size()+SYN)<window_size;//不能在窗口满的时候加上FIN，因为它也占一位
-            debug("seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {} ,window_size = {}", 
+            FIN=reader().is_finished()&&((payload.size()+SYN)<window_size||(window_size==0&&len==1&&payload.size()==0));//不能在窗口满的时候加上FIN，因为它也占一位
+            debug("len = {} , seq = {} , isn_ = {} , payload = {} ,FIN = {} ,reader_is_finished = {} ,window_size = {}",
+                len, 
                 seq.unwrap(isn_, windowLeft),
                 isn_.unwrap(isn_, windowLeft),
                 payload,
@@ -146,6 +155,11 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
             is_closed=reader().is_finished();
         }
     }
+    recvZero=(msg.window_size==0);
+    timer.set_recv0(recvZero);
+    if(recvZero){
+        debug("have recv 0 !");
+    }
     window_size=(msg.window_size>=sequence_numbers_in_flight())?(msg.window_size-sequence_numbers_in_flight()):0;
 }
 
@@ -161,7 +175,9 @@ void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& trans
             debug("timer is expired!");
             transmit(msgq.front());
             debug("seqno = Wrap32<{}> {}SYN ,window_size = {}", msgq.front().seqno.getRaw(),(msgq.front().SYN)?'+':'-',window_size);
-            if(window_size!=0||msgq.front().SYN||msgq.front().FIN){
+            // if(window_size!=0||msgq.front().SYN||msgq.front().FIN){
+            if(!timer.get_recv0()||msgq.front().SYN){
+            // if(window_size){
                 retransmissions++;
                 timer.back_off();
                 debug("back off");

@@ -62,8 +62,14 @@ private:
         void back_off(){
             RTO=(RTO>>63==0)?(RTO*2):UINT16_MAX;
         }
+        void set_recv0(bool windowZero){
+            recv0=windowZero;
+        }
         bool is_start(){
             return isstart;
+        }
+        bool get_recv0(){
+            return  recv0;
         }
         void update(uint64_t ms_since_last_tick){
             timehold=(timehold<(UINT64_MAX-ms_since_last_tick))?(timehold+ms_since_last_tick):UINT64_MAX;
@@ -75,6 +81,7 @@ private:
         uint64_t getinitial() const {return  initial_RTO_ms_;}
         bool isstart=false;
         bool expired=false;
+        bool recv0=true;
         uint64_t RTO;
         uint64_t initial_RTO_ms_;
         uint64_t timehold{};
@@ -92,4 +99,5 @@ private:
   uint64_t retransmissions=0;
   RetransmissionTimer timer;
   std::optional<bool> is_closed=std::nullopt;
+  bool recvZero=false;
 };
