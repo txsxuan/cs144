@@ -14,26 +14,19 @@
 
 using namespace std;
 
-// This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::sequence_numbers_in_flight() const
 {
-//   debug( "unimplemented sequence_numbers_in_flight() called" );
   return seq.unwrap(isn_, windowLeft)-windowLeft;
 }
 
-// This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::consecutive_retransmissions() const
 {
-//   debug( "unimplemented consecutive_retransmissions() called" );
   return retransmissions;
 }
 
 void TCPSender::push( const TransmitFunction& transmit )
 {
     try {
-        // if(reader().has_error()){
-        //     throw std::runtime_error("bytes has error!");
-        // }
         if((is_closed.has_value()&&is_closed.value())
             ||(!msgq.empty()&&windowLeft==0)){//如果链接关闭或者SYN没有被确认，都不能继续push
             return;
@@ -44,16 +37,10 @@ void TCPSender::push( const TransmitFunction& transmit )
             window_size,
             reader().bytes_buffered()
         );
-        // if(window_size==0&&reader().bytes_buffered()&&!writer().is_closed()){
-        //     debug("windowsize == 0");
-        //     transmit(make_empty_message());
-        //     return;
-        // }
         while((reader().bytes_buffered()
                     ||seq==isn_//如果的是seq==isn_，那么无论如何都要发
                     ||reader().is_finished()
                     )
-                    //&&window_size>0
                     &&!is_closed.has_value()
                         ){
             uint16_t len=((window_size)<TCPConfig::MAX_PAYLOAD_SIZE)?window_size:TCPConfig::MAX_PAYLOAD_SIZE;
@@ -88,7 +75,6 @@ void TCPSender::push( const TransmitFunction& transmit )
             msg.payload=std::move(payload);
             msg.FIN=FIN;
             msg.RST=reader().has_error();
-            // {seq,seq==isn_,std::move(payload),FIN,reader().has_error()};
             seq=seq+msg.sequence_length();
             transmit(msg);
             if(window_size>=msg.sequence_length()){
@@ -106,9 +92,6 @@ void TCPSender::push( const TransmitFunction& transmit )
             }
 
         }
-        // if(window_size==0&&reader().bytes_buffered()){
-        //     transmit(make_empty_message());
-        // }
         if(!msgq.empty()&&!timer.is_start()){ 
             timer.turn_on();
         }
@@ -125,7 +108,6 @@ void TCPSender::push( const TransmitFunction& transmit )
 
 TCPSenderMessage TCPSender::make_empty_message() const
 {
-//   debug( "unimplemented make_empty_message() called" );
   return {seq,false,"",false,reader().has_error()};
 }
 
@@ -135,12 +117,10 @@ void TCPSender::receive( const TCPReceiverMessage& msg )
         reader().set_error();
         return;
     }
-
     uint64_t ack=msg.ackno->unwrap(isn_, windowLeft);
     if(ack>windowLeft&&ack<=seq.unwrap(isn_, windowLeft)){
         timer.turn_off();
         retransmissions=0;
-        // debug("what ? {}", +msgq.front().sequence_length());
         while(!msgq.empty()&&((msgq.front().seqno.unwrap(isn_, windowLeft))+msgq.front().sequence_length())<=ack){
             debug("seq = {} , size = {}", msgq.front().seqno.getRaw(),msgq.front().sequence_length());
             windowLeft+=msgq.front().sequence_length();
@@ -175,9 +155,7 @@ void TCPSender::tick( uint64_t ms_since_last_tick, const TransmitFunction& trans
             debug("timer is expired!");
             transmit(msgq.front());
             debug("seqno = Wrap32<{}> {}SYN ,window_size = {}", msgq.front().seqno.getRaw(),(msgq.front().SYN)?'+':'-',window_size);
-            // if(window_size!=0||msgq.front().SYN||msgq.front().FIN){
             if(!timer.get_recv0()||msgq.front().SYN){
-            // if(window_size){
                 retransmissions++;
                 timer.back_off();
                 debug("back off");
