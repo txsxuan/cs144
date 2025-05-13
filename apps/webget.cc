@@ -16,7 +16,7 @@ void get_URL( const string& host, const string& path )
   std::string readBuff;
   sendBuff = "GET " + path + " HTTP/1.1\r\n";
   sendBuff += "Host: " + host + "\r\n";
-  sendBuff += "Connection:close\r\n\r\n";
+  sendBuff += "Connection: close\r\n\r\n";
   checkzSocket.write( sendBuff );
   while ( !checkzSocket.eof() ) {
     checkzSocket.read( readBuff );

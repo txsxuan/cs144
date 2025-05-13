@@ -1,469 +1,639 @@
-Start testing: May 13 01:20 CST
+Start testing: May 13 16:03 CST
 ----------------------------------------------------------
 1/40 Testing: compile with bug-checkers
 1/40 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: May 13 01:20 CST
+"compile with bug-checkers" start time: May 13 16:03 CST
 Output:
 ----------------------------------------------------------
-[1/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/byte_stream_helpers.cc.o
-[2/158] Building CXX object util/CMakeFiles/util_sanitized.dir/address.cc.o
-[3/158] Building CXX object util/CMakeFiles/util_sanitized.dir/random.cc.o
-[4/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tun.cc.o
-[5/158] Building CXX object util/CMakeFiles/util_sanitized.dir/ipv4_header.cc.o
-[6/158] Building CXX object util/CMakeFiles/util_sanitized.dir/helpers.cc.o
-[7/158] Building CXX object util/CMakeFiles/util_sanitized.dir/debug.cc.o
-[8/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/byte_stream.cc.o
-[9/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/wrapping_integers.cc.o
-[10/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tcp_over_ip.cc.o
-[11/158] Building CXX object util/CMakeFiles/util_sanitized.dir/socket.cc.o
-[12/158] Building CXX object util/CMakeFiles/util_sanitized.dir/file_descriptor.cc.o
-[13/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tcp_segment.cc.o
-[14/158] Building CXX object util/CMakeFiles/util_sanitized.dir/parser.cc.o
-[15/158] Building CXX object util/CMakeFiles/util_sanitized.dir/eventloop.cc.o
-[16/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tuntap_adapter.cc.o
-[17/158] Linking CXX static library util/libutil_sanitized.a
-[18/158] Building CXX object tests/CMakeFiles/byte_stream_basics_sanitized.dir/byte_stream_basics.cc.o
-[19/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/reassembler.cc.o
-[20/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/tcp_receiver.cc.o
-[21/158] Building CXX object tests/CMakeFiles/minnow_testing_sanitized.dir/common.cc.o
-[22/158] Linking CXX static library tests/libminnow_testing_sanitized.a
-[23/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/tcp_sender.cc.o
-[24/158] Building CXX object tests/CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o
-[25/158] Building CXX object tests/CMakeFiles/byte_stream_one_write_sanitized.dir/byte_stream_one_write.cc.o
-[26/158] Building CXX object tests/CMakeFiles/byte_stream_basics.dir/byte_stream_basics.cc.o
-[27/158] Building CXX object tests/CMakeFiles/byte_stream_capacity_sanitized.dir/byte_stream_capacity.cc.o
-[28/158] Linking CXX executable tests/byte_stream_one_write
-[29/158] Building CXX object tests/CMakeFiles/reassembler_single.dir/reassembler_single.cc.o
-[30/158] Building CXX object tests/CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o
-[31/158] Building CXX object tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o
-[32/158] Building CXX object tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/byte_stream_two_writes.cc.o
-[33/158] Linking CXX executable tests/byte_stream_basics
-[34/158] Linking CXX executable tests/reassembler_single
-[35/158] Building CXX object tests/CMakeFiles/reassembler_single_sanitized.dir/reassembler_single.cc.o
-[36/158] Building CXX object tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/byte_stream_many_writes.cc.o
-[37/158] Linking CXX executable tests/byte_stream_two_writes
-[38/158] Linking CXX executable tests/byte_stream_capacity
-[39/158] Building CXX object tests/CMakeFiles/reassembler_cap_sanitized.dir/reassembler_cap.cc.o
-[40/158] Building CXX object tests/CMakeFiles/byte_stream_stress_test.dir/byte_stream_stress_test.cc.o
-[41/158] Building CXX object tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o
-[42/158] Linking CXX executable tests/byte_stream_stress_test
-[43/158] Linking CXX executable tests/byte_stream_many_writes
-[44/158] Building CXX object tests/CMakeFiles/reassembler_cap.dir/reassembler_cap.cc.o
-[45/158] Building CXX object tests/CMakeFiles/reassembler_seq_sanitized.dir/reassembler_seq.cc.o
-[46/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/tcp_minnow_socket.cc.o
-[47/158] Building CXX object tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/byte_stream_stress_test.cc.o
-[48/158] Linking CXX static library src/libminnow_sanitized.a
-[49/158] Linking CXX executable tests/reassembler_cap
-[50/158] Building CXX object tests/CMakeFiles/wrapping_integers_unwrap.dir/wrapping_integers_unwrap.cc.o
-[51/158] Building CXX object tests/CMakeFiles/reassembler_seq.dir/reassembler_seq.cc.o
-[52/158] Building CXX object tests/CMakeFiles/reassembler_dup.dir/reassembler_dup.cc.o
-[53/158] Building CXX object tests/CMakeFiles/wrapping_integers_unwrap_sanitized.dir/wrapping_integers_unwrap.cc.o
-[54/158] Building CXX object tests/CMakeFiles/wrapping_integers_cmp_sanitized.dir/wrapping_integers_cmp.cc.o
-[55/158] Building CXX object tests/CMakeFiles/wrapping_integers_wrap.dir/wrapping_integers_wrap.cc.o
-[56/158] Building CXX object tests/CMakeFiles/wrapping_integers_wrap_sanitized.dir/wrapping_integers_wrap.cc.o
-[57/158] Linking CXX executable tests/byte_stream_basics_sanitized
-[58/158] Linking CXX executable tests/byte_stream_capacity_sanitized
-[59/158] Building CXX object tests/CMakeFiles/reassembler_holes_sanitized.dir/reassembler_holes.cc.o
-[60/158] Linking CXX executable tests/byte_stream_one_write_sanitized
-[61/158] Linking CXX executable tests/byte_stream_stress_test_sanitized
-[62/158] Linking CXX executable tests/byte_stream_two_writes_sanitized
-[63/158] Linking CXX executable tests/reassembler_seq
-[64/158] Linking CXX executable tests/byte_stream_many_writes_sanitized
-[65/158] Linking CXX executable tests/reassembler_dup
-[66/158] Linking CXX executable tests/reassembler_cap_sanitized
-[67/158] Linking CXX executable tests/reassembler_single_sanitized
-[68/158] Linking CXX executable tests/wrapping_integers_wrap
-[69/158] Linking CXX executable tests/wrapping_integers_unwrap
-[70/158] Building CXX object tests/CMakeFiles/wrapping_integers_cmp.dir/wrapping_integers_cmp.cc.o
-[71/158] Building CXX object tests/CMakeFiles/wrapping_integers_extra_sanitized.dir/wrapping_integers_extra.cc.o
-[72/158] Linking CXX executable tests/reassembler_seq_sanitized
-[73/158] Linking CXX executable tests/wrapping_integers_wrap_sanitized
-[74/158] Linking CXX executable tests/wrapping_integers_cmp_sanitized
-[75/158] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
-[76/158] Linking CXX executable tests/reassembler_holes_sanitized
-[77/158] Linking CXX executable tests/wrapping_integers_cmp
-[78/158] Building CXX object tests/CMakeFiles/reassembler_overlapping.dir/reassembler_overlapping.cc.o
-[79/158] Building CXX object tests/CMakeFiles/reassembler_dup_sanitized.dir/reassembler_dup.cc.o
-[80/158] Building CXX object tests/CMakeFiles/wrapping_integers_roundtrip_sanitized.dir/wrapping_integers_roundtrip.cc.o
-[81/158] Linking CXX executable tests/wrapping_integers_extra_sanitized
-[82/158] Building CXX object tests/CMakeFiles/reassembler_holes.dir/reassembler_holes.cc.o
-[83/158] Building CXX object tests/CMakeFiles/wrapping_integers_extra.dir/wrapping_integers_extra.cc.o
-[84/158] Linking CXX executable tests/reassembler_overlapping
-[85/158] Linking CXX executable tests/reassembler_holes
-[86/158] Linking CXX executable tests/reassembler_dup_sanitized
-[87/158] Linking CXX executable tests/wrapping_integers_extra
-[88/158] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
-[89/158] Building CXX object tests/CMakeFiles/wrapping_integers_roundtrip.dir/wrapping_integers_roundtrip.cc.o
-[90/158] Building CXX object tests/CMakeFiles/reassembler_overlapping_sanitized.dir/reassembler_overlapping.cc.o
-[91/158] Building CXX object tests/CMakeFiles/reassembler_win.dir/reassembler_win.cc.o
-[92/158] Linking CXX executable tests/wrapping_integers_roundtrip
-[93/158] Linking CXX executable tests/reassembler_win
-[94/158] Linking CXX executable tests/reassembler_overlapping_sanitized
-[95/158] Building CXX object tests/CMakeFiles/reassembler_win_sanitized.dir/reassembler_win.cc.o
-[96/158] Linking CXX executable tests/reassembler_win_sanitized
-[97/158] Building CXX object tests/CMakeFiles/recv_connect_sanitized.dir/recv_connect.cc.o
-[98/158] Building CXX object tests/CMakeFiles/recv_window.dir/recv_window.cc.o
-[99/158] Building CXX object tests/CMakeFiles/recv_connect.dir/recv_connect.cc.o
-[100/158] Linking CXX executable tests/recv_window
-[101/158] Building CXX object tests/CMakeFiles/recv_reorder_more.dir/recv_reorder_more.cc.o
-[102/158] Linking CXX executable tests/recv_connect
-[103/158] Building CXX object tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o
-[104/158] Building CXX object tests/CMakeFiles/recv_reorder.dir/recv_reorder.cc.o
-[105/158] Building CXX object tests/CMakeFiles/recv_window_sanitized.dir/recv_window.cc.o
-[106/158] Linking CXX executable tests/recv_connect_sanitized
-[107/158] Linking CXX executable tests/recv_transmit
-[108/158] Building CXX object tests/CMakeFiles/recv_close.dir/recv_close.cc.o
-[109/158] Linking CXX executable tests/recv_reorder
-[110/158] Linking CXX executable tests/recv_reorder_more
-[111/158] Linking CXX executable tests/recv_close
-[112/158] Linking CXX executable tests/recv_window_sanitized
-[113/158] Building CXX object tests/CMakeFiles/recv_reorder_more_sanitized.dir/recv_reorder_more.cc.o
-[114/158] Building CXX object tests/CMakeFiles/recv_transmit_sanitized.dir/recv_transmit.cc.o
-[115/158] Building CXX object tests/CMakeFiles/send_transmit.dir/send_transmit.cc.o
-[116/158] Building CXX object tests/CMakeFiles/send_transmit_sanitized.dir/send_transmit.cc.o
-[117/158] Linking CXX executable tests/recv_transmit_sanitized
-[118/158] Linking CXX executable tests/send_transmit
-[119/158] Building CXX object tests/CMakeFiles/recv_close_sanitized.dir/recv_close.cc.o
-[120/158] Building CXX object tests/CMakeFiles/send_connect.dir/send_connect.cc.o
-[121/158] Linking CXX executable tests/recv_reorder_more_sanitized
-[122/158] Building CXX object tests/CMakeFiles/send_window.dir/send_window.cc.o
-[123/158] Building CXX object tests/CMakeFiles/recv_reorder_sanitized.dir/recv_reorder.cc.o
-[124/158] Building CXX object tests/CMakeFiles/send_connect_sanitized.dir/send_connect.cc.o
-[125/158] Linking CXX executable tests/send_connect
-[126/158] Linking CXX executable tests/send_window
-[127/158] Building CXX object tests/CMakeFiles/send_ack_sanitized.dir/send_ack.cc.o
-[128/158] Building CXX object tests/CMakeFiles/recv_special.dir/recv_special.cc.o
-[129/158] Linking CXX executable tests/send_transmit_sanitized
-[130/158] Linking CXX executable tests/recv_close_sanitized
-[131/158] Linking CXX executable tests/recv_reorder_sanitized
-[132/158] Linking CXX executable tests/recv_special
-[133/158] Linking CXX executable tests/send_connect_sanitized
-[134/158] Linking CXX executable tests/send_ack_sanitized
-[135/158] Building CXX object tests/CMakeFiles/send_ack.dir/send_ack.cc.o
-[136/158] Building CXX object tests/CMakeFiles/recv_special_sanitized.dir/recv_special.cc.o
-[137/158] Linking CXX executable tests/send_ack
-[138/158] Building CXX object tests/CMakeFiles/send_window_sanitized.dir/send_window.cc.o
-[139/158] Linking CXX executable tests/recv_special_sanitized
-[140/158] Linking CXX executable tests/send_window_sanitized
-[141/158] Building CXX object tests/CMakeFiles/no_skip_sanitized.dir/no_skip.cc.o
-[142/158] Building CXX object tests/CMakeFiles/send_close.dir/send_close.cc.o
-[143/158] Building CXX object tests/CMakeFiles/no_skip.dir/no_skip.cc.o
-[144/158] Linking CXX executable tests/no_skip_sanitized
-[145/158] Linking CXX executable tests/send_close
-[146/158] Linking CXX executable tests/no_skip
-[147/158] Building CXX object tests/CMakeFiles/send_close_sanitized.dir/send_close.cc.o
-[148/158] Building CXX object tests/CMakeFiles/send_retx.dir/send_retx.cc.o
-[149/158] Building CXX object tests/CMakeFiles/send_retx_sanitized.dir/send_retx.cc.o
-[150/158] Building CXX object apps/CMakeFiles/webget.dir/webget.cc.o
-[151/158] Linking CXX executable tests/send_retx
-[152/158] Linking CXX executable tests/send_close_sanitized
-[153/158] Linking CXX executable apps/webget
-[154/158] Linking CXX executable tests/send_retx_sanitized
-[155/158] Building CXX object tests/CMakeFiles/send_extra.dir/send_extra.cc.o
-[156/158] Linking CXX executable tests/send_extra
-[157/158] Building CXX object tests/CMakeFiles/send_extra_sanitized.dir/send_extra.cc.o
-[158/158] Linking CXX executable tests/send_extra_sanitized
+[2/71   1% :: 4.166] Building CXX object src/CMakeFiles/minnow_debug.dir/tcp_sender.cc.o
+[3/71   2% :: 4.271] Linking CXX static library src/libminnow_debug.a
+[24/71   4% :: 4.630] Linking CXX executable tests/wrapping_integers_unwrap
+[25/71   5% :: 4.636] Linking CXX executable tests/wrapping_integers_cmp
+[26/71   7% :: 4.659] Linking CXX executable tests/wrapping_integers_roundtrip
+[27/71   8% :: 4.678] Linking CXX executable tests/byte_stream_basics
+[28/71   9% :: 4.682] Linking CXX executable tests/byte_stream_many_writes
+[29/71  11% :: 4.688] Linking CXX executable tests/byte_stream_one_write
+[30/71  12% :: 4.689] Linking CXX executable tests/byte_stream_stress_test
+[31/71  14% :: 4.715] Linking CXX executable tests/byte_stream_two_writes
+[32/71  15% :: 4.734] Linking CXX executable tests/reassembler_cap
+[33/71  16% :: 4.738] Linking CXX executable tests/reassembler_dup
+[34/71  18% :: 4.745] Linking CXX executable tests/reassembler_single
+[35/71  19% :: 4.804] Linking CXX executable tests/wrapping_integers_extra
+[36/71  21% :: 4.831] Linking CXX executable tests/wrapping_integers_wrap
+[37/71  22% :: 4.842] Linking CXX executable tests/byte_stream_capacity
+[37/71  23% :: 4.866] Linking CXX executable tests/recv_connect
+[37/71  25% :: 4.873] Linking CXX executable tests/recv_transmit
+[37/71  26% :: 4.886] Linking CXX executable tests/reassembler_win
+[37/71  28% :: 4.954] Linking CXX executable tests/reassembler_seq
+[37/71  29% :: 4.957] Linking CXX executable tests/reassembler_overlapping
+[37/71  30% :: 5.018] Linking CXX executable tests/recv_window
+[37/71  32% :: 5.054] Linking CXX executable tests/reassembler_holes
+[37/71  33% :: 5.141] Linking CXX executable tests/recv_reorder
+[37/71  35% :: 5.183] Linking CXX executable tests/recv_reorder_more
+[37/71  36% :: 5.198] Linking CXX executable tests/no_skip
+[37/71  38% :: 5.217] Linking CXX executable tests/send_transmit
+[37/71  39% :: 5.243] Linking CXX executable tests/send_close
+[37/71  40% :: 5.244] Linking CXX executable tests/send_connect
+[37/71  42% :: 5.255] Linking CXX executable tests/send_ack
+[37/71  43% :: 5.255] Linking CXX executable tests/send_window
+[37/71  45% :: 5.270] Linking CXX executable tests/recv_special
+[37/71  46% :: 5.315] Linking CXX executable tests/recv_close
+[37/71  47% :: 5.315] Linking CXX executable tests/send_retx
+[37/71  49% :: 5.316] Linking CXX executable tests/send_extra
+[37/71  50% :: 5.484] Linking CXX executable apps/webget
+[37/71  52% :: 5.918] Building CXX object src/CMakeFiles/minnow_sanitized.dir/tcp_sender.cc.o
+[38/71  53% :: 6.025] Linking CXX static library src/libminnow_sanitized.a
+[60/71  54% :: 6.873] Linking CXX executable tests/wrapping_integers_cmp_sanitized
+[61/71  56% :: 6.950] Linking CXX executable tests/wrapping_integers_wrap_sanitized
+[62/71  57% :: 6.961] Linking CXX executable tests/byte_stream_one_write_sanitized
+[63/71  59% :: 7.021] Linking CXX executable tests/recv_connect_sanitized
+[64/71  60% :: 7.057] Linking CXX executable tests/recv_window_sanitized
+[65/71  61% :: 7.063] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
+[66/71  63% :: 7.065] Linking CXX executable tests/byte_stream_capacity_sanitized
+[67/71  64% :: 7.113] Linking CXX executable tests/byte_stream_two_writes_sanitized
+[68/71  66% :: 7.140] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
+[69/71  67% :: 7.143] Linking CXX executable tests/reassembler_cap_sanitized
+[70/71  69% :: 7.155] Linking CXX executable tests/reassembler_seq_sanitized
+[71/71  70% :: 7.157] Linking CXX executable tests/reassembler_win_sanitized
+[71/71  71% :: 7.166] Linking CXX executable tests/recv_transmit_sanitized
+[71/71  73% :: 7.196] Linking CXX executable tests/reassembler_dup_sanitized
+[71/71  74% :: 7.221] Linking CXX executable tests/recv_reorder_sanitized
+[71/71  76% :: 7.237] Linking CXX executable tests/byte_stream_many_writes_sanitized
+[71/71  77% :: 7.242] Linking CXX executable tests/reassembler_holes_sanitized
+[71/71  78% :: 7.361] Linking CXX executable tests/reassembler_single_sanitized
+[71/71  80% :: 7.434] Linking CXX executable tests/wrapping_integers_extra_sanitized
+[71/71  81% :: 7.442] Linking CXX executable tests/reassembler_overlapping_sanitized
+[71/71  83% :: 7.461] Linking CXX executable tests/byte_stream_stress_test_sanitized
+[71/71  84% :: 7.516] Linking CXX executable tests/byte_stream_basics_sanitized
+[71/71  85% :: 7.980] Linking CXX executable tests/recv_reorder_more_sanitized
+[71/71  87% :: 8.053] Linking CXX executable tests/no_skip_sanitized
+[71/71  88% :: 8.053] Linking CXX executable tests/recv_special_sanitized
+[71/71  90% :: 8.069] Linking CXX executable tests/send_window_sanitized
+[71/71  91% :: 8.074] Linking CXX executable tests/send_transmit_sanitized
+[71/71  92% :: 8.101] Linking CXX executable tests/send_ack_sanitized
+[71/71  94% :: 8.110] Linking CXX executable tests/send_close_sanitized
+[71/71  95% :: 8.128] Linking CXX executable tests/send_connect_sanitized
+[71/71  97% :: 8.174] Linking CXX executable tests/recv_close_sanitized
+[71/71  98% :: 8.183] Linking CXX executable tests/send_extra_sanitized
+[71/71 100% :: 8.185] Linking CXX executable tests/send_retx_sanitized
 <end of output>
-Test time =  12.39 sec
+Test time =   8.23 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: May 13 01:21 CST
-"compile with bug-checkers" time elapsed: 00:00:12
+"compile with bug-checkers" end time: May 13 16:03 CST
+"compile with bug-checkers" time elapsed: 00:00:08
 ----------------------------------------------------------
 
-2/40 Testing: t_webget
-2/40 Test: t_webget
-Command: "/home/yukinisakuhana/program/cs144/tests/webget_t.sh" "/home/yukinisakuhana/program/cs144/cmake-build"
+3/40 Testing: byte_stream_basics
+3/40 Test: byte_stream_basics
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_basics_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"t_webget" start time: May 13 01:21 CST
+"byte_stream_basics" start time: May 13 16:03 CST
 Output:
 ----------------------------------------------------------
-DEBUG: minnow connecting to 104.196.238.229:80...
-DEBUG: seq = 137 , isn_ = 137 , windowsize = 1 , 0 bytes remained
-DEBUG: len = 0 , seq = 0 , isn_ = 0 , payload =  ,FIN = false ,reader_is_finished = false ,window_size = 1
-DEBUG: msgq.size = 1
-DEBUG: now window_size = 0
-DEBUG: index = 0 , data =  , FIN = false 
-
-DEBUG: bytes pushed 0
-
-DEBUG: seq = 137 , size = 1
-DEBUG: seq = 138 , isn_ = 137 , windowsize = 65280 , 0 bytes remained
-DEBUG: minnow successfully connected to 104.196.238.229:80.
-DEBUG: seq = 138 , isn_ = 137 , windowsize = 65280 , 76 bytes remained
-DEBUG: len = 1000 , seq = 1 , isn_ = 0 , payload = GET /nph-hasher/xyzzy HTTP/1.1
-Host: cs144.keithw.org
-Connection:close
-
- ,FIN = false ,reader_is_finished = false ,window_size = 65280
-DEBUG: msgq.size = 1
-DEBUG: now window_size = 65204
-DEBUG: time = 1 ,RTO = 100 ,initial = 100
-DEBUG: index = 0 , data =  , FIN = false 
-
-DEBUG: bytes pushed 0
-
-DEBUG: seq = 138 , size = 76
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65204 , 0 bytes remained
-DEBUG: index = 0 , data = HTTP/1.1 200 OK
- , FIN = false 
-
-DEBUG: bytes pushed 16
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-DEBUG: index = 16 , data = Content-type: text/plain
- , FIN = false 
-
-DEBUG: bytes pushed 41
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-HTTP/1.1 200 OK
-DEBUG: index = 41 , data = 
-7 , FIN = false 
-
-DEBUG: bytes pushed 43
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-Content-type: text/plain
-DEBUG: index = 43 , data = S , FIN = false 
-
-DEBUG: bytes pushed 44
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-
-7DEBUG: index = 44 , data = m , FIN = false 
-
-DEBUG: bytes pushed 45
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-SDEBUG: index = 45 , data = X , FIN = false 
-
-DEBUG: bytes pushed 46
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-mDEBUG: index = 46 , data = q , FIN = false 
-
-DEBUG: bytes pushed 47
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-XDEBUG: index = 47 , data = W , FIN = false 
-
-DEBUG: bytes pushed 48
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-qDEBUG: index = 48 , data = k , FIN = false 
-
-DEBUG: bytes pushed 49
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-WDEBUG: index = 49 , data = r , FIN = false 
-
-DEBUG: bytes pushed 50
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-kDEBUG: index = 50 , data = L , FIN = false 
-
-DEBUG: bytes pushed 51
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-rDEBUG: index = 51 , data = K , FIN = false 
-
-DEBUG: bytes pushed 52
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-LDEBUG: index = 52 , data = z , FIN = false 
-
-DEBUG: bytes pushed 53
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-KDEBUG: index = 53 , data = V , FIN = false 
-
-DEBUG: bytes pushed 54
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-zDEBUG: index = 54 , data = B , FIN = false 
-
-DEBUG: bytes pushed 55
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-VDEBUG: index = 55 , data = C , FIN = false 
-
-DEBUG: bytes pushed 56
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-BDEBUG: index = 56 , data = E , FIN = false 
-
-DEBUG: bytes pushed 57
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-CDEBUG: index = 57 , data = a , FIN = false 
-
-DEBUG: bytes pushed 58
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-EDEBUG: index = 58 , data = l , FIN = false 
-
-DEBUG: bytes pushed 59
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-aDEBUG: index = 59 , data = b , FIN = false 
-
-DEBUG: bytes pushed 60
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-lDEBUG: index = 60 , data = S , FIN = false 
-
-DEBUG: bytes pushed 61
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-bDEBUG: index = 61 , data = P , FIN = false 
-
-DEBUG: bytes pushed 62
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-SDEBUG: index = 62 , data = q , FIN = false 
-
-DEBUG: bytes pushed 63
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-PDEBUG: index = 63 , data = B , FIN = false 
-
-DEBUG: bytes pushed 64
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-qDEBUG: index = 64 , data = c , FIN = false 
-
-DEBUG: bytes pushed 65
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-BDEBUG: index = 65 , data = v , FIN = false 
-
-DEBUG: bytes pushed 66
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-cDEBUG: index = 66 , data = s , FIN = false 
-
-DEBUG: bytes pushed 67
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-vDEBUG: index = 67 , data = 1 , FIN = false 
-
-DEBUG: bytes pushed 68
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-sDEBUG: index = 68 , data = 1 , FIN = false 
-
-DEBUG: bytes pushed 69
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-1DEBUG: index = 69 , data = P , FIN = false 
-
-DEBUG: bytes pushed 70
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-1DEBUG: index = 70 , data = w , FIN = false 
-
-DEBUG: bytes pushed 71
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-PDEBUG: index = 71 , data = 2 , FIN = false 
-
-DEBUG: bytes pushed 72
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-wDEBUG: index = 72 , data = 6 , FIN = false 
-
-DEBUG: bytes pushed 73
-
-2DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-DEBUG: index = 73 , data = 3 , FIN = false 
-
-DEBUG: bytes pushed 74
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-6DEBUG: index = 74 , data = K , FIN = false 
-
-DEBUG: bytes pushed 75
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-3DEBUG: index = 75 , data = 7 , FIN = false 
-
-DEBUG: bytes pushed 76
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-KDEBUG: index = 76 , data = x , FIN = false 
-
-DEBUG: bytes pushed 77
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-7DEBUG: index = 77 , data = 4 , FIN = false 
-
-DEBUG: bytes pushed 78
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-xDEBUG: index = 78 , data = W , FIN = false 
-
-DEBUG: bytes pushed 79
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-4DEBUG: index = 79 , data = v , FIN = false 
-
-DEBUG: bytes pushed 80
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-WDEBUG: index = 80 , data = 3 , FIN = false 
-
-DEBUG: bytes pushed 81
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-vDEBUG: index = 81 , data = J , FIN = false 
-
-DEBUG: bytes pushed 82
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-3DEBUG: index = 82 , data = c , FIN = false 
-
-DEBUG: bytes pushed 83
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-JDEBUG: index = 83 , data = k , FIN = false 
-
-DEBUG: bytes pushed 84
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-cDEBUG: index = 84 , data = I , FIN = false 
-
-DEBUG: bytes pushed 85
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-kDEBUG: index = 85 , data = 
- , FIN = false 
-
-DEBUG: bytes pushed 86
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-IDEBUG: index = 86 , data =  , FIN = true 
-
-DEBUG: closed: 
-DEBUG: bytes pushed 86
-
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-DEBUG: minnow inbound stream from 104.196.238.229:80DEBUG: minnow waiting for clean shutdown...  finished cleanly.
-DEBUG: minnow outbound stream to 104.196.238.229:80 finished (0 seqnos still in flight).
-DEBUG: seq = 214 , isn_ = 137 , windowsize = 65535 , 0 bytes remained
-DEBUG: len = 1000 , seq = 77 , isn_ = 0 , payload =  ,FIN = true ,reader_is_finished = true ,window_size = 65535
-DEBUG: msgq.size = 1
-
-DEBUG: minnow TCP connection finished cleanly.
-done.
 <end of output>
-Test time =  11.36 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"t_webget" end time: May 13 01:21 CST
-"t_webget" time elapsed: 00:00:11
+"byte_stream_basics" end time: May 13 16:03 CST
+"byte_stream_basics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 13 01:21 CST
+4/40 Testing: byte_stream_capacity
+4/40 Test: byte_stream_capacity
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_capacity_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_capacity" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_capacity" end time: May 13 16:03 CST
+"byte_stream_capacity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/40 Testing: byte_stream_one_write
+5/40 Test: byte_stream_one_write
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_one_write_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_one_write" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_one_write" end time: May 13 16:03 CST
+"byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/40 Testing: byte_stream_two_writes
+6/40 Test: byte_stream_two_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_two_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_two_writes" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_two_writes" end time: May 13 16:03 CST
+"byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/40 Testing: byte_stream_many_writes
+7/40 Test: byte_stream_many_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_many_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_many_writes" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_many_writes" end time: May 13 16:03 CST
+"byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/40 Testing: byte_stream_stress_test
+8/40 Test: byte_stream_stress_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_stress_test_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_stress_test" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_stress_test" end time: May 13 16:03 CST
+"byte_stream_stress_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/40 Testing: reassembler_single
+9/40 Test: reassembler_single
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_single_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_single" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_single" end time: May 13 16:03 CST
+"reassembler_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/40 Testing: reassembler_cap
+10/40 Test: reassembler_cap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_cap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_cap" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_cap" end time: May 13 16:03 CST
+"reassembler_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/40 Testing: reassembler_seq
+11/40 Test: reassembler_seq
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_seq_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_seq" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_seq" end time: May 13 16:03 CST
+"reassembler_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/40 Testing: reassembler_dup
+12/40 Test: reassembler_dup
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_dup_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_dup" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_dup" end time: May 13 16:03 CST
+"reassembler_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/40 Testing: reassembler_holes
+13/40 Test: reassembler_holes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_holes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_holes" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_holes" end time: May 13 16:03 CST
+"reassembler_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/40 Testing: reassembler_overlapping
+14/40 Test: reassembler_overlapping
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_overlapping_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_overlapping" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_overlapping" end time: May 13 16:03 CST
+"reassembler_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/40 Testing: reassembler_win
+15/40 Test: reassembler_win
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_win_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_win" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.15 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_win" end time: May 13 16:03 CST
+"reassembler_win" time elapsed: 00:00:01
+----------------------------------------------------------
+
+16/40 Testing: wrapping_integers_cmp
+16/40 Test: wrapping_integers_cmp
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_cmp_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_cmp" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_cmp" end time: May 13 16:03 CST
+"wrapping_integers_cmp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/40 Testing: wrapping_integers_wrap
+17/40 Test: wrapping_integers_wrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_wrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_wrap" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_wrap" end time: May 13 16:03 CST
+"wrapping_integers_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/40 Testing: wrapping_integers_unwrap
+18/40 Test: wrapping_integers_unwrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_unwrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_unwrap" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_unwrap" end time: May 13 16:03 CST
+"wrapping_integers_unwrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/40 Testing: wrapping_integers_roundtrip
+19/40 Test: wrapping_integers_roundtrip
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_roundtrip_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_roundtrip" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.70 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_roundtrip" end time: May 13 16:03 CST
+"wrapping_integers_roundtrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/40 Testing: wrapping_integers_extra
+20/40 Test: wrapping_integers_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_extra" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.40 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_extra" end time: May 13 16:03 CST
+"wrapping_integers_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/40 Testing: recv_connect
+21/40 Test: recv_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_connect" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"recv_connect" end time: May 13 16:03 CST
+"recv_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/40 Testing: recv_transmit
+22/40 Test: recv_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_transmit" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.58 sec
+----------------------------------------------------------
+Test Passed.
+"recv_transmit" end time: May 13 16:03 CST
+"recv_transmit" time elapsed: 00:00:01
+----------------------------------------------------------
+
+23/40 Testing: recv_window
+23/40 Test: recv_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_window" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"recv_window" end time: May 13 16:03 CST
+"recv_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/40 Testing: recv_reorder
+24/40 Test: recv_reorder
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder" end time: May 13 16:03 CST
+"recv_reorder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/40 Testing: recv_reorder_more
+25/40 Test: recv_reorder_more
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_more_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder_more" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.86 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder_more" end time: May 13 16:03 CST
+"recv_reorder_more" time elapsed: 00:00:03
+----------------------------------------------------------
+
+26/40 Testing: recv_close
+26/40 Test: recv_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_close" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"recv_close" end time: May 13 16:03 CST
+"recv_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/40 Testing: recv_special
+27/40 Test: recv_special
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_special_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_special" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"recv_special" end time: May 13 16:03 CST
+"recv_special" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/40 Testing: send_connect
+28/40 Test: send_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_connect" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"send_connect" end time: May 13 16:03 CST
+"send_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/40 Testing: send_transmit
+29/40 Test: send_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_transmit" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.57 sec
+----------------------------------------------------------
+Test Passed.
+"send_transmit" end time: May 13 16:03 CST
+"send_transmit" time elapsed: 00:00:02
+----------------------------------------------------------
+
+30/40 Testing: send_window
+30/40 Test: send_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_window" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.44 sec
+----------------------------------------------------------
+Test Passed.
+"send_window" end time: May 13 16:03 CST
+"send_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/40 Testing: send_ack
+31/40 Test: send_ack
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_ack_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_ack" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"send_ack" end time: May 13 16:03 CST
+"send_ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/40 Testing: send_close
+32/40 Test: send_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_close" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"send_close" end time: May 13 16:03 CST
+"send_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/40 Testing: send_retx
+33/40 Test: send_retx
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_retx_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_retx" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"send_retx" end time: May 13 16:03 CST
+"send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/40 Testing: send_extra
+34/40 Test: send_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_extra" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"send_extra" end time: May 13 16:03 CST
+"send_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/40 Testing: no_skip
+37/40 Test: no_skip
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/no_skip_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"no_skip" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"no_skip" end time: May 13 16:03 CST
+"no_skip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/40 Testing: compile with optimization
+38/40 Test: compile with optimization
+Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "speed_testing"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"compile with optimization" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+[2/5  20% :: 3.248] Building CXX object src/CMakeFiles/minnow_optimized.dir/tcp_sender.cc.o
+[2/5  40% :: 7.769] Building CXX object src/CMakeFiles/minnow_optimized.dir/tcp_minnow_socket.cc.o
+[3/5  60% :: 7.874] Linking CXX static library src/libminnow_optimized.a
+[5/5  80% :: 8.124] Linking CXX executable tests/reassembler_speed_test
+[5/5 100% :: 8.129] Linking CXX executable tests/byte_stream_speed_test
+<end of output>
+Test time =   8.18 sec
+----------------------------------------------------------
+Test Passed.
+"compile with optimization" end time: May 13 16:03 CST
+"compile with optimization" time elapsed: 00:00:08
+----------------------------------------------------------
+
+39/40 Testing: byte_stream_speed_test
+39/40 Test: byte_stream_speed_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_speed_test"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_speed_test" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+ByteStream with capacity=32768, write_size=1500, read_size=4096 reached 6.08 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=128 reached 6.66 Gbit/s.
+ByteStream with capacity=32768, write_size=1500, read_size=32 reached 5.63 Gbit/s.
+<end of output>
+Test time =   0.68 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_speed_test" end time: May 13 16:03 CST
+"byte_stream_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/40 Testing: reassembler_speed_test
+40/40 Test: reassembler_speed_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_speed_test"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_speed_test" start time: May 13 16:03 CST
+Output:
+----------------------------------------------------------
+Reassembler to ByteStream with capacity=32768 reached 37.87 Gbit/s.
+Reassembler to ByteStream with capacity=32768 reached 4.13 Gbit/s.
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_speed_test" end time: May 13 16:03 CST
+"reassembler_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 13 16:03 CST

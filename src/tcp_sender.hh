@@ -30,6 +30,7 @@ public:
 
   /* Time has passed by the given # of milliseconds since the last time the tick() method was called */
   void tick( uint64_t ms_since_last_tick, const TransmitFunction& transmit );
+  
 
   // Accessors
   uint64_t sequence_numbers_in_flight() const;  // For testing: how many sequence numbers are outstanding?
@@ -93,11 +94,13 @@ private:
   Wrap32 isn_;
   uint64_t initial_RTO_ms_;
   uint16_t window_size{1};
+  uint64_t windowSize{1};
   Wrap32 seq;
   uint64_t windowLeft=0;
   std::queue<TCPSenderMessage> msgq{};
   uint64_t retransmissions=0;
   RetransmissionTimer timer;
+  std::optional<bool> is_connected=std::nullopt;
   std::optional<bool> is_closed=std::nullopt;
   bool recvZero=false;
 };
