@@ -1,5 +1,4 @@
 #include "wrapping_integers.hh"
-#include "debug.hh"
 #include <climits>
 #include <cstdint>
 

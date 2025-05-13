@@ -1,5 +1,4 @@
 #include "tcp_receiver.hh"
-#include "debug.hh"
 #include "wrapping_integers.hh"
 #include <cstdint>
 #include <optional>
@@ -21,7 +20,6 @@ void TCPReceiver::receive( TCPSenderMessage message )
                            - static_cast<uint64_t>( !message.SYN ),
                          std::move( message.payload ),
                          message.FIN );
-    debug( "bytes pushed {}\n", writer().bytes_pushed() );
   }
 }
 

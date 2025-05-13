@@ -1,5 +1,4 @@
 #include "reassembler.hh"
-#include "debug.hh"
 #include <cassert>
 #include <iterator>
 
@@ -38,7 +37,6 @@ bool Reassembler::newinserthelp( uint64_t first_index, std::string& data )
 }
 void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_substring )
 {
-  debug( "index = {} , data = {} , FIN = {} \n", first_index, data, is_last_substring );
   uint64_t Firstunaccept = ( output_.writer().bytes_pushed() + writer().available_capacity() );
   const auto checkclose = [&]() {
     if (
@@ -46,7 +44,6 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
       && unassembled
            .empty() ) { // 如果已经没有被assemble的数据报，并且我知道已经有了最后一个子串，那么就要关闭我们的写端了（或者说，in_bound)
       output_.writer().close();
-      debug( "closed: {}", data );
     }
   };
   if ( writer().is_closed() || first_index >= Firstunaccept
