@@ -1,0 +1,11 @@
+digraph FdAdapterBase {
+  node [shape=record, fontname="Courier New"];
+
+  FdAdapterBase [
+    label="{FdAdapterBase|
+{Private Members|_cfg : FdAdapterConfig = {}\l_listen : bool = false\l}|
+{Protected Members|config_mutable() : FdAdapterConfig&\l}|
+{Public Members|set_listening(l: bool) : void\llistening() const : bool\lconfig() const : const FdAdapterConfig&\lconfig_mut() : FdAdapterConfig&\\ltick(unused: size_t) : void\\l}
+}"
+  ];
+}

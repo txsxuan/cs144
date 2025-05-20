@@ -5,32 +5,6 @@
 最后选择在wsl中，使用llvm16工具链，主要用到了clang-16,clang++-16,clang-tidy-16,clang-format-16
 ## 为wsl设置代理
 这也折腾死我了，最后想了个办法，直接下一个xray，写写配置文件就行，easy
-## 阅读代码
-按照文档要求，需要阅读utils目录下的代码
-* file_descriptor.hh<br />
-    这就是一个封装好的文件描述符，基本上是把原来的c系统调用包装成了c++类，其中最值得我学习的是以下几点
-    * fcntl函数<br />
-    file control，一般用来获取与文件相关的信息或者设置相关信息。原型是     int fcntl(int fd, int cmd, ... /* arg */ );
-        * fd: linux的文件描述符
-        * cmd:命令，可以设置文件或者获取文件相关的信息，支持的操作有很多，在这个文件里主要使用的是fcntl( fd, F_GETFL )，意思是获取文件相关的标志位。同理，将F_GETFL 改为F_SETFL就是设置相关的标志位，比如可以让文件是阻塞模式，也可以不是。 
-
-    * 一种神奇的写法<br />
-        想起之前阅读一个sdl的项目时发现的，一些大佬们喜欢在一个类里面方一个智能指针私有变量,这个智能指针可以用来实现RAII，又可以保证接口的灵活性，十分实用。
-
-* socket.hh<br />
-同样的是对c系统调用的包装。看代码会发现socket继承于FileDescriptor类
-    * extern int socket (int __domain, int __type, int __protocol)<br />
-    这是glibc中对linux系统调用的封装，主要接收三个参数。第一个用来指示协议族,例如AF_INET（IPv4）、AF_INET6（IPv6）、AF_UNIX（本地 Unix 套接字）<br />
-    第二个用来标识套接字类型，可以是SOCK_STREAM（TCP 流式套接字）或者SOCK_DGRAM（UDP 数据报套接字）。<br />
-    第三个参数用来表示协议类型，通常为0，默认匹配。
-    * extern int shutdown (int __fd, int __how) __THROW;<br />
-
-    | `__how` | 宏定义 | 作用 |
-    |------------|----------------|-------------------------------|
-    | `0` | `SHUT_RD` | 关闭**读取**方向，不能再接收数据，但仍可发送数据 |
-    | `1` | `SHUT_WR` | 关闭**写入**方向，不能再发送数据，但仍可接收数据 |
-    | `2` | `SHUT_RDWR` | 关闭**读写**方向，完全断开连接 |
-    * 
 ## 编写webget
 * http文件头要求结尾必须是"\r\n"
 * 需要使用address，而框架代码支持一种用主机+端口的方式传入，由于会调用getaddrinfo，它要求第二个参数也就是端口号必须是字符串类型，这里比较坑
@@ -116,8 +90,85 @@ in mind that SYN and FIN aren’t part of the stream itself and aren’t “byte
 * 规定当窗口是满的时候，不能发送FIN（实际上和第一点相同），但是这里钻了个空子，那就是
 
 > 2025-05-13 10:36 by nanaku
+
 发现很多问题，有很多隐含的条件其实没有提到，比较担心
-* 
 
+# 阅读代码
+按照文档要求，需要阅读utils目录下的代码
+* file_descriptor.hh<br />
+    这就是一个封装好的文件描述符，基本上是把原来的c系统调用包装成了c++类，其中最值得我学习的是以下几点
+    * fcntl函数<br />
+    file control，一般用来获取与文件相关的信息或者设置相关信息。原型是     int fcntl(int fd, int cmd, ... /* arg */ );
+        * fd: linux的文件描述符
+        * cmd:命令，可以设置文件或者获取文件相关的信息，支持的操作有很多，在这个文件里主要使用的是fcntl( fd, F_GETFL )，意思是获取文件相关的标志位。同理，将F_GETFL 改为F_SETFL就是设置相关的标志位，比如可以让文件是阻塞模式，也可以不是。 
 
+    * 一种神奇的写法<br />
+        想起之前阅读一个sdl的项目时发现的，一些大佬们喜欢在一个类里面方一个智能指针私有变量,这个智能指针可以用来实现RAII，又可以保证接口的灵活性，十分实用。
 
+* socket.hh<br />
+同样的是对c系统调用的包装。看代码会发现socket继承于FileDescriptor类
+    * extern int socket (int __domain, int __type, int __protocol)<br />
+    这是glibc中对linux系统调用的封装，主要接收三个参数。第一个用来指示协议族,例如AF_INET（IPv4）、AF_INET6（IPv6）、AF_UNIX（本地 Unix 套接字）<br />
+    第二个用来标识套接字类型，可以是SOCK_STREAM（TCP 流式套接字）或者SOCK_DGRAM（UDP 数据报套接字）。<br />
+    第三个参数用来表示协议类型，通常为0，默认匹配。
+    * extern int shutdown (int __fd, int __how) __THROW;<br />
+
+    | `__how` | 宏定义 | 作用 |
+    |------------|----------------|-------------------------------|
+    | `0` | `SHUT_RD` | 关闭**读取**方向，不能再接收数据，但仍可发送数据 |
+    | `1` | `SHUT_WR` | 关闭**写入**方向，不能再发送数据，但仍可接收数据 |
+    | `2` | `SHUT_RDWR` | 关闭**读写**方向，完全断开连接 |
+
+> 2025-05-19 19:26 by nanaku
+    
+* ref.hh<br />
+    阅读了一下，是一个类似智能指针但是有超过智能指针的设计，Ref既可以是borrow一个对象（类似const引用），也可以own一个对象，这就需要做检查，Ref<T>的T必须要
+    ```Cpp
+    static_assert( std::is_nothrow_move_constructible_v<T> );
+    static_assert( std::is_nothrow_move_assignable_v<T> );
+    ```
+    很神奇的默认构造
+    ```Cpp
+    Ref()requires std::default_initializable<T>
+        : obj_( std::in_place )
+    {}
+    ```
+* lossy_fd_adapter.hh
+```dot
+digraph FdAdapterBase {
+  node [shape=record, fontname="Courier New"];
+
+  FdAdapterBase [
+    label="{FdAdapterBase|
+{Private |
+  FdAdapterConfig _cfg \{\}\l
+  bool _listen = false\l
+}|
+{Protected |
+  FdAdapterConfig& config_mutable()\l
+}|
+{Public |
+  void set_listening(const bool)\l
+  bool listening() const\l
+  const FdAdapterConfig& config() const\l
+  FdAdapterConfig& config_mut()\l
+  void tick(const size_t [[unused]])\l
+}
+}"
+  ];
+}
+```
+
+> 2025-05-20 16:22 by nanaku
+* socket pair
+    unix socket不光可以网络通信，甚至可以实现进程间通信。使用的时候创建一对socket（并把他们绑定起来），这时候需要通信的进程就可以分别在两边各自读写，这种通信方式是“全双工”的，其流程和网络通信其实差不多。如果想用管道通信来实现双向通信的话，那就只能用两个或者多个管道了。
+* thread
+* class TCPMinnowSocket
+    1. 该类别看名字是Socket，实际上在本例中只是一个前端，提供了默认构造，connect，listen_and_accept等，实际上完成多线程的工作的是后端TCPpeer，它封装了一系列我们之前写的代码，将TCPSender和TCPReceiver结合在了一起；
+    2. 该Socket相当于unix的socket api，它继承自前文提到的文件描述符类；
+    3. 该类的私有成员就很丰富了，真正涉及了框架代码的核心：
+        * 当用户使用上述的接口之一建立TCP连接时，它会初始化一些配置（实际上是初始化TCPpeer），初始化一些规则如果tcp是客户端，它会发送一个SYN（向服务端请求建立连接）
+
+# 感悟
+1. 个人觉得这个实验的后面一部分已经没有那么重要了（至少没有框架代码重要），重心应该落在如何读懂并写差不多优雅的框架上
+2. 应该早点写完，早点接着看和理解代码，提升自己
