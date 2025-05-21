@@ -97,6 +97,7 @@ void NetworkInterface::recv_frame( EthernetFrame frame )
                                     transmit(move(it2->second.front()));
                                     it2->second.pop();
                                 }
+                                frame_in_stand.erase(it2);
                             }
                         }
                     }
