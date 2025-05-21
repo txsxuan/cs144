@@ -35,8 +35,8 @@
 			}
 		]
 	},
-	"id" : "check4::@6890427a1f51a3e7e1df",
-	"name" : "check4",
+	"id" : "check3::@6890427a1f51a3e7e1df",
+	"name" : "check3",
 	"paths" : 
 	{
 		"build" : ".",
@@ -64,13 +64,13 @@
 		{
 			"backtrace" : 3,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/check4",
+			"path" : "cmake-build/CMakeFiles/check3",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/check4.rule",
+			"path" : "cmake-build/CMakeFiles/check3.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

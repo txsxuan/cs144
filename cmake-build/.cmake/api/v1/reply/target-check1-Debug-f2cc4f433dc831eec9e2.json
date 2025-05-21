@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 65,
+				"line" : 69,
 				"parent" : 2
 			}
 		]
 	},
-	"id" : "check_webget::@6890427a1f51a3e7e1df",
-	"name" : "check_webget",
+	"id" : "check1::@6890427a1f51a3e7e1df",
+	"name" : "check1",
 	"paths" : 
 	{
 		"build" : ".",
@@ -64,13 +64,13 @@
 		{
 			"backtrace" : 3,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/check_webget",
+			"path" : "cmake-build/CMakeFiles/check1",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/check_webget.rule",
+			"path" : "cmake-build/CMakeFiles/check1.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

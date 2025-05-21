@@ -65,6 +65,12 @@
 			"id" : "tidy_src__byte_stream_helpers.cc::@6890427a1f51a3e7e1df"
 		},
 		{
+			"id" : "tidy_src__network_interface.cc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_src__network_interface.hh::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "tidy_src__reassembler.cc::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -123,6 +129,12 @@
 		},
 		{
 			"id" : "tidy_tests__conversions.hh::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_tests__net_interface.cc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_tests__network_interface_test_harness.hh::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "tidy_tests__no_skip.cc::@6890427a1f51a3e7e1df"
@@ -227,6 +239,12 @@
 			"id" : "tidy_util__address.hh::@6890427a1f51a3e7e1df"
 		},
 		{
+			"id" : "tidy_util__arp_message.cc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_util__arp_message.hh::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "tidy_util__checksum.hh::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -234,6 +252,15 @@
 		},
 		{
 			"id" : "tidy_util__debug.hh::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_util__ethernet_frame.hh::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_util__ethernet_header.cc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_util__ethernet_header.hh::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "tidy_util__eventloop.cc::@6890427a1f51a3e7e1df"

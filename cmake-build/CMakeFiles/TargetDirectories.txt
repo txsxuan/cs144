@@ -8,6 +8,8 @@
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__byte_stream.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__byte_stream.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__byte_stream_helpers.cc.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__network_interface.cc.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__network_interface.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__reassembler.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__reassembler.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_src__tcp_minnow_socket.cc.dir
@@ -28,6 +30,8 @@
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__common.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__common.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__conversions.hh.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__net_interface.cc.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__network_interface_test_harness.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__no_skip.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__reassembler_cap.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__reassembler_dup.cc.dir
@@ -62,9 +66,14 @@
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_tests__wrapping_integers_wrap.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__address.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__address.hh.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__arp_message.cc.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__arp_message.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__checksum.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__debug.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__debug.hh.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__ethernet_frame.hh.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__ethernet_header.cc.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__ethernet_header.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__eventloop.cc.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__eventloop.hh.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/tidy_util__exception.hh.dir
@@ -130,12 +139,13 @@
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/ContinuousMemCheck.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/ContinuousSubmit.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check0.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check_byte_stream.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check_webget.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check1.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check2.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check3.dir
-/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check4.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check5.dir
+/home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/check6.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/speed.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/test.dir
 /home/yukinisakuhana/program/cs144/cmake-build/CMakeFiles/edit_cache.dir
@@ -220,6 +230,8 @@
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/send_retx.dir
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/send_extra_sanitized.dir
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/send_extra.dir
+/home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/net_interface_sanitized.dir
+/home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/net_interface.dir
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/no_skip_sanitized.dir
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/no_skip.dir
 /home/yukinisakuhana/program/cs144/cmake-build/tests/CMakeFiles/byte_stream_speed_test.dir

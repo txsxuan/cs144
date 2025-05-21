@@ -616,6 +616,24 @@
 				"file" : 0,
 				"line" : 22,
 				"parent" : 98
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 72,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 101
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 101
 			}
 		]
 	},
@@ -879,10 +897,18 @@
 		},
 		{
 			"backtrace" : 99,
-			"id" : "no_skip_sanitized::@a44f0ac069e85531cdee"
+			"id" : "net_interface_sanitized::@a44f0ac069e85531cdee"
 		},
 		{
 			"backtrace" : 100,
+			"id" : "net_interface::@a44f0ac069e85531cdee"
+		},
+		{
+			"backtrace" : 102,
+			"id" : "no_skip_sanitized::@a44f0ac069e85531cdee"
+		},
+		{
+			"backtrace" : 103,
 			"id" : "no_skip::@a44f0ac069e85531cdee"
 		}
 	],

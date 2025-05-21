@@ -2,11 +2,14 @@
 
 #include "address.hh"
 #include "ethernet_frame.hh"
+#include "ethernet_header.hh"
 #include "ipv4_datagram.hh"
 
+#include <cstddef>
+#include <cstdint>
 #include <memory>
 #include <queue>
-
+#include <unordered_map>
 // A "network interface" that connects IP (the internet layer, or network layer)
 // with Ethernet (the network access layer, or link layer).
 
@@ -67,6 +70,13 @@ public:
   std::queue<InternetDatagram>& datagrams_received() { return datagrams_received_; }
 
 private:
+    struct ARPItem{
+        EthernetAddress MAC{};
+        size_t TTL{};
+    };
+    using ARP_TPYE=std::unordered_map<uint32_t, ARPItem>;
+    ARP_TPYE arpTabel{};
+    std::unordered_map<uint32_t, std::queue<EthernetFrame>> frame_in_stand{};
   // Human-readable name of the interface
   std::string name_;
 
@@ -79,7 +89,7 @@ private:
 
   // IP (known as internet-layer or network-layer) address of the interface
   Address ip_address_;
-
+    size_t ms_since_construct{};
   // Datagrams that have been received
   std::queue<InternetDatagram> datagrams_received_ {};
 };

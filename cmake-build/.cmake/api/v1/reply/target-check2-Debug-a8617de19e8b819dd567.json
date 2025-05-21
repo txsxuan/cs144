@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 79,
+				"line" : 71,
 				"parent" : 2
 			}
 		]
 	},
-	"id" : "speed::@6890427a1f51a3e7e1df",
-	"name" : "speed",
+	"id" : "check2::@6890427a1f51a3e7e1df",
+	"name" : "check2",
 	"paths" : 
 	{
 		"build" : ".",
@@ -64,13 +64,13 @@
 		{
 			"backtrace" : 3,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/speed",
+			"path" : "cmake-build/CMakeFiles/check2",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build/CMakeFiles/speed.rule",
+			"path" : "cmake-build/CMakeFiles/check2.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

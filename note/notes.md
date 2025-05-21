@@ -92,6 +92,8 @@ in mind that SYN and FIN aren’t part of the stream itself and aren’t “byte
 > 2025-05-13 10:36 by nanaku
 
 发现很多问题，有很多隐含的条件其实没有提到，比较担心
+# check5
+这次的任务是实现根据ARP协议维护一个表？
 
 # 阅读代码
 按照文档要求，需要阅读utils目录下的代码
