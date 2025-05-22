@@ -37,12 +37,17 @@ void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Addre
   debug( "unimplemented send_datagram called" );
   auto it=arpTabel.find(next_hop.ipv4_numeric());
   if(it!=arpTabel.end()){
-    EthernetFrame frame{{move(it->second.MAC),ethernet_address_,EthernetHeader::TYPE_IPv4},serialize(dgram)};
+    EthernetFrame frame{{it->second.MAC,ethernet_address_,EthernetHeader::TYPE_IPv4},serialize(dgram)};
     transmit(std::move(frame));
   }
   else{
+    auto & Item=frame_in_stand[next_hop.ipv4_numeric()];
     EthernetFrame frame{{ETHERNET_BROADCAST,ethernet_address_,EthernetHeader::TYPE_IPv4},serialize(dgram)};
-    frame_in_stand[next_hop.ipv4_numeric()].emplace(move(frame));
+    Item.queue.emplace(move(frame));
+    if(Item.TTL>ms_since_construct){//保证同一个IP不会发太多次，避免泛洪
+        return;
+    }
+    Item.TTL=ms_since_construct+5000;
     ARPMessage arpmsg{};
     arpmsg.opcode=ARPMessage::OPCODE_REQUEST;
     arpmsg.sender_ethernet_address=ethernet_address_;
@@ -71,34 +76,32 @@ void NetworkInterface::recv_frame( EthernetFrame frame )
             case EthernetHeader::TYPE_ARP:{
                 ARPMessage arpmsg{};
                 if(parse(arpmsg,frame.payload)){
-                    if(arpmsg.opcode==ARPMessage::OPCODE_REQUEST
-                        &&arpmsg.target_ip_address==ip_address_.ipv4_numeric()){
-                        ARPMessage arpreply{};
-                        arpreply.opcode=ARPMessage::OPCODE_REPLY;
-                        arpreply.target_ip_address=arpmsg.sender_ip_address;
-                        arpreply.target_ethernet_address=arpmsg.sender_ethernet_address;
-                        arpreply.sender_ip_address=ip_address_.ipv4_numeric();
-                        arpreply.sender_ethernet_address=ethernet_address_;
-                        EthernetFrame replyframe{};
-                        replyframe.payload=serialize(arpreply);
-                        replyframe.header.type=EthernetHeader::TYPE_ARP;
-                        replyframe.header.src=ethernet_address_;
-                        replyframe.header.dst=ETHERNET_BROADCAST;
-                        transmit(std::move(replyframe));
-                    }
-                    else if(arpmsg.opcode==ARPMessage::OPCODE_REPLY){
-                        auto it=arpTabel.find(arpmsg.target_ip_address);
-                        if(it==arpTabel.end()){
-                            arpTabel[arpmsg.target_ip_address]={arpmsg.target_ethernet_address,ms_since_construct+30*1000};
-                            auto it2=frame_in_stand.find(arpmsg.target_ip_address);
-                            if(it2!=frame_in_stand.end()){
-                                while(!it2->second.empty()){
-                                    it2->second.front().header.dst=arpmsg.target_ethernet_address;
-                                    transmit(move(it2->second.front()));
-                                    it2->second.pop();
-                                }
-                                frame_in_stand.erase(it2);
+                    debug("recv arp : {}",arpmsg.to_string());
+                    if(arpmsg.opcode==ARPMessage::OPCODE_REQUEST||arpmsg.opcode==ARPMessage::OPCODE_REPLY){                    
+                        arpTabel[arpmsg.sender_ip_address]={arpmsg.sender_ethernet_address,ms_since_construct+30*1000};
+                        auto it=frame_in_stand.find(arpmsg.target_ip_address);
+                        if(it!=frame_in_stand.end()){
+                            while(!it->second.queue.empty()){
+                                it->second.queue.front().header.dst=arpmsg.target_ethernet_address;
+                                transmit(std::move(it->second.queue.front()));
+                                it->second.queue.pop();
                             }
+                            frame_in_stand.erase(it);
+                        }
+                        if(arpmsg.opcode==ARPMessage::OPCODE_REQUEST
+                            &&arpmsg.target_ip_address==ip_address_.ipv4_numeric()){//只有当arp request的目的报文是该交换机（路由器）的ip时，才会reply
+                            ARPMessage arpreply{};
+                            arpreply.opcode=ARPMessage::OPCODE_REPLY;
+                            arpreply.target_ip_address=arpmsg.sender_ip_address;
+                            arpreply.target_ethernet_address=arpmsg.sender_ethernet_address;
+                            arpreply.sender_ip_address=ip_address_.ipv4_numeric();
+                            arpreply.sender_ethernet_address=ethernet_address_;
+                            EthernetFrame replyframe{};
+                            replyframe.payload=serialize(arpreply);
+                            replyframe.header.type=EthernetHeader::TYPE_ARP;
+                            replyframe.header.src=ethernet_address_;
+                            replyframe.header.dst=arpmsg.sender_ethernet_address;
+                            transmit(std::move(replyframe));
                         }
                     }
                 }
@@ -107,14 +110,11 @@ void NetworkInterface::recv_frame( EthernetFrame frame )
             default: break;
         }
     }
-  debug( "unimplemented recv_frame called" );
-  (void)frame;
 }
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
 void NetworkInterface::tick( const size_t ms_since_last_tick )
 {
-  debug( "unimplemented tick({}) called", ms_since_last_tick );
   ms_since_construct+=ms_since_last_tick;
   for(auto it=arpTabel.begin();it!=arpTabel.end();){
     if(it->second.TTL<=ms_since_construct){

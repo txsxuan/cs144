@@ -75,8 +75,13 @@ private:
         size_t TTL{};
     };
     using ARP_TPYE=std::unordered_map<uint32_t, ARPItem>;
+    struct standQueue{
+        std::queue<EthernetFrame> queue{};
+        size_t TTL{};
+    };
     ARP_TPYE arpTabel{};
-    std::unordered_map<uint32_t, std::queue<EthernetFrame>> frame_in_stand{};
+    std::unordered_map<uint32_t, 
+        standQueue> frame_in_stand{};
   // Human-readable name of the interface
   std::string name_;
 
