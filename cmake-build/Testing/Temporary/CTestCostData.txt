@@ -6,7 +6,7 @@ byte_stream_one_write 257 6.48582e-05
 byte_stream_two_writes 257 6.4396e-05
 byte_stream_many_writes 257 0.000388035
 byte_stream_stress_test 257 0.000705953
-no_skip 63 0.000183209
+no_skip 65 0.00011259
 compile 0 0
 byte_stream_speed_test 63 0.00486087
 compile 0 0
@@ -73,7 +73,7 @@ send_retx 65 0.000380501
 compile 0 0
 send_extra 21 0.00275822
 compile 0 0
-net_interface 0 0
+net_interface 2 0.0201834
 compile 0 0
 router 0 0
 compile 0 0
@@ -620,5 +620,33 @@ compile 0 0
 compile 0 0
 compile 0 0
 compile 0 0
-compile with bug-checkers 1 15.0404
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile 0 0
+compile with bug-checkers 1 2.57091
 ---

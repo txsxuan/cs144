@@ -3,6 +3,7 @@
 #include "ipv4_datagram.hh"
 #include "network_interface_test_harness.hh"
 
+#include <cassert>
 #include <cstdlib>
 #include <iostream>
 #include <random>
@@ -558,6 +559,7 @@ int main()
       // We should receive only the second queued datagram
       test.execute(
         ExpectFrame { make_frame( local_eth, target_eth, EthernetHeader::TYPE_IPv4, serialize( datagram ) ) } );
+        
       test.execute( ExpectNoFrame {} );
     }
 

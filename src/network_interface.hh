@@ -76,12 +76,12 @@ private:
     };
     using ARP_TPYE=std::unordered_map<uint32_t, ARPItem>;
     struct standQueue{
-        std::queue<EthernetFrame> queue{};
+        std::vector<InternetDatagram> queue{};
         size_t TTL{};
     };
     ARP_TPYE arpTabel{};
     std::unordered_map<uint32_t, 
-        standQueue> frame_in_stand{};
+        standQueue> dgram_in_stand{};
   // Human-readable name of the interface
   std::string name_;
 
