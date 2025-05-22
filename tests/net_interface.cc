@@ -559,7 +559,7 @@ int main()
       // We should receive only the second queued datagram
       test.execute(
         ExpectFrame { make_frame( local_eth, target_eth, EthernetHeader::TYPE_IPv4, serialize( datagram ) ) } );
-        
+
       test.execute( ExpectNoFrame {} );
     }
 

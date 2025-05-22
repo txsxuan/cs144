@@ -70,18 +70,19 @@ public:
   std::queue<InternetDatagram>& datagrams_received() { return datagrams_received_; }
 
 private:
-    struct ARPItem{
-        EthernetAddress MAC{};
-        size_t TTL{};
-    };
-    using ARP_TPYE=std::unordered_map<uint32_t, ARPItem>;
-    struct standQueue{
-        std::vector<InternetDatagram> queue{};
-        size_t TTL{};
-    };
-    ARP_TPYE arpTabel{};
-    std::unordered_map<uint32_t, 
-        standQueue> dgram_in_stand{};
+  struct ARPItem
+  {
+    EthernetAddress MAC {};
+    size_t TTL {};
+  };
+  using ARP_TPYE = std::unordered_map<uint32_t, ARPItem>;
+  struct standQueue
+  {
+    std::vector<InternetDatagram> queue {};
+    size_t TTL {};
+  };
+  ARP_TPYE arpTabel {};
+  std::unordered_map<uint32_t, standQueue> dgram_in_stand {};
   // Human-readable name of the interface
   std::string name_;
 
@@ -94,7 +95,7 @@ private:
 
   // IP (known as internet-layer or network-layer) address of the interface
   Address ip_address_;
-    size_t ms_since_construct{};
+  size_t ms_since_construct {};
   // Datagrams that have been received
   std::queue<InternetDatagram> datagrams_received_ {};
 };
