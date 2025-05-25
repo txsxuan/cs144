@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/libminnow_sanitized.a"
+			"path" : "src/libminnow_debug.a"
 		}
 	],
 	"backtrace" : 1,
@@ -12,7 +12,6 @@
 		"commands" : 
 		[
 			"add_library",
-			"target_compile_options",
 			"include_directories"
 		],
 		"files" : 
@@ -28,29 +27,23 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 6,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
 				"file" : 1
 			},
 			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 1,
 				"line" : 17,
-				"parent" : 3
+				"parent" : 2
 			},
 			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 1,
 				"line" : 18,
-				"parent" : 3
+				"parent" : 2
 			}
 		]
 	},
@@ -61,28 +54,16 @@
 			[
 				{
 					"fragment" : " -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -Wno-non-virtual-dtor -g -std=gnu++20"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-fno-sanitize-recover=all"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-fsanitize=undefined"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-fsanitize=address"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "/home/yukinisakuhana/program/cs144/util"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "/home/yukinisakuhana/program/cs144/src"
 				}
 			],
@@ -104,13 +85,14 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		}
 	],
-	"id" : "minnow_sanitized::@145eef247bfb46b6828c",
-	"name" : "minnow_sanitized",
-	"nameOnDisk" : "libminnow_sanitized.a",
+	"id" : "minnow_debug::@145eef247bfb46b6828c",
+	"name" : "minnow_debug",
+	"nameOnDisk" : "libminnow_debug.a",
 	"paths" : 
 	{
 		"build" : "src",
@@ -129,7 +111,8 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		}
 	],
@@ -157,6 +140,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/reassembler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/router.cc",
 			"sourceGroupIndex" : 0
 		},
 		{

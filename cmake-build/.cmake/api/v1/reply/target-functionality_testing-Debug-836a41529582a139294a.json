@@ -634,6 +634,24 @@
 				"file" : 0,
 				"line" : 22,
 				"parent" : 101
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 104
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 104
 			}
 		]
 	},
@@ -905,10 +923,18 @@
 		},
 		{
 			"backtrace" : 102,
-			"id" : "no_skip_sanitized::@a44f0ac069e85531cdee"
+			"id" : "router_sanitized::@a44f0ac069e85531cdee"
 		},
 		{
 			"backtrace" : 103,
+			"id" : "router::@a44f0ac069e85531cdee"
+		},
+		{
+			"backtrace" : 105,
+			"id" : "no_skip_sanitized::@a44f0ac069e85531cdee"
+		},
+		{
+			"backtrace" : 106,
 			"id" : "no_skip::@a44f0ac069e85531cdee"
 		}
 	],

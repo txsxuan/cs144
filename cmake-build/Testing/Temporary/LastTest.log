@@ -1,218 +1,210 @@
-Start testing: May 22 22:44 CST
+Start testing: May 26 01:38 CST
 ----------------------------------------------------------
 1/40 Testing: compile with bug-checkers
 1/40 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: May 22 22:44 CST
+"compile with bug-checkers" start time: May 26 01:38 CST
 Output:
 ----------------------------------------------------------
-[1/158] Building CXX object util/CMakeFiles/util_debug.dir/tcp_segment.cc.o
-[2/158] Building CXX object util/CMakeFiles/util_debug.dir/helpers.cc.o
-[3/158] Building CXX object util/CMakeFiles/util_debug.dir/tcp_over_ip.cc.o
-[4/158] Building CXX object util/CMakeFiles/util_debug.dir/tuntap_adapter.cc.o
-[5/158] Building CXX object util/CMakeFiles/util_sanitized.dir/helpers.cc.o
-[6/158] Linking CXX static library util/libutil_debug.a
-[7/158] Building CXX object tests/CMakeFiles/minnow_testing_sanitized.dir/common.cc.o
-[8/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tcp_segment.cc.o
-[9/158] Linking CXX static library tests/libminnow_testing_sanitized.a
-[10/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tuntap_adapter.cc.o
-[11/158] Building CXX object util/CMakeFiles/util_sanitized.dir/tcp_over_ip.cc.o
-[12/158] Building CXX object tests/CMakeFiles/byte_stream_basics.dir/byte_stream_basics.cc.o
-[13/158] Building CXX object tests/CMakeFiles/minnow_testing_debug.dir/common.cc.o
-[14/158] Linking CXX static library util/libutil_sanitized.a
-[15/158] Linking CXX static library tests/libminnow_testing_debug.a
-[16/158] Building CXX object tests/CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o
-[17/158] Building CXX object tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o
-[18/158] Building CXX object tests/CMakeFiles/byte_stream_capacity_sanitized.dir/byte_stream_capacity.cc.o
-[19/158] Building CXX object tests/CMakeFiles/byte_stream_basics_sanitized.dir/byte_stream_basics.cc.o
-[20/158] Building CXX object tests/CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o
-[21/158] Building CXX object tests/CMakeFiles/byte_stream_one_write_sanitized.dir/byte_stream_one_write.cc.o
-[22/158] Building CXX object tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/byte_stream_two_writes.cc.o
-[23/158] Building CXX object src/CMakeFiles/minnow_debug.dir/tcp_minnow_socket.cc.o
-[24/158] Building CXX object src/CMakeFiles/minnow_debug.dir/network_interface.cc.o
-[25/158] Linking CXX static library src/libminnow_debug.a
-[26/158] Linking CXX executable tests/byte_stream_basics
-[27/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/tcp_minnow_socket.cc.o
-[28/158] Building CXX object src/CMakeFiles/minnow_sanitized.dir/network_interface.cc.o
-[29/158] Linking CXX executable tests/byte_stream_capacity
-[30/158] Linking CXX static library src/libminnow_sanitized.a
-[31/158] Linking CXX executable tests/byte_stream_one_write
-[32/158] Building CXX object tests/CMakeFiles/byte_stream_stress_test.dir/byte_stream_stress_test.cc.o
-[33/158] Linking CXX executable tests/byte_stream_two_writes
-[34/158] Building CXX object tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o
-[35/158] Building CXX object tests/CMakeFiles/reassembler_single_sanitized.dir/reassembler_single.cc.o
-[36/158] Building CXX object tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/byte_stream_stress_test.cc.o
-[37/158] Linking CXX executable tests/byte_stream_basics_sanitized
-[38/158] Linking CXX executable tests/byte_stream_many_writes
-[39/158] Building CXX object tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/byte_stream_many_writes.cc.o
-[40/158] Linking CXX executable tests/byte_stream_capacity_sanitized
-[41/158] Linking CXX executable tests/byte_stream_one_write_sanitized
-[42/158] Linking CXX executable tests/byte_stream_stress_test
-[43/158] Linking CXX executable tests/byte_stream_two_writes_sanitized
-[44/158] Building CXX object tests/CMakeFiles/reassembler_single.dir/reassembler_single.cc.o
-[45/158] Building CXX object tests/CMakeFiles/reassembler_seq.dir/reassembler_seq.cc.o
-[46/158] Building CXX object tests/CMakeFiles/reassembler_holes.dir/reassembler_holes.cc.o
-[47/158] Linking CXX executable tests/byte_stream_stress_test_sanitized
-[48/158] Building CXX object tests/CMakeFiles/reassembler_cap.dir/reassembler_cap.cc.o
-[49/158] Building CXX object tests/CMakeFiles/reassembler_dup.dir/reassembler_dup.cc.o
-[50/158] Linking CXX executable tests/reassembler_single_sanitized
-[51/158] Linking CXX executable tests/reassembler_single
-[52/158] Linking CXX executable tests/byte_stream_many_writes_sanitized
-[53/158] Building CXX object tests/CMakeFiles/reassembler_dup_sanitized.dir/reassembler_dup.cc.o
-[54/158] Linking CXX executable tests/reassembler_cap
-[55/158] Building CXX object tests/CMakeFiles/reassembler_cap_sanitized.dir/reassembler_cap.cc.o
-[56/158] Linking CXX executable tests/reassembler_holes
-[57/158] Linking CXX executable tests/reassembler_seq
-[58/158] Linking CXX executable tests/reassembler_dup
-[59/158] Building CXX object tests/CMakeFiles/wrapping_integers_cmp_sanitized.dir/wrapping_integers_cmp.cc.o
-[60/158] Building CXX object tests/CMakeFiles/reassembler_seq_sanitized.dir/reassembler_seq.cc.o
-[61/158] Building CXX object tests/CMakeFiles/reassembler_overlapping.dir/reassembler_overlapping.cc.o
-[62/158] Building CXX object tests/CMakeFiles/reassembler_holes_sanitized.dir/reassembler_holes.cc.o
-[63/158] Linking CXX executable tests/reassembler_dup_sanitized
-[64/158] Linking CXX executable tests/wrapping_integers_cmp_sanitized
-[65/158] Linking CXX executable tests/reassembler_overlapping
-[66/158] Linking CXX executable tests/reassembler_cap_sanitized
-[67/158] Linking CXX executable tests/reassembler_holes_sanitized
-[68/158] Building CXX object tests/CMakeFiles/reassembler_overlapping_sanitized.dir/reassembler_overlapping.cc.o
-[69/158] Linking CXX executable tests/reassembler_seq_sanitized
-[70/158] Building CXX object tests/CMakeFiles/reassembler_win.dir/reassembler_win.cc.o
-[71/158] Building CXX object tests/CMakeFiles/wrapping_integers_wrap.dir/wrapping_integers_wrap.cc.o
-[72/158] Building CXX object tests/CMakeFiles/wrapping_integers_unwrap.dir/wrapping_integers_unwrap.cc.o
-[73/158] Linking CXX executable tests/reassembler_win
-[74/158] Building CXX object tests/CMakeFiles/wrapping_integers_unwrap_sanitized.dir/wrapping_integers_unwrap.cc.o
-[75/158] Linking CXX executable tests/wrapping_integers_unwrap
-[76/158] Linking CXX executable tests/wrapping_integers_wrap
-[77/158] Building CXX object tests/CMakeFiles/wrapping_integers_cmp.dir/wrapping_integers_cmp.cc.o
-[78/158] Linking CXX executable tests/reassembler_overlapping_sanitized
-[79/158] Linking CXX executable tests/wrapping_integers_cmp
-[80/158] Building CXX object tests/CMakeFiles/wrapping_integers_wrap_sanitized.dir/wrapping_integers_wrap.cc.o
-[81/158] Building CXX object tests/CMakeFiles/wrapping_integers_roundtrip_sanitized.dir/wrapping_integers_roundtrip.cc.o
-[82/158] Building CXX object tests/CMakeFiles/wrapping_integers_extra_sanitized.dir/wrapping_integers_extra.cc.o
-[83/158] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
-[84/158] Building CXX object tests/CMakeFiles/wrapping_integers_extra.dir/wrapping_integers_extra.cc.o
-[85/158] Linking CXX executable tests/wrapping_integers_wrap_sanitized
-[86/158] Linking CXX executable tests/wrapping_integers_extra_sanitized
-[87/158] Building CXX object tests/CMakeFiles/wrapping_integers_roundtrip.dir/wrapping_integers_roundtrip.cc.o
-[88/158] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
-[89/158] Linking CXX executable tests/wrapping_integers_roundtrip
-[90/158] Linking CXX executable tests/wrapping_integers_extra
-[91/158] Building CXX object tests/CMakeFiles/reassembler_win_sanitized.dir/reassembler_win.cc.o
-[92/158] Linking CXX executable tests/reassembler_win_sanitized
-[93/158] Building CXX object tests/CMakeFiles/recv_connect.dir/recv_connect.cc.o
-[94/158] Linking CXX executable tests/recv_connect
-[95/158] Building CXX object tests/CMakeFiles/recv_window.dir/recv_window.cc.o
-[96/158] Building CXX object tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o
-[97/158] Building CXX object tests/CMakeFiles/recv_connect_sanitized.dir/recv_connect.cc.o
-[98/158] Linking CXX executable tests/recv_window
-[99/158] Linking CXX executable tests/recv_transmit
-[100/158] Building CXX object tests/CMakeFiles/recv_reorder.dir/recv_reorder.cc.o
-[101/158] Linking CXX executable tests/recv_reorder
-[102/158] Building CXX object tests/CMakeFiles/recv_close.dir/recv_close.cc.o
-[103/158] Linking CXX executable tests/recv_connect_sanitized
-[104/158] Building CXX object tests/CMakeFiles/recv_window_sanitized.dir/recv_window.cc.o
-[105/158] Building CXX object tests/CMakeFiles/recv_reorder_more_sanitized.dir/recv_reorder_more.cc.o
-[106/158] Building CXX object tests/CMakeFiles/recv_reorder_more.dir/recv_reorder_more.cc.o
-[107/158] Linking CXX executable tests/recv_close
-[108/158] Building CXX object tests/CMakeFiles/recv_transmit_sanitized.dir/recv_transmit.cc.o
-[109/158] Building CXX object tests/CMakeFiles/recv_reorder_sanitized.dir/recv_reorder.cc.o
-[110/158] Linking CXX executable tests/recv_reorder_more
-[111/158] Linking CXX executable tests/recv_window_sanitized
-[112/158] Linking CXX executable tests/recv_reorder_more_sanitized
-[113/158] Building CXX object tests/CMakeFiles/recv_close_sanitized.dir/recv_close.cc.o
-[114/158] Linking CXX executable tests/recv_transmit_sanitized
-[115/158] Linking CXX executable tests/recv_reorder_sanitized
-[116/158] Building CXX object tests/CMakeFiles/recv_special_sanitized.dir/recv_special.cc.o
-[117/158] Building CXX object tests/CMakeFiles/recv_special.dir/recv_special.cc.o
-[118/158] Linking CXX executable tests/recv_special
-[119/158] Building CXX object tests/CMakeFiles/send_connect.dir/send_connect.cc.o
-[120/158] Linking CXX executable tests/recv_close_sanitized
-[121/158] Linking CXX executable tests/recv_special_sanitized
-[122/158] Linking CXX executable tests/send_connect
-[123/158] Building CXX object tests/CMakeFiles/send_connect_sanitized.dir/send_connect.cc.o
-[124/158] Building CXX object tests/CMakeFiles/send_transmit.dir/send_transmit.cc.o
-[125/158] Building CXX object tests/CMakeFiles/send_window.dir/send_window.cc.o
-[126/158] Linking CXX executable tests/send_transmit
-[127/158] Linking CXX executable tests/send_window
-[128/158] Linking CXX executable tests/send_connect_sanitized
-[129/158] Building CXX object tests/CMakeFiles/send_ack_sanitized.dir/send_ack.cc.o
-[130/158] Building CXX object tests/CMakeFiles/send_transmit_sanitized.dir/send_transmit.cc.o
-[131/158] Linking CXX executable tests/send_ack_sanitized
-[132/158] Building CXX object tests/CMakeFiles/send_window_sanitized.dir/send_window.cc.o
-[133/158] Linking CXX executable tests/send_transmit_sanitized
-[134/158] Linking CXX executable tests/send_window_sanitized
-[135/158] Building CXX object tests/CMakeFiles/send_ack.dir/send_ack.cc.o
-[136/158] Building CXX object tests/CMakeFiles/no_skip.dir/no_skip.cc.o
-[137/158] Linking CXX executable tests/no_skip
-[138/158] Building CXX object tests/CMakeFiles/no_skip_sanitized.dir/no_skip.cc.o
-[139/158] Linking CXX executable tests/send_ack
-[140/158] Linking CXX executable tests/no_skip_sanitized
-[141/158] Building CXX object tests/CMakeFiles/send_retx.dir/send_retx.cc.o
-[142/158] Building CXX object tests/CMakeFiles/send_close_sanitized.dir/send_close.cc.o
-[143/158] Linking CXX executable tests/send_retx
-[144/158] Linking CXX executable tests/send_close_sanitized
-[145/158] Building CXX object tests/CMakeFiles/send_extra.dir/send_extra.cc.o
-[146/158] Linking CXX executable tests/send_extra
-[147/158] Building CXX object tests/CMakeFiles/send_close.dir/send_close.cc.o
-[148/158] Building CXX object apps/CMakeFiles/webget.dir/webget.cc.o
-[149/158] Linking CXX executable tests/send_close
-[150/158] Linking CXX executable apps/webget
-[151/158] Building CXX object tests/CMakeFiles/net_interface.dir/net_interface.cc.o
-[152/158] Building CXX object tests/CMakeFiles/send_retx_sanitized.dir/send_retx.cc.o
-[153/158] Building CXX object tests/CMakeFiles/net_interface_sanitized.dir/net_interface.cc.o
-[154/158] Linking CXX executable tests/net_interface
-[155/158] Linking CXX executable tests/send_retx_sanitized
-[156/158] Linking CXX executable tests/net_interface_sanitized
-[157/158] Building CXX object tests/CMakeFiles/send_extra_sanitized.dir/send_extra.cc.o
-[158/158] Linking CXX executable tests/send_extra_sanitized
+[1/77] Building CXX object src/CMakeFiles/minnow_debug.dir/router.cc.o
+[2/77] Linking CXX static library src/libminnow_debug.a
+[3/77] Building CXX object src/CMakeFiles/minnow_sanitized.dir/router.cc.o
+[4/77] Linking CXX static library src/libminnow_sanitized.a
+[5/77] Linking CXX executable tests/wrapping_integers_wrap
+[6/77] Linking CXX executable tests/wrapping_integers_extra
+[7/77] Linking CXX executable tests/wrapping_integers_unwrap
+[8/77] Linking CXX executable tests/wrapping_integers_cmp
+[9/77] Linking CXX executable tests/byte_stream_basics
+[10/77] Linking CXX executable tests/reassembler_holes
+[11/77] Linking CXX executable tests/byte_stream_capacity
+[12/77] Linking CXX executable tests/wrapping_integers_roundtrip
+[13/77] Linking CXX executable tests/byte_stream_two_writes
+[14/77] Linking CXX executable tests/byte_stream_many_writes
+[15/77] Linking CXX executable tests/reassembler_cap
+[16/77] Linking CXX executable tests/reassembler_single
+[17/77] Linking CXX executable tests/reassembler_win
+[18/77] Linking CXX executable tests/reassembler_overlapping
+[19/77] Linking CXX executable tests/recv_connect
+[20/77] Linking CXX executable tests/byte_stream_one_write
+[21/77] Linking CXX executable tests/byte_stream_stress_test
+[22/77] Linking CXX executable tests/reassembler_dup
+[23/77] Linking CXX executable tests/reassembler_seq
+[24/77] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
+[25/77] Linking CXX executable tests/byte_stream_capacity_sanitized
+[26/77] Linking CXX executable tests/reassembler_seq_sanitized
+[27/77] Linking CXX executable tests/byte_stream_stress_test_sanitized
+[28/77] Linking CXX executable tests/byte_stream_two_writes_sanitized
+[29/77] Linking CXX executable tests/wrapping_integers_cmp_sanitized
+[30/77] Linking CXX executable tests/wrapping_integers_extra_sanitized
+[31/77] Linking CXX executable tests/wrapping_integers_wrap_sanitized
+[32/77] Linking CXX executable tests/reassembler_overlapping_sanitized
+[33/77] Linking CXX executable tests/reassembler_cap_sanitized
+[34/77] Linking CXX executable tests/byte_stream_one_write_sanitized
+[35/77] Linking CXX executable tests/byte_stream_basics_sanitized
+[36/77] Linking CXX executable tests/byte_stream_many_writes_sanitized
+[37/77] Linking CXX executable tests/reassembler_dup_sanitized
+[38/77] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
+[39/77] Linking CXX executable tests/reassembler_win_sanitized
+[40/77] Linking CXX executable tests/recv_transmit_sanitized
+[41/77] Linking CXX executable tests/recv_connect_sanitized
+[42/77] Linking CXX executable tests/reassembler_holes_sanitized
+[43/77] Linking CXX executable tests/reassembler_single_sanitized
+[44/77] Linking CXX executable tests/recv_transmit
+[45/77] Linking CXX executable tests/recv_window
+[46/77] Linking CXX executable tests/recv_close
+[47/77] Linking CXX executable tests/send_connect
+[48/77] Linking CXX executable tests/recv_reorder
+[49/77] Linking CXX executable tests/recv_reorder_more
+[50/77] Linking CXX executable tests/recv_special
+[51/77] Linking CXX executable tests/send_window
+[52/77] Linking CXX executable tests/send_ack
+[53/77] Linking CXX executable tests/send_transmit
+[54/77] Linking CXX executable tests/recv_window_sanitized
+[55/77] Linking CXX executable tests/recv_reorder_sanitized
+[56/77] Linking CXX executable tests/recv_special_sanitized
+[57/77] Linking CXX executable tests/recv_reorder_more_sanitized
+[58/77] Linking CXX executable tests/send_connect_sanitized
+[59/77] Linking CXX executable tests/send_close
+[60/77] Linking CXX executable tests/recv_close_sanitized
+[61/77] Linking CXX executable tests/send_retx
+[62/77] Linking CXX executable tests/send_extra
+[63/77] Linking CXX executable tests/no_skip
+[64/77] Linking CXX executable tests/send_ack_sanitized
+[65/77] Linking CXX executable tests/net_interface
+[66/77] Linking CXX executable tests/send_transmit_sanitized
+[67/77] Linking CXX executable tests/send_window_sanitized
+[68/77] Linking CXX executable tests/send_close_sanitized
+[69/77] Linking CXX executable apps/webget
+[70/77] Linking CXX executable tests/send_extra_sanitized
+[71/77] Linking CXX executable tests/send_retx_sanitized
+[72/77] Linking CXX executable tests/net_interface_sanitized
+[73/77] Linking CXX executable tests/no_skip_sanitized
+[74/77] Building CXX object tests/CMakeFiles/router.dir/router.cc.o
+[75/77] Linking CXX executable tests/router
+[76/77] Building CXX object tests/CMakeFiles/router_sanitized.dir/router.cc.o
+[77/77] Linking CXX executable tests/router_sanitized
 <end of output>
-Test time =  11.86 sec
+Test time =   3.30 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: May 22 22:44 CST
-"compile with bug-checkers" time elapsed: 00:00:11
+"compile with bug-checkers" end time: May 26 01:38 CST
+"compile with bug-checkers" time elapsed: 00:00:03
 ----------------------------------------------------------
 
 35/40 Testing: net_interface
 35/40 Test: net_interface
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/net_interface_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"net_interface" start time: May 22 22:44 CST
+"net_interface" start time: May 26 01:38 CST
 Output:
 ----------------------------------------------------------
-DEBUG: Network interface has Ethernet address 2a:59:c7:6f:3f:8a and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 3e:1d:cb:b1:17:4f and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address 2a:7b:64:50:44:f7 and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address 0a:0e:48:23:36:73 and IP address 1.2.3.4
-DEBUG: Network interface has Ethernet address aa:40:0f:64:07:2d and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 52:32:3b:27:ff:88 and IP address 10.0.0.1
-DEBUG: Network interface has Ethernet address 32:38:53:ad:22:8a and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address fe:91:14:19:2a:18 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 36:3b:a5:48:3c:f7 and IP address 100.5.100.5
-DEBUG: Network interface has Ethernet address a6:9a:4f:e2:36:6b and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address b6:39:96:5e:4e:3d and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 86:8b:7f:fc:b2:2a and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 9a:8f:c1:ee:be:bf and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address de:64:70:77:bf:15 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 5e:45:59:d3:d4:4c and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address ae:5a:68:de:7a:c2 and IP address 1.2.3.4
+DEBUG: Network interface has Ethernet address 76:00:4c:3b:f8:f8 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 3e:62:92:51:f1:a0 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 96:3a:ed:18:97:1f and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 06:b6:6f:fc:98:93 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address c2:ec:b0:01:30:87 and IP address 100.5.100.5
+DEBUG: Network interface has Ethernet address 42:56:75:cc:1e:4c and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 3e:ff:77:29:21:e8 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 46:e4:0a:13:b4:53 and IP address 5.5.5.5
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"net_interface" end time: May 22 22:44 CST
+"net_interface" end time: May 26 01:38 CST
 "net_interface" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-37/40 Testing: no_skip
-37/40 Test: no_skip
-Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/no_skip_sanitized"
+36/40 Testing: router
+36/40 Test: router
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/router_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"no_skip" start time: May 22 22:44 CST
+"router" start time: May 26 01:38 CST
 Output:
 ----------------------------------------------------------
+[32;1mConstructing network.[m
+DEBUG: Network interface has Ethernet address 02:00:00:24:be:03 and IP address 171.67.76.46
+DEBUG: Network interface has Ethernet address 02:00:00:ac:59:e7 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:93:32:2d and IP address 172.16.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:78:99:f4 and IP address 192.168.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:bb:24:85 and IP address 198.178.229.1
+DEBUG: Network interface has Ethernet address 02:00:00:c7:05:33 and IP address 143.195.0.2
+DEBUG: Network interface has Ethernet address 02:00:00:0a:ea:dd and IP address 128.30.76.255
+DEBUG: Network interface has Ethernet address 26:b4:06:05:cb:70 and IP address 10.0.0.2
+DEBUG: Network interface has Ethernet address e6:3c:78:89:bf:83 and IP address 171.67.76.1
+DEBUG: Network interface has Ethernet address 22:2e:d1:ef:ab:21 and IP address 192.168.0.2
+DEBUG: Network interface has Ethernet address d2:34:bf:9c:e0:b7 and IP address 143.195.0.1
+DEBUG: Network interface has Ethernet address 3a:16:71:24:0a:f4 and IP address 198.178.229.42
+DEBUG: Network interface has Ethernet address 02:72:d5:a4:a0:10 and IP address 198.178.229.43
+DEBUG: adding route 10.0.0.0/8 => (direct) on interface 1
+DEBUG: adding route 172.16.0.0/16 => (direct) on interface 2
+DEBUG: adding route 192.168.0.0/24 => (direct) on interface 3
+DEBUG: adding route 0.0.0.0/0 => 171.67.76.1 on interface 0
+DEBUG: adding route 198.178.229.0/24 => (direct) on interface 4
+DEBUG: adding route 143.195.0.0/17 => 143.195.0.1 on interface 5
+DEBUG: adding route 143.195.128.0/18 => 143.195.0.1 on interface 5
+DEBUG: adding route 143.195.192.0/19 => 143.195.0.1 on interface 5
+DEBUG: adding route 128.30.76.255/16 => 128.30.0.1 on interface 6
+[32;1m
+
+Testing traffic between two ordinary hosts (applesauce to cherrypie)...[m
+
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to default: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to default_router: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth2: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to cherrypie: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to uun3: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm42: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm43: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs4: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs_router: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from eth0 to default: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to default_router: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to applesauce: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+DEBUG: recv arp : opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to eth2: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to cherrypie: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to uun3: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to dm42: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to dm43: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to hs4: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from eth0 to hs_router: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
+Transferring frame from applesauce to default: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to default_router: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to eth0: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to eth2: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to uun3: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to dm42: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to dm43: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to hs4: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Transferring frame from applesauce to hs_router: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+
+
+
+[31;1mError: Host cherrypie did NOT receive an expected Internet datagram: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2[m
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
-Test Passed.
-"no_skip" end time: May 22 22:44 CST
-"no_skip" time elapsed: 00:00:00
+Test Failed.
+"router" end time: May 26 01:38 CST
+"router" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 22 22:44 CST
+End testing: May 26 01:38 CST

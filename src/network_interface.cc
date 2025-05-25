@@ -34,7 +34,6 @@ NetworkInterface::NetworkInterface( string_view name,
 //! can be converted to a uint32_t (raw 32-bit IP address) by using the Address::ipv4_numeric() method.
 void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Address& next_hop )
 {
-  debug( "unimplemented send_datagram called" );
   auto it = arpTabel.find( next_hop.ipv4_numeric() );
   if ( it != arpTabel.end() ) {
     transmit( { { it->second.MAC, ethernet_address_, EthernetHeader::TYPE_IPv4 }, serialize( dgram ) } );
@@ -67,7 +66,6 @@ void NetworkInterface::recv_frame( EthernetFrame frame )
         if ( parse( ipv4frame, frame.payload ) ) {
           datagrams_received_.emplace( ipv4frame );
         }
-
         break;
       }
       case EthernetHeader::TYPE_ARP: {

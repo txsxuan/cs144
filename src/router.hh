@@ -1,9 +1,15 @@
 #pragma once
 
+#include "address.hh"
 #include "exception.hh"
 #include "network_interface.hh"
 
+#include <cstddef>
+#include <cstdint>
+#include <memory>
+#include <unordered_map>
 #include <optional>
+#include <utility>
 
 // \brief A router that has multiple network interfaces and
 // performs longest-prefix-match routing between them.
@@ -32,6 +38,44 @@ public:
   void route();
 
 private:
+    struct Item{
+        std::optional<Address> next_hop;
+        size_t interface_num;
+    };
+    struct bitTrie{
+        struct bitNode{
+            std::optional<Item> table;
+            std::shared_ptr<bitNode> next[2]; 
+        };
+        std::shared_ptr<bitNode> head=std::make_shared<bitNode>();
+        std::shared_ptr<bitNode> insert(uint32_t route_prefix,uint8_t prefix_length){
+            if(prefix_length==0){
+                return head;
+            }
+            std::shared_ptr<bitNode> node=head;
+            for(int i=31;i>32-prefix_length;i--){
+                bool bit=(route_prefix>>i)&1;
+                if(!node->next[bit]){
+                    node->next[bit]=std::make_shared<bitNode>();
+                }
+                node=node->next[bit];
+            }
+            return node;
+        }
+        std::optional<Item> search(uint32_t ipv4){//最长匹配
+            std::shared_ptr<bitNode> node=head;
+            for(int i=31;i>0;i--){
+                bool bit=(ipv4>>i)&i;
+                if(!node->next[bit]){
+                    break;
+                }
+                node=node->next[bit];
+            }
+            return node->table;
+        }
+    };
+    bitTrie BTrie{};
   // The router's collection of network interfaces
   std::vector<std::shared_ptr<NetworkInterface>> interfaces_ {};
+    // std::unordered_map<addressPair, Item> RoutingTable {};
 };
