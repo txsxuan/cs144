@@ -1,13 +1,13 @@
 #pragma once
 
 #include "address.hh"
+#include "debug.hh"
 #include "exception.hh"
 #include "network_interface.hh"
 
 #include <cstddef>
 #include <cstdint>
 #include <memory>
-#include <unordered_map>
 #include <optional>
 #include <utility>
 
@@ -53,22 +53,24 @@ private:
                 return head;
             }
             std::shared_ptr<bitNode> node=head;
-            for(int i=31;i>32-prefix_length;i--){
-                bool bit=(route_prefix>>i)&1;
+            for(int i=31;i>=32-prefix_length;i--){
+                bool bit=(route_prefix>>i)&1UL;
                 if(!node->next[bit]){
                     node->next[bit]=std::make_shared<bitNode>();
                 }
+                debug("route_prefix = {},prefix= {}",Address::from_ipv4_numeric((route_prefix>>(32-prefix_length))<<(32-prefix_length)).ip(),prefix_length);
                 node=node->next[bit];
             }
             return node;
         }
-        std::optional<Item> search(uint32_t ipv4){//最长匹配
+        const std::optional<Item> search(const uint32_t ipv4) const{//最长匹配
             std::shared_ptr<bitNode> node=head;
-            for(int i=31;i>0;i--){
-                bool bit=(ipv4>>i)&i;
+            for(int i=31;i>=0;i--){
+                bool bit=(ipv4>>i)&1UL;
                 if(!node->next[bit]){
                     break;
                 }
+                debug("i = {} ,route_prefix = {},prefix = {}",i,Address::from_ipv4_numeric((ipv4>>i)<<i).ip(),(32-i));
                 node=node->next[bit];
             }
             return node->table;

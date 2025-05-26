@@ -30,8 +30,8 @@ void Router::add_route( const uint32_t route_prefix,
         throw std::runtime_error(std::string("prefix_length out of range !"));
     }
     std::shared_ptr<bitTrie::bitNode> node=BTrie.insert(route_prefix,prefix_length);
-    node->table->interface_num=interface_num;
-    node->table->next_hop=next_hop;
+    node->table={next_hop,interface_num};
+    debug("route_ {}",node->table.has_value()?'+':'-');
 }
 
 // Go through all the interfaces, and route every incoming datagram to its proper outgoing interface.
@@ -41,12 +41,19 @@ void Router::route()
     std::queue<InternetDatagram>& dgrams=interface_->datagrams_received();
     while(!dgrams.empty()){
         auto dgram=std::move(dgrams.front());
+        debug("dgram with head : {}",dgram.header.to_string());
+        if(dgram.header.ttl<=1){
+            dgrams.pop();
+            continue;
+        }
         dgram.header.ttl--;
-        if(dgram.header.ttl){
-            std::optional<Item> route_=BTrie.search(dgram.header.dst);
-            if(route_){
-                interface(route_->interface_num)->send_datagram(std::move(dgram), (route_->next_hop)?route_->next_hop.value():Address::from_ipv4_numeric(dgram.header.dst));
-            }
+        const std::optional<Item> route_=BTrie.search(dgram.header.dst);
+        if(route_){
+            debug("find route for {}: interface {} , next_hop {}",Address::from_ipv4_numeric(dgram.header.dst).ip(),route_->interface_num,( route_->next_hop.has_value() ? route_->next_hop->ip() : "(direct)" ));
+            interface(route_->interface_num)->send_datagram(dgram, (route_->next_hop)?route_->next_hop.value():Address::from_ipv4_numeric(dgram.header.dst));
+        }
+        else{
+            debug("no route with {}",Address::from_ipv4_numeric(dgram.header.dst).ip());
         }
         dgrams.pop();
     }

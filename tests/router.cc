@@ -2,6 +2,7 @@
 #include "network_interface_test_harness.hh"
 
 #include <algorithm>
+#include <cassert>
 #include <iostream>
 #include <list>
 #include <random>

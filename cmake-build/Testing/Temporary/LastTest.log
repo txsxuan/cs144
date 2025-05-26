@@ -1,121 +1,48 @@
-Start testing: May 26 01:38 CST
+Start testing: May 26 17:01 CST
 ----------------------------------------------------------
 1/40 Testing: compile with bug-checkers
 1/40 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: May 26 01:38 CST
+"compile with bug-checkers" start time: May 26 17:01 CST
 Output:
 ----------------------------------------------------------
-[1/77] Building CXX object src/CMakeFiles/minnow_debug.dir/router.cc.o
-[2/77] Linking CXX static library src/libminnow_debug.a
-[3/77] Building CXX object src/CMakeFiles/minnow_sanitized.dir/router.cc.o
-[4/77] Linking CXX static library src/libminnow_sanitized.a
-[5/77] Linking CXX executable tests/wrapping_integers_wrap
-[6/77] Linking CXX executable tests/wrapping_integers_extra
-[7/77] Linking CXX executable tests/wrapping_integers_unwrap
-[8/77] Linking CXX executable tests/wrapping_integers_cmp
-[9/77] Linking CXX executable tests/byte_stream_basics
-[10/77] Linking CXX executable tests/reassembler_holes
-[11/77] Linking CXX executable tests/byte_stream_capacity
-[12/77] Linking CXX executable tests/wrapping_integers_roundtrip
-[13/77] Linking CXX executable tests/byte_stream_two_writes
-[14/77] Linking CXX executable tests/byte_stream_many_writes
-[15/77] Linking CXX executable tests/reassembler_cap
-[16/77] Linking CXX executable tests/reassembler_single
-[17/77] Linking CXX executable tests/reassembler_win
-[18/77] Linking CXX executable tests/reassembler_overlapping
-[19/77] Linking CXX executable tests/recv_connect
-[20/77] Linking CXX executable tests/byte_stream_one_write
-[21/77] Linking CXX executable tests/byte_stream_stress_test
-[22/77] Linking CXX executable tests/reassembler_dup
-[23/77] Linking CXX executable tests/reassembler_seq
-[24/77] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
-[25/77] Linking CXX executable tests/byte_stream_capacity_sanitized
-[26/77] Linking CXX executable tests/reassembler_seq_sanitized
-[27/77] Linking CXX executable tests/byte_stream_stress_test_sanitized
-[28/77] Linking CXX executable tests/byte_stream_two_writes_sanitized
-[29/77] Linking CXX executable tests/wrapping_integers_cmp_sanitized
-[30/77] Linking CXX executable tests/wrapping_integers_extra_sanitized
-[31/77] Linking CXX executable tests/wrapping_integers_wrap_sanitized
-[32/77] Linking CXX executable tests/reassembler_overlapping_sanitized
-[33/77] Linking CXX executable tests/reassembler_cap_sanitized
-[34/77] Linking CXX executable tests/byte_stream_one_write_sanitized
-[35/77] Linking CXX executable tests/byte_stream_basics_sanitized
-[36/77] Linking CXX executable tests/byte_stream_many_writes_sanitized
-[37/77] Linking CXX executable tests/reassembler_dup_sanitized
-[38/77] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
-[39/77] Linking CXX executable tests/reassembler_win_sanitized
-[40/77] Linking CXX executable tests/recv_transmit_sanitized
-[41/77] Linking CXX executable tests/recv_connect_sanitized
-[42/77] Linking CXX executable tests/reassembler_holes_sanitized
-[43/77] Linking CXX executable tests/reassembler_single_sanitized
-[44/77] Linking CXX executable tests/recv_transmit
-[45/77] Linking CXX executable tests/recv_window
-[46/77] Linking CXX executable tests/recv_close
-[47/77] Linking CXX executable tests/send_connect
-[48/77] Linking CXX executable tests/recv_reorder
-[49/77] Linking CXX executable tests/recv_reorder_more
-[50/77] Linking CXX executable tests/recv_special
-[51/77] Linking CXX executable tests/send_window
-[52/77] Linking CXX executable tests/send_ack
-[53/77] Linking CXX executable tests/send_transmit
-[54/77] Linking CXX executable tests/recv_window_sanitized
-[55/77] Linking CXX executable tests/recv_reorder_sanitized
-[56/77] Linking CXX executable tests/recv_special_sanitized
-[57/77] Linking CXX executable tests/recv_reorder_more_sanitized
-[58/77] Linking CXX executable tests/send_connect_sanitized
-[59/77] Linking CXX executable tests/send_close
-[60/77] Linking CXX executable tests/recv_close_sanitized
-[61/77] Linking CXX executable tests/send_retx
-[62/77] Linking CXX executable tests/send_extra
-[63/77] Linking CXX executable tests/no_skip
-[64/77] Linking CXX executable tests/send_ack_sanitized
-[65/77] Linking CXX executable tests/net_interface
-[66/77] Linking CXX executable tests/send_transmit_sanitized
-[67/77] Linking CXX executable tests/send_window_sanitized
-[68/77] Linking CXX executable tests/send_close_sanitized
-[69/77] Linking CXX executable apps/webget
-[70/77] Linking CXX executable tests/send_extra_sanitized
-[71/77] Linking CXX executable tests/send_retx_sanitized
-[72/77] Linking CXX executable tests/net_interface_sanitized
-[73/77] Linking CXX executable tests/no_skip_sanitized
-[74/77] Building CXX object tests/CMakeFiles/router.dir/router.cc.o
-[75/77] Linking CXX executable tests/router
-[76/77] Building CXX object tests/CMakeFiles/router_sanitized.dir/router.cc.o
-[77/77] Linking CXX executable tests/router_sanitized
+[1/4] Building CXX object tests/CMakeFiles/router.dir/router.cc.o
+[2/4] Linking CXX executable tests/router
+[3/4] Building CXX object tests/CMakeFiles/router_sanitized.dir/router.cc.o
+[4/4] Linking CXX executable tests/router_sanitized
 <end of output>
-Test time =   3.30 sec
+Test time =   2.27 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: May 26 01:38 CST
-"compile with bug-checkers" time elapsed: 00:00:03
+"compile with bug-checkers" end time: May 26 17:01 CST
+"compile with bug-checkers" time elapsed: 00:00:02
 ----------------------------------------------------------
 
 35/40 Testing: net_interface
 35/40 Test: net_interface
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/net_interface_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"net_interface" start time: May 26 01:38 CST
+"net_interface" start time: May 26 17:01 CST
 Output:
 ----------------------------------------------------------
-DEBUG: Network interface has Ethernet address 9a:8f:c1:ee:be:bf and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address de:64:70:77:bf:15 and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address 5e:45:59:d3:d4:4c and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address ae:5a:68:de:7a:c2 and IP address 1.2.3.4
-DEBUG: Network interface has Ethernet address 76:00:4c:3b:f8:f8 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 3e:62:92:51:f1:a0 and IP address 10.0.0.1
-DEBUG: Network interface has Ethernet address 96:3a:ed:18:97:1f and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 06:b6:6f:fc:98:93 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address c2:ec:b0:01:30:87 and IP address 100.5.100.5
-DEBUG: Network interface has Ethernet address 42:56:75:cc:1e:4c and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 3e:ff:77:29:21:e8 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 46:e4:0a:13:b4:53 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address ba:08:98:d4:ef:de and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 36:19:cc:e7:c0:8a and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 1a:40:40:a0:e7:d9 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 56:24:bf:f4:ab:70 and IP address 1.2.3.4
+DEBUG: Network interface has Ethernet address 72:a7:96:35:7b:82 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address ca:1e:78:03:c6:c0 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address e6:cf:8c:76:62:1d and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 6e:67:41:95:2f:dc and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 26:b6:36:6d:ce:c9 and IP address 100.5.100.5
+DEBUG: Network interface has Ethernet address 22:0c:b1:03:7a:a6 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 6e:1e:62:31:0c:f8 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 92:18:4f:ae:f5:53 and IP address 5.5.5.5
 <end of output>
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"net_interface" end time: May 26 01:38 CST
+"net_interface" end time: May 26 17:01 CST
 "net_interface" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -123,88 +50,284 @@ Test Passed.
 36/40 Test: router
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/router_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"router" start time: May 26 01:38 CST
+"router" start time: May 26 17:01 CST
 Output:
 ----------------------------------------------------------
 [32;1mConstructing network.[m
-DEBUG: Network interface has Ethernet address 02:00:00:24:be:03 and IP address 171.67.76.46
-DEBUG: Network interface has Ethernet address 02:00:00:ac:59:e7 and IP address 10.0.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:93:32:2d and IP address 172.16.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:78:99:f4 and IP address 192.168.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:bb:24:85 and IP address 198.178.229.1
-DEBUG: Network interface has Ethernet address 02:00:00:c7:05:33 and IP address 143.195.0.2
-DEBUG: Network interface has Ethernet address 02:00:00:0a:ea:dd and IP address 128.30.76.255
-DEBUG: Network interface has Ethernet address 26:b4:06:05:cb:70 and IP address 10.0.0.2
-DEBUG: Network interface has Ethernet address e6:3c:78:89:bf:83 and IP address 171.67.76.1
-DEBUG: Network interface has Ethernet address 22:2e:d1:ef:ab:21 and IP address 192.168.0.2
-DEBUG: Network interface has Ethernet address d2:34:bf:9c:e0:b7 and IP address 143.195.0.1
-DEBUG: Network interface has Ethernet address 3a:16:71:24:0a:f4 and IP address 198.178.229.42
-DEBUG: Network interface has Ethernet address 02:72:d5:a4:a0:10 and IP address 198.178.229.43
+DEBUG: Network interface has Ethernet address 02:00:00:e4:5c:f0 and IP address 171.67.76.46
+DEBUG: Network interface has Ethernet address 02:00:00:32:7b:6d and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:c7:d8:d9 and IP address 172.16.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:82:d4:08 and IP address 192.168.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:ad:c8:9d and IP address 198.178.229.1
+DEBUG: Network interface has Ethernet address 02:00:00:d8:37:2b and IP address 143.195.0.2
+DEBUG: Network interface has Ethernet address 02:00:00:d5:34:c8 and IP address 128.30.76.255
+DEBUG: Network interface has Ethernet address b6:1c:45:28:a4:d8 and IP address 10.0.0.2
+DEBUG: Network interface has Ethernet address 2a:d3:2a:bf:f3:eb and IP address 171.67.76.1
+DEBUG: Network interface has Ethernet address ba:5c:09:fb:f7:ad and IP address 192.168.0.2
+DEBUG: Network interface has Ethernet address 4e:63:db:5c:a2:9e and IP address 143.195.0.1
+DEBUG: Network interface has Ethernet address 62:02:72:73:f9:30 and IP address 198.178.229.42
+DEBUG: Network interface has Ethernet address c6:15:08:46:6f:65 and IP address 198.178.229.43
 DEBUG: adding route 10.0.0.0/8 => (direct) on interface 1
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_prefix = 10.0.0.0,prefix= 8
+DEBUG: route_ +
 DEBUG: adding route 172.16.0.0/16 => (direct) on interface 2
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_prefix = 172.16.0.0,prefix= 16
+DEBUG: route_ +
 DEBUG: adding route 192.168.0.0/24 => (direct) on interface 3
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_prefix = 192.168.0.0,prefix= 24
+DEBUG: route_ +
 DEBUG: adding route 0.0.0.0/0 => 171.67.76.1 on interface 0
+DEBUG: route_ +
 DEBUG: adding route 198.178.229.0/24 => (direct) on interface 4
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_prefix = 198.178.229.0,prefix= 24
+DEBUG: route_ +
 DEBUG: adding route 143.195.0.0/17 => 143.195.0.1 on interface 5
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_prefix = 143.195.0.0,prefix= 17
+DEBUG: route_ +
 DEBUG: adding route 143.195.128.0/18 => 143.195.0.1 on interface 5
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_prefix = 143.195.128.0,prefix= 18
+DEBUG: route_ +
 DEBUG: adding route 143.195.192.0/19 => 143.195.0.1 on interface 5
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_prefix = 143.195.192.0,prefix= 19
+DEBUG: route_ +
 DEBUG: adding route 128.30.76.255/16 => 128.30.0.1 on interface 6
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_prefix = 128.30.0.0,prefix= 16
+DEBUG: route_ +
 [32;1m
 
 Testing traffic between two ordinary hosts (applesauce to cherrypie)...[m
 
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to default: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to default_router: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to eth2: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to cherrypie: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to uun3: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to dm42: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to dm43: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to hs4: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to hs_router: dst=ff:ff:ff:ff:ff:ff src=26:b4:06:05:cb:70 type=ARP payload: opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-DEBUG: recv arp : opcode=REQUEST, sender=26:b4:06:05:cb:70/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from eth0 to default: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to default_router: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to applesauce: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-DEBUG: recv arp : opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to eth2: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to cherrypie: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to uun3: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to dm42: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to dm43: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to hs4: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from eth0 to hs_router: dst=26:b4:06:05:cb:70 src=02:00:00:ac:59:e7 type=ARP payload: opcode=REPLY, sender=02:00:00:ac:59:e7/10.0.0.1, target=26:b4:06:05:cb:70/10.0.0.2
-Transferring frame from applesauce to default: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to default_router: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to eth0: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to eth2: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to uun3: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to dm42: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to dm43: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to hs4: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
-Transferring frame from applesauce to hs_router: dst=02:00:00:ac:59:e7 src=26:b4:06:05:cb:70 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 574"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to default: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to default_router: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth2: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to cherrypie: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to uun3: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm42: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm43: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs4: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs_router: dst=ff:ff:ff:ff:ff:ff src=b6:1c:45:28:a4:d8 type=ARP payload: opcode=REQUEST, sender=b6:1c:45:28:a4:d8/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from eth0 to default: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to default_router: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to applesauce: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to eth2: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to cherrypie: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to uun3: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to dm42: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to dm43: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to hs4: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from eth0 to hs_router: dst=b6:1c:45:28:a4:d8 src=02:00:00:32:7b:6d type=ARP payload: opcode=REPLY, sender=02:00:00:32:7b:6d/10.0.0.1, target=b6:1c:45:28:a4:d8/10.0.0.2
+Transferring frame from applesauce to default: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to default_router: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to eth0: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to eth2: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to uun3: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to dm42: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to dm43: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to hs4: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+Transferring frame from applesauce to hs_router: dst=02:00:00:32:7b:6d src=b6:1c:45:28:a4:d8 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 440"
+DEBUG: dgram with head : IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2
+DEBUG: i = 31 ,route_prefix = 128.0.0.0,prefix = 1
+DEBUG: i = 30 ,route_prefix = 192.0.0.0,prefix = 2
+DEBUG: i = 29 ,route_prefix = 192.0.0.0,prefix = 3
+DEBUG: i = 28 ,route_prefix = 192.0.0.0,prefix = 4
+DEBUG: i = 27 ,route_prefix = 192.0.0.0,prefix = 5
+DEBUG: i = 26 ,route_prefix = 192.0.0.0,prefix = 6
+DEBUG: i = 25 ,route_prefix = 192.0.0.0,prefix = 7
+DEBUG: i = 24 ,route_prefix = 192.0.0.0,prefix = 8
+DEBUG: i = 23 ,route_prefix = 192.128.0.0,prefix = 9
+DEBUG: i = 22 ,route_prefix = 192.128.0.0,prefix = 10
+DEBUG: i = 21 ,route_prefix = 192.160.0.0,prefix = 11
+DEBUG: i = 20 ,route_prefix = 192.160.0.0,prefix = 12
+DEBUG: i = 19 ,route_prefix = 192.168.0.0,prefix = 13
+DEBUG: i = 18 ,route_prefix = 192.168.0.0,prefix = 14
+DEBUG: i = 17 ,route_prefix = 192.168.0.0,prefix = 15
+DEBUG: i = 16 ,route_prefix = 192.168.0.0,prefix = 16
+DEBUG: i = 15 ,route_prefix = 192.168.0.0,prefix = 17
+DEBUG: i = 14 ,route_prefix = 192.168.0.0,prefix = 18
+DEBUG: i = 13 ,route_prefix = 192.168.0.0,prefix = 19
+DEBUG: i = 12 ,route_prefix = 192.168.0.0,prefix = 20
+DEBUG: i = 11 ,route_prefix = 192.168.0.0,prefix = 21
+DEBUG: i = 10 ,route_prefix = 192.168.0.0,prefix = 22
+DEBUG: i = 9 ,route_prefix = 192.168.0.0,prefix = 23
+DEBUG: i = 8 ,route_prefix = 192.168.0.0,prefix = 24
+DEBUG: find route for 192.168.0.2: interface 3 , next_hop (direct)
+Transferring frame from eth2 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:82:d4:08 type=ARP payload: opcode=REQUEST, sender=02:00:00:82:d4:08/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from cherrypie to default: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to default_router: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to eth0: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to applesauce: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to eth2: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to uun3: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to dm42: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to dm43: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to hs4: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from cherrypie to hs_router: dst=02:00:00:82:d4:08 src=ba:5c:09:fb:f7:ad type=ARP payload: opcode=REPLY, sender=ba:5c:09:fb:f7:ad/192.168.0.2, target=02:00:00:82:d4:08/192.168.0.1
+Transferring frame from eth2 to default: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to default_router: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to eth0: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to applesauce: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to cherrypie: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to uun3: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to dm42: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to dm43: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to hs4: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
+Transferring frame from eth2 to hs_router: dst=ba:5c:09:fb:f7:ad src=02:00:00:82:d4:08 type=IPv4 payload: bad IPv4 datagram
 
 
 
 [31;1mError: Host cherrypie did NOT receive an expected Internet datagram: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2[m
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"router" end time: May 26 01:38 CST
+"router" end time: May 26 17:01 CST
 "router" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 26 01:38 CST
+End testing: May 26 17:01 CST

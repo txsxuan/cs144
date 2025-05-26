@@ -71,7 +71,6 @@ void NetworkInterface::recv_frame( EthernetFrame frame )
       case EthernetHeader::TYPE_ARP: {
         ARPMessage arpmsg {};
         if ( parse( arpmsg, frame.payload ) ) {
-          debug( "recv arp : {}", arpmsg.to_string() );
           if ( arpmsg.opcode == ARPMessage::OPCODE_REQUEST || arpmsg.opcode == ARPMessage::OPCODE_REPLY ) {
             arpTabel[arpmsg.sender_ip_address] = { arpmsg.sender_ethernet_address, ms_since_construct + 30 * 1000 };
             auto it = dgram_in_stand.find( arpmsg.sender_ip_address );
