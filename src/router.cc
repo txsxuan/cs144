@@ -1,11 +1,8 @@
 #include "router.hh"
-#include "debug.hh"
 
 #include <cstdint>
 #include <iostream>
-#include <memory>
 #include <optional>
-#include <stdexcept>
 
 using namespace std;
 
@@ -23,44 +20,27 @@ void Router::add_route( const uint32_t route_prefix,
   cerr << "DEBUG: adding route " << Address::from_ipv4_numeric( route_prefix ).ip() << "/"
        << static_cast<int>( prefix_length ) << " => " << ( next_hop.has_value() ? next_hop->ip() : "(direct)" )
        << " on interface " << interface_num << "\n";
-    if(interface_num>=interfaces_.size()||interface_num<0){
-        throw std::runtime_error(std::string("interface_num out of range !"));
-    }
-    else if(prefix_length>32){
-        throw std::runtime_error(std::string("prefix_length out of range !"));
-    }
-    std::shared_ptr<bitTrie::bitNode> node=BTrie.insert(route_prefix,prefix_length);
-    node->table={next_hop,interface_num};
-    debug("route_ {}",node->table.has_value()?'+':'-');
+  BTrie.insert( route_prefix, prefix_length )->table = { next_hop, interface_num };
 }
 
 // Go through all the interfaces, and route every incoming datagram to its proper outgoing interface.
 void Router::route()
 {
-  for(auto interface_:interfaces_){
-    std::queue<InternetDatagram>& dgrams=interface_->datagrams_received();
-    while(!dgrams.empty()){
-        auto dgram=std::move(dgrams.front());
-        debug("dgram with head : {}",dgram.header.to_string());
-        dgrams.pop();
-        if(dgram.header.ttl<=1){
-            continue;
-        }
-        dgram.header.ttl--;
-        dgram.header.compute_checksum();
-        const std::optional<Item> route_=BTrie.search(dgram.header.dst);
-        if(route_){
-            debug("find route for {}: interface {} , next_hop {}",Address::from_ipv4_numeric(dgram.header.dst).ip(),route_->interface_num,( route_->next_hop.has_value() ? route_->next_hop->ip() : "(direct)" ));
-
-
-            interface(route_->interface_num)->send_datagram(dgram, route_->next_hop.value_or( Address::from_ipv4_numeric( dgram.header.dst ) ));
-        }
-        else{
-            debug("no route with {}",Address::from_ipv4_numeric(dgram.header.dst).ip());
-        }
-
+  for ( auto interface_ : interfaces_ ) {
+    std::queue<InternetDatagram>& dgrams = interface_->datagrams_received();
+    while ( !dgrams.empty() ) {
+      auto dgram = std::move( dgrams.front() );
+      dgrams.pop();
+      if ( dgram.header.ttl <= 1 ) {
+        continue;
+      }
+      dgram.header.ttl--;
+      dgram.header.compute_checksum();
+      const std::optional<Item> route_ = BTrie.search( dgram.header.dst );
+      if ( route_ ) {
+        interface( route_->interface_num )
+          ->send_datagram( dgram, route_->next_hop.value_or( Address::from_ipv4_numeric( dgram.header.dst ) ) );
+      }
     }
   }
 }
-
-

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "address.hh"
-#include "debug.hh"
 #include "exception.hh"
 #include "network_interface.hh"
 
@@ -38,49 +37,49 @@ public:
   void route();
 
 private:
-    struct Item{
-        std::optional<Address> next_hop;
-        size_t interface_num;
+  struct Item
+  {
+    std::optional<Address> next_hop;
+    size_t interface_num;
+  };
+  struct bitTrie
+  {
+    struct bitNode
+    {
+      std::optional<Item> table;
+      std::shared_ptr<bitNode> next[2];
     };
-    struct bitTrie{
-        struct bitNode{
-            std::optional<Item> table;
-            std::shared_ptr<bitNode> next[2]; 
-        };
-        std::shared_ptr<bitNode> head=std::make_shared<bitNode>();
-        std::shared_ptr<bitNode> insert(uint32_t route_prefix,uint8_t prefix_length){
-            if(prefix_length==0){
-                return head;
-            }
-            std::shared_ptr<bitNode> node=head;
-            for(int i=31;i>=32-prefix_length;i--){
-                bool bit=(route_prefix>>i)&1UL;
-                if(!node->next[bit]){
-                    node->next[bit]=std::make_shared<bitNode>();
-                }
-                debug("route_prefix = {},prefix= {}",Address::from_ipv4_numeric((route_prefix>>(32-prefix_length))<<(32-prefix_length)).ip(),prefix_length);
-                node=node->next[bit];
-            }
-            return node;
+    std::shared_ptr<bitNode> head = std::make_shared<bitNode>();
+    std::shared_ptr<bitNode> insert( uint32_t route_prefix, uint8_t prefix_length )
+    {
+      if ( prefix_length == 0 ) {
+        return head;
+      }
+      std::shared_ptr<bitNode> node = head;
+      for ( int i = 31; i >= 32 - prefix_length; i-- ) {
+        bool bit = ( route_prefix >> i ) & 1UL;
+        if ( !node->next[bit] ) {
+          node->next[bit] = std::make_shared<bitNode>();
         }
-        const std::optional<Item> search(const uint32_t ipv4) const{//最长匹配
-            std::shared_ptr<bitNode> node=head;
-            for(int i=31;i>=0;i--){
-                bool bit=(ipv4>>i)&1UL;
-                if(!node->next[bit]){
-                    if(!node->table){
-                        return head->table;
-                    }
-                    break;
-                }
-                debug("i = {} ,route_prefix = {},prefix = {}",i,Address::from_ipv4_numeric((ipv4>>i)<<i).ip(),(32-i));
-                node=node->next[bit];
-            }
-            return node->table;
+        node = node->next[bit];
+      }
+      return node;
+    }
+    const std::optional<Item> search( const uint32_t ipv4 ) const
+    { // 最长匹配
+      std::shared_ptr<bitNode> node = head;
+      for ( int i = 31; i >= 0; i-- ) {
+        bool bit = ( ipv4 >> i ) & 1UL;
+        if ( !node->next[bit] ) {
+          break;
         }
-    };
-    bitTrie BTrie{};
+        node = node->next[bit];
+      }
+      return ( node->table ) ? node->table : head->table;
+    }
+  };
+  bitTrie BTrie {};
   // The router's collection of network interfaces
   std::vector<std::shared_ptr<NetworkInterface>> interfaces_ {};
-    // std::unordered_map<addressPair, Item> RoutingTable {};
+  // std::unordered_map<addressPair, Item> RoutingTable {};
 };
