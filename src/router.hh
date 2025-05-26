@@ -68,6 +68,9 @@ private:
             for(int i=31;i>=0;i--){
                 bool bit=(ipv4>>i)&1UL;
                 if(!node->next[bit]){
+                    if(!node->table){
+                        return head->table;
+                    }
                     break;
                 }
                 debug("i = {} ,route_prefix = {},prefix = {}",i,Address::from_ipv4_numeric((ipv4>>i)<<i).ip(),(32-i));

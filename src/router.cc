@@ -42,20 +42,23 @@ void Router::route()
     while(!dgrams.empty()){
         auto dgram=std::move(dgrams.front());
         debug("dgram with head : {}",dgram.header.to_string());
+        dgrams.pop();
         if(dgram.header.ttl<=1){
-            dgrams.pop();
             continue;
         }
         dgram.header.ttl--;
+        dgram.header.compute_checksum();
         const std::optional<Item> route_=BTrie.search(dgram.header.dst);
         if(route_){
             debug("find route for {}: interface {} , next_hop {}",Address::from_ipv4_numeric(dgram.header.dst).ip(),route_->interface_num,( route_->next_hop.has_value() ? route_->next_hop->ip() : "(direct)" ));
-            interface(route_->interface_num)->send_datagram(dgram, (route_->next_hop)?route_->next_hop.value():Address::from_ipv4_numeric(dgram.header.dst));
+
+
+            interface(route_->interface_num)->send_datagram(dgram, route_->next_hop.value_or( Address::from_ipv4_numeric( dgram.header.dst ) ));
         }
         else{
             debug("no route with {}",Address::from_ipv4_numeric(dgram.header.dst).ip());
         }
-        dgrams.pop();
+
     }
   }
 }
