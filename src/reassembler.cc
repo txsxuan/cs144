@@ -1,7 +1,6 @@
 #include "reassembler.hh"
 #include <cassert>
 #include <iterator>
-
 bool Reassembler::newinserthelp( uint64_t first_index, std::string& data )
 {
   if ( !unassembled.empty() ) {
@@ -39,11 +38,8 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
 {
   uint64_t Firstunaccept = ( output_.writer().bytes_pushed() + writer().available_capacity() );
   const auto checkclose = [&]() {
-    if (
-      haslastSubstr
-      && unassembled
-           .empty() ) { // 如果已经没有被assemble的数据报，并且我知道已经有了最后一个子串，那么就要关闭我们的写端了（或者说，in_bound)
-      output_.writer().close();
+    if(last&&writer().bytes_pushed()==last.value()){
+        output_.writer().close();
     }
   };
   if ( writer().is_closed() || first_index >= Firstunaccept
@@ -51,12 +47,11 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
             == 0 ) { // 如果写端已经关闭了就不再接收了，或者干脆大于Firstunaccept，也没什么好说的了
     return;
   }
+  if(is_last_substring){
+    last=first_index+data.size();
+  }
   if ( data.empty() ) {
-    if ( output_.writer().bytes_pushed() == first_index && is_last_substring ) {
-      haslastSubstr = true;
-      return checkclose();
-    }
-    return;
+    return checkclose();
   }
   if ( output_.writer().bytes_pushed() > first_index ) {
     if ( output_.writer().bytes_pushed() >= first_index + data.size() ) {
@@ -67,9 +62,7 @@ void Reassembler::insert( uint64_t first_index, std::string data, bool is_last_s
   }
   if ( first_index + data.size() - 1 >= Firstunaccept ) { // 说明有一部分是无法被接受进来的
     data.resize( Firstunaccept - first_index );
-  } else if ( is_last_substring ) {
-    haslastSubstr = true;
-  }
+  } 
   if ( !newinserthelp( first_index, data ) ) {
     output_.writer().push( move( data ) );
   }

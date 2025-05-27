@@ -1,145 +1,570 @@
-Start testing: May 26 23:56 CST
+Start testing: May 27 10:55 CST
 ----------------------------------------------------------
-1/40 Testing: compile with bug-checkers
-1/40 Test: compile with bug-checkers
+1/36 Testing: compile with bug-checkers
+1/36 Test: compile with bug-checkers
 Command: "/usr/bin/cmake" "--build" "/home/yukinisakuhana/program/cs144/cmake-build" "-t" "functionality_testing" "webget"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"compile with bug-checkers" start time: May 26 23:56 CST
+"compile with bug-checkers" start time: May 27 10:55 CST
 Output:
 ----------------------------------------------------------
-[1/77] Building CXX object src/CMakeFiles/minnow_debug.dir/router.cc.o
-[2/77] Linking CXX static library src/libminnow_debug.a
-[3/77] Building CXX object src/CMakeFiles/minnow_sanitized.dir/router.cc.o
-[4/77] Linking CXX executable tests/wrapping_integers_unwrap
-[5/77] Linking CXX executable tests/wrapping_integers_cmp
-[6/77] Linking CXX executable tests/wrapping_integers_wrap
-[7/77] Linking CXX static library src/libminnow_sanitized.a
-[8/77] Linking CXX executable tests/byte_stream_many_writes
-[9/77] Linking CXX executable tests/byte_stream_stress_test
-[10/77] Linking CXX executable tests/reassembler_overlapping
-[11/77] Linking CXX executable tests/reassembler_cap
-[12/77] Linking CXX executable tests/byte_stream_one_write
-[13/77] Linking CXX executable tests/byte_stream_two_writes
-[14/77] Linking CXX executable tests/byte_stream_basics
-[15/77] Linking CXX executable tests/byte_stream_capacity
-[16/77] Linking CXX executable tests/reassembler_single
-[17/77] Linking CXX executable tests/reassembler_dup
-[18/77] Linking CXX executable tests/wrapping_integers_roundtrip
-[19/77] Linking CXX executable tests/recv_connect
-[20/77] Linking CXX executable tests/wrapping_integers_extra
-[21/77] Linking CXX executable tests/reassembler_win
-[22/77] Linking CXX executable tests/reassembler_holes
-[23/77] Linking CXX executable tests/reassembler_seq
-[24/77] Linking CXX executable tests/recv_transmit
-[25/77] Linking CXX executable tests/recv_window
-[26/77] Linking CXX executable tests/recv_reorder
-[27/77] Linking CXX executable tests/byte_stream_capacity_sanitized
-[28/77] Linking CXX executable tests/byte_stream_basics_sanitized
-[29/77] Linking CXX executable tests/wrapping_integers_cmp_sanitized
-[30/77] Linking CXX executable tests/byte_stream_one_write_sanitized
-[31/77] Linking CXX executable tests/reassembler_dup_sanitized
-[32/77] Linking CXX executable tests/byte_stream_stress_test_sanitized
-[33/77] Linking CXX executable tests/reassembler_seq_sanitized
-[34/77] Linking CXX executable tests/reassembler_single_sanitized
-[35/77] Linking CXX executable tests/byte_stream_two_writes_sanitized
-[36/77] Linking CXX executable tests/wrapping_integers_wrap_sanitized
-[37/77] Linking CXX executable tests/reassembler_overlapping_sanitized
-[38/77] Linking CXX executable tests/byte_stream_many_writes_sanitized
-[39/77] Linking CXX executable tests/reassembler_cap_sanitized
-[40/77] Linking CXX executable tests/wrapping_integers_unwrap_sanitized
-[41/77] Linking CXX executable tests/wrapping_integers_extra_sanitized
-[42/77] Linking CXX executable tests/reassembler_win_sanitized
-[43/77] Linking CXX executable tests/recv_connect_sanitized
-[44/77] Linking CXX executable tests/reassembler_holes_sanitized
-[45/77] Linking CXX executable tests/wrapping_integers_roundtrip_sanitized
-[46/77] Linking CXX executable tests/recv_special
-[47/77] Linking CXX executable tests/recv_reorder_more
-[48/77] Linking CXX executable tests/send_transmit
-[49/77] Linking CXX executable tests/recv_close
-[50/77] Linking CXX executable tests/recv_transmit_sanitized
-[51/77] Linking CXX executable tests/send_connect
-[52/77] Linking CXX executable tests/send_window
-[53/77] Linking CXX executable tests/recv_reorder_sanitized
-[54/77] Linking CXX executable tests/send_ack
-[55/77] Linking CXX executable tests/recv_window_sanitized
-[56/77] Linking CXX executable tests/recv_close_sanitized
-[57/77] Linking CXX executable tests/recv_reorder_more_sanitized
-[58/77] Linking CXX executable tests/send_close
-[59/77] Linking CXX executable tests/recv_special_sanitized
-[60/77] Linking CXX executable tests/send_transmit_sanitized
-[61/77] Linking CXX executable tests/send_retx
-[62/77] Linking CXX executable tests/send_connect_sanitized
-[63/77] Linking CXX executable tests/send_window_sanitized
-[64/77] Linking CXX executable tests/send_ack_sanitized
-[65/77] Linking CXX executable tests/send_extra
-[66/77] Linking CXX executable tests/no_skip
-[67/77] Linking CXX executable tests/send_close_sanitized
-[68/77] Linking CXX executable tests/net_interface
-[69/77] Linking CXX executable apps/webget
-[70/77] Linking CXX executable tests/send_retx_sanitized
-[71/77] Linking CXX executable tests/send_extra_sanitized
-[72/77] Linking CXX executable tests/net_interface_sanitized
-[73/77] Linking CXX executable tests/no_skip_sanitized
-[74/77] Building CXX object tests/CMakeFiles/router.dir/router.cc.o
-[75/77] Linking CXX executable tests/router
-[76/77] Building CXX object tests/CMakeFiles/router_sanitized.dir/router.cc.o
-[77/77] Linking CXX executable tests/router_sanitized
+ninja: no work to do.
 <end of output>
-Test time =   2.57 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"compile with bug-checkers" end time: May 26 23:56 CST
-"compile with bug-checkers" time elapsed: 00:00:02
+"compile with bug-checkers" end time: May 27 10:55 CST
+"compile with bug-checkers" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-35/40 Testing: net_interface
-35/40 Test: net_interface
-Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/net_interface_sanitized"
+2/36 Testing: byte_stream_basics
+2/36 Test: byte_stream_basics
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_basics_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"net_interface" start time: May 26 23:56 CST
+"byte_stream_basics" start time: May 27 10:55 CST
 Output:
 ----------------------------------------------------------
-DEBUG: Network interface has Ethernet address 56:66:66:23:e0:24 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 3e:2c:97:4a:73:d8 and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address c2:c1:d7:e8:7e:62 and IP address 5.5.5.5
-DEBUG: Network interface has Ethernet address 8e:dd:9d:6e:89:b2 and IP address 1.2.3.4
-DEBUG: Network interface has Ethernet address de:5a:05:b7:af:64 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 06:1f:f5:24:6c:98 and IP address 10.0.0.1
-DEBUG: Network interface has Ethernet address c6:44:68:41:49:e0 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 66:97:79:a9:64:bd and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 36:7a:32:35:e8:95 and IP address 100.5.100.5
-DEBUG: Network interface has Ethernet address f2:cf:01:51:41:11 and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 7e:d8:f7:c7:38:1c and IP address 4.3.2.1
-DEBUG: Network interface has Ethernet address 26:a7:b7:85:23:24 and IP address 5.5.5.5
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"net_interface" end time: May 26 23:56 CST
+"byte_stream_basics" end time: May 27 10:55 CST
+"byte_stream_basics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/36 Testing: byte_stream_capacity
+3/36 Test: byte_stream_capacity
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_capacity_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_capacity" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_capacity" end time: May 27 10:55 CST
+"byte_stream_capacity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/36 Testing: byte_stream_one_write
+4/36 Test: byte_stream_one_write
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_one_write_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_one_write" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_one_write" end time: May 27 10:55 CST
+"byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/36 Testing: byte_stream_two_writes
+5/36 Test: byte_stream_two_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_two_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_two_writes" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_two_writes" end time: May 27 10:55 CST
+"byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/36 Testing: byte_stream_many_writes
+6/36 Test: byte_stream_many_writes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_many_writes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_many_writes" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_many_writes" end time: May 27 10:55 CST
+"byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/36 Testing: byte_stream_stress_test
+7/36 Test: byte_stream_stress_test
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/byte_stream_stress_test_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"byte_stream_stress_test" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_stress_test" end time: May 27 10:55 CST
+"byte_stream_stress_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/36 Testing: reassembler_single
+8/36 Test: reassembler_single
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_single_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_single" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_single" end time: May 27 10:55 CST
+"reassembler_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/36 Testing: reassembler_cap
+9/36 Test: reassembler_cap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_cap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_cap" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_cap" end time: May 27 10:55 CST
+"reassembler_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/36 Testing: reassembler_seq
+10/36 Test: reassembler_seq
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_seq_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_seq" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_seq" end time: May 27 10:55 CST
+"reassembler_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/36 Testing: reassembler_dup
+11/36 Test: reassembler_dup
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_dup_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_dup" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_dup" end time: May 27 10:55 CST
+"reassembler_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/36 Testing: reassembler_holes
+12/36 Test: reassembler_holes
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_holes_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_holes" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_holes" end time: May 27 10:55 CST
+"reassembler_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/36 Testing: reassembler_overlapping
+13/36 Test: reassembler_overlapping
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_overlapping_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_overlapping" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_overlapping" end time: May 27 10:55 CST
+"reassembler_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/36 Testing: reassembler_win
+14/36 Test: reassembler_win
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/reassembler_win_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"reassembler_win" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_win" end time: May 27 10:55 CST
+"reassembler_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/36 Testing: wrapping_integers_cmp
+15/36 Test: wrapping_integers_cmp
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_cmp_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_cmp" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_cmp" end time: May 27 10:55 CST
+"wrapping_integers_cmp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/36 Testing: wrapping_integers_wrap
+16/36 Test: wrapping_integers_wrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_wrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_wrap" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_wrap" end time: May 27 10:55 CST
+"wrapping_integers_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/36 Testing: wrapping_integers_unwrap
+17/36 Test: wrapping_integers_unwrap
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_unwrap_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_unwrap" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_unwrap" end time: May 27 10:55 CST
+"wrapping_integers_unwrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/36 Testing: wrapping_integers_roundtrip
+18/36 Test: wrapping_integers_roundtrip
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_roundtrip_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_roundtrip" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_roundtrip" end time: May 27 10:55 CST
+"wrapping_integers_roundtrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/36 Testing: wrapping_integers_extra
+19/36 Test: wrapping_integers_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/wrapping_integers_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"wrapping_integers_extra" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_extra" end time: May 27 10:55 CST
+"wrapping_integers_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/36 Testing: recv_connect
+20/36 Test: recv_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_connect" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"recv_connect" end time: May 27 10:55 CST
+"recv_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/36 Testing: recv_transmit
+21/36 Test: recv_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_transmit" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Passed.
+"recv_transmit" end time: May 27 10:55 CST
+"recv_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/36 Testing: recv_window
+22/36 Test: recv_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_window" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"recv_window" end time: May 27 10:55 CST
+"recv_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/36 Testing: recv_reorder
+23/36 Test: recv_reorder
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder" end time: May 27 10:55 CST
+"recv_reorder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/36 Testing: recv_reorder_more
+24/36 Test: recv_reorder_more
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_reorder_more_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_reorder_more" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.69 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder_more" end time: May 27 10:55 CST
+"recv_reorder_more" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/36 Testing: recv_close
+25/36 Test: recv_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_close" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"recv_close" end time: May 27 10:55 CST
+"recv_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/36 Testing: recv_special
+26/36 Test: recv_special
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/recv_special_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"recv_special" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_special" end time: May 27 10:55 CST
+"recv_special" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/36 Testing: send_connect
+27/36 Test: send_connect
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_connect_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_connect" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_connect" end time: May 27 10:55 CST
+"send_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/36 Testing: send_transmit
+28/36 Test: send_transmit
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_transmit_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_transmit" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.38 sec
+----------------------------------------------------------
+Test Passed.
+"send_transmit" end time: May 27 10:55 CST
+"send_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/36 Testing: send_window
+29/36 Test: send_window
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_window_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_window" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"send_window" end time: May 27 10:55 CST
+"send_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/36 Testing: send_ack
+30/36 Test: send_ack
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_ack_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_ack" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"send_ack" end time: May 27 10:55 CST
+"send_ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/36 Testing: send_close
+31/36 Test: send_close
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_close_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_close" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_close" end time: May 27 10:55 CST
+"send_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/36 Testing: send_retx
+32/36 Test: send_retx
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_retx_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_retx" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"send_retx" end time: May 27 10:55 CST
+"send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/36 Testing: send_extra
+33/36 Test: send_extra
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/send_extra_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"send_extra" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"send_extra" end time: May 27 10:55 CST
+"send_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/36 Testing: net_interface
+34/36 Test: net_interface
+Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/net_interface_sanitized"
+Directory: /home/yukinisakuhana/program/cs144/cmake-build
+"net_interface" start time: May 27 10:55 CST
+Output:
+----------------------------------------------------------
+DEBUG: Network interface has Ethernet address 72:3e:b7:7a:dd:16 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 86:a9:fb:26:9c:1f and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 3a:cb:8e:97:b5:1a and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 22:ae:0b:49:f3:3e and IP address 1.2.3.4
+DEBUG: Network interface has Ethernet address fa:8a:79:e1:b1:f2 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address ee:48:7a:a4:ae:67 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 0e:50:8d:b0:34:49 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 66:80:b0:e7:a3:76 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 02:db:3a:a6:1b:71 and IP address 100.5.100.5
+DEBUG: Network interface has Ethernet address ea:f0:42:1f:1e:48 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 02:91:23:e5:9e:72 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 5a:61:a5:7d:b2:f5 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 26:f5:51:f1:fe:6f and IP address 4.3.2.1
+
+The test "Test OPTION I: learning mapping from an ARP request results in releasing datagram queue (option with ARP reply sent first)" failed after these steps:
+
+  0.	Initialized std::pair<NetworkInterface, std::shared_ptr<FramesOut> > with eth=26:f5:51:f1:fe:6f, ip=4.3.2.1
+  1.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > action: request to send datagram (to next hop 192.168.0.1): IPv4 len=25 proto=6 ttl=128 src=5.6.7.8 dst=13.12.11.10 payload="hello"
+  2.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > expectation: frame transmitted (dst=ff:ff:ff:ff:ff:ff src=26:f5:51:f1:fe:6f type=ARP payload: opcode=REQUEST, sender=26:f5:51:f1:fe:6f/4.3.2.1, target=00:00:00:00:00:00/192.168.0.1)
+  3.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > expectation: no frame transmitted
+  4.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > action: request to send datagram (to next hop 192.168.0.1): IPv4 len=25 proto=6 ttl=128 src=5.6.7.8 dst=13.12.11.10 payload="hello"
+  5.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > expectation: no frame transmitted
+  6.	std::pair<NetworkInterface, std::shared_ptr<FramesOut> > action: receive frame (dst=26:f5:51:f1:fe:6f src=aa:0d:05:a0:15:1f type=ARP payload: opcode=REQUEST, sender=aa:0d:05:a0:15:1f/192.168.0.1, target=00:00:00:00:00:00/4.3.2.1)
+  ***** Unsuccessful std::pair<NetworkInterface, std::shared_ptr<FramesOut> > expectation: frame transmitted (dst=aa:0d:05:a0:15:1f src=26:f5:51:f1:fe:6f type=ARP payload: opcode=REPLY, sender=26:f5:51:f1:fe:6f/4.3.2.1, target=aa:0d:05:a0:15:1f/192.168.0.1) *****
+
+Unmet Expectation: The std::pair<NetworkInterface, std::shared_ptr<FramesOut> > NetworkInterface sent a different Ethernet frame than was expected: actual={dst=aa:0d:05:a0:15:1f src=26:f5:51:f1:fe:6f type=IPv4 payload: IPv4 len=25 proto=6 ttl=128 src=5.6.7.8 dst=13.12.11.10 payload=bad TCP segment}.
+
+DEBUG: Network interface has Ethernet address f6:b8:7c:83:d7:17 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address 12:e9:8b:17:ef:7a and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 86:79:0b:4e:a4:61 and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address 96:43:d0:4e:75:39 and IP address 4.3.2.1
+DEBUG: Network interface has Ethernet address ae:ed:7a:c7:c5:de and IP address 5.5.5.5
+DEBUG: Network interface has Ethernet address c2:d4:a8:3c:06:7a and IP address 4.3.2.1
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"net_interface" end time: May 27 10:55 CST
 "net_interface" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-36/40 Testing: router
-36/40 Test: router
+35/36 Testing: router
+35/36 Test: router
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/router_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"router" start time: May 26 23:56 CST
+"router" start time: May 27 10:55 CST
 Output:
 ----------------------------------------------------------
 [32;1mConstructing network.[m
-DEBUG: Network interface has Ethernet address 02:00:00:9c:18:77 and IP address 171.67.76.46
-DEBUG: Network interface has Ethernet address 02:00:00:d1:45:7d and IP address 10.0.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:54:98:27 and IP address 172.16.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:9c:b5:74 and IP address 192.168.0.1
-DEBUG: Network interface has Ethernet address 02:00:00:43:a4:89 and IP address 198.178.229.1
-DEBUG: Network interface has Ethernet address 02:00:00:b3:c2:f2 and IP address 143.195.0.2
-DEBUG: Network interface has Ethernet address 02:00:00:fd:f2:d3 and IP address 128.30.76.255
-DEBUG: Network interface has Ethernet address 02:e3:8c:b1:b6:31 and IP address 10.0.0.2
-DEBUG: Network interface has Ethernet address f6:75:59:92:c6:78 and IP address 171.67.76.1
-DEBUG: Network interface has Ethernet address 06:cb:74:aa:f1:65 and IP address 192.168.0.2
-DEBUG: Network interface has Ethernet address ee:48:a9:7d:a8:76 and IP address 143.195.0.1
-DEBUG: Network interface has Ethernet address 22:8b:98:5e:23:48 and IP address 198.178.229.42
-DEBUG: Network interface has Ethernet address 86:11:2f:ad:58:f7 and IP address 198.178.229.43
+DEBUG: Network interface has Ethernet address 02:00:00:a1:b7:7e and IP address 171.67.76.46
+DEBUG: Network interface has Ethernet address 02:00:00:47:20:26 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:4a:7a:71 and IP address 172.16.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:70:f1:4b and IP address 192.168.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:d9:61:4c and IP address 198.178.229.1
+DEBUG: Network interface has Ethernet address 02:00:00:2e:e9:7b and IP address 143.195.0.2
+DEBUG: Network interface has Ethernet address 02:00:00:db:c8:4d and IP address 128.30.76.255
+DEBUG: Network interface has Ethernet address 9e:79:58:cc:d8:28 and IP address 10.0.0.2
+DEBUG: Network interface has Ethernet address 2e:40:b6:68:af:f0 and IP address 171.67.76.1
+DEBUG: Network interface has Ethernet address fe:73:8d:e7:7b:d0 and IP address 192.168.0.2
+DEBUG: Network interface has Ethernet address 0a:61:4a:99:9e:69 and IP address 143.195.0.1
+DEBUG: Network interface has Ethernet address f2:77:64:1b:39:3a and IP address 198.178.229.42
+DEBUG: Network interface has Ethernet address ee:45:99:e9:79:5d and IP address 198.178.229.43
 DEBUG: adding route 10.0.0.0/8 => (direct) on interface 1
 DEBUG: adding route 172.16.0.0/16 => (direct) on interface 2
 DEBUG: adding route 192.168.0.0/24 => (direct) on interface 3
@@ -153,336 +578,344 @@ DEBUG: adding route 128.30.76.255/16 => 128.30.0.1 on interface 6
 
 Testing traffic between two ordinary hosts (applesauce to cherrypie)...[m
 
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to default: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to default_router: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to eth2: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to uun3: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to dm42: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to dm43: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to hs4: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from applesauce to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:e3:8c:b1:b6:31 type=ARP payload: opcode=REQUEST, sender=02:e3:8c:b1:b6:31/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
-Transferring frame from eth0 to default: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to default_router: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to applesauce: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to eth2: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to cherrypie: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to uun3: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to dm42: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to dm43: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to hs4: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from eth0 to hs_router: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=ARP payload: opcode=REPLY, sender=02:00:00:d1:45:7d/10.0.0.1, target=02:e3:8c:b1:b6:31/10.0.0.2
-Transferring frame from applesauce to default: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to default_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to eth0: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to eth2: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to uun3: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to dm42: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to dm43: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to hs4: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=31 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from eth2 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:b5:74 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:b5:74/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
-Transferring frame from cherrypie to default: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to default_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to eth0: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to applesauce: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to eth2: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to uun3: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to dm42: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to dm43: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to hs4: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from cherrypie to hs_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=ARP payload: opcode=REPLY, sender=06:cb:74:aa:f1:65/192.168.0.2, target=02:00:00:9c:b5:74/192.168.0.1
-Transferring frame from eth2 to default: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to default_router: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to eth0: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to applesauce: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to cherrypie: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to uun3: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to dm42: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to dm43: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to hs4: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
-Transferring frame from eth2 to hs_router: dst=06:cb:74:aa:f1:65 src=02:00:00:9c:b5:74 type=IPv4 payload: IPv4 len=31 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 94"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to default: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to default_router: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth0: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to eth2: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to cherrypie: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to uun3: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm42: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to dm43: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs4: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from applesauce to hs_router: dst=ff:ff:ff:ff:ff:ff src=9e:79:58:cc:d8:28 type=ARP payload: opcode=REQUEST, sender=9e:79:58:cc:d8:28/10.0.0.2, target=00:00:00:00:00:00/10.0.0.1
+Transferring frame from eth0 to default: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to default_router: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to applesauce: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to eth2: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to cherrypie: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to uun3: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to dm42: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to dm43: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to hs4: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from eth0 to hs_router: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=ARP payload: opcode=REPLY, sender=02:00:00:47:20:26/10.0.0.1, target=9e:79:58:cc:d8:28/10.0.0.2
+Transferring frame from applesauce to default: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to default_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to eth0: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to eth2: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to uun3: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to dm42: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to dm43: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to hs4: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from applesauce to hs_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from eth2 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:70:f1:4b type=ARP payload: opcode=REQUEST, sender=02:00:00:70:f1:4b/192.168.0.1, target=00:00:00:00:00:00/192.168.0.2
+Transferring frame from cherrypie to default: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to default_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to eth0: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to applesauce: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to eth2: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to uun3: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to dm42: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to dm43: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to hs4: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from cherrypie to hs_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=ARP payload: opcode=REPLY, sender=fe:73:8d:e7:7b:d0/192.168.0.2, target=02:00:00:70:f1:4b/192.168.0.1
+Transferring frame from eth2 to default: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to default_router: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to eth0: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to applesauce: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to cherrypie: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to uun3: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to dm42: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to dm43: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to hs4: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
+Transferring frame from eth2 to hs_router: dst=fe:73:8d:e7:7b:d0 src=02:00:00:70:f1:4b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=192.168.0.2 payload="Cardinal 562"
 [32;1m
 
 Testing traffic between two ordinary hosts (cherrypie to applesauce)...[m
 
-Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to default: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to default_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to eth0: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to applesauce: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to eth2: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to uun3: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to dm42: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to dm43: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to hs4: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from cherrypie to hs_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to default: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to default_router: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to applesauce: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to eth2: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to cherrypie: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to uun3: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to dm42: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to dm43: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to hs4: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
-Transferring frame from eth0 to hs_router: dst=02:e3:8c:b1:b6:31 src=02:00:00:d1:45:7d type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 527"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to default: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to default_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to eth0: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to applesauce: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to eth2: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to uun3: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to dm42: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to dm43: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to hs4: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from cherrypie to hs_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to default: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to default_router: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to applesauce: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to eth2: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to cherrypie: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to uun3: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to dm42: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to dm43: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to hs4: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
+Transferring frame from eth0 to hs_router: dst=9e:79:58:cc:d8:28 src=02:00:00:47:20:26 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=10.0.0.2 payload="Cardinal 951"
 [32;1m
 
 Success! Testing applesauce sending to the Internet.[m
 
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to default: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to default_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to eth0: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to eth2: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to uun3: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to dm42: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to dm43: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to hs4: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:9c:18:77 type=ARP payload: opcode=REQUEST, sender=02:00:00:9c:18:77/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
-Transferring frame from default_router to default: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to eth0: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to applesauce: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to eth2: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to cherrypie: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to uun3: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to dm42: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to dm43: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to hs4: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default_router to hs_router: dst=02:00:00:9c:18:77 src=f6:75:59:92:c6:78 type=ARP payload: opcode=REPLY, sender=f6:75:59:92:c6:78/171.67.76.1, target=02:00:00:9c:18:77/171.67.76.46
-Transferring frame from default to default_router: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to eth0: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to applesauce: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to eth2: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to cherrypie: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to uun3: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to dm42: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to dm43: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to hs4: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
-Transferring frame from default to hs_router: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 354"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to default: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to default_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to eth0: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to eth2: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to uun3: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to dm42: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to dm43: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to hs4: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from applesauce to hs_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:a1:b7:7e type=ARP payload: opcode=REQUEST, sender=02:00:00:a1:b7:7e/171.67.76.46, target=00:00:00:00:00:00/171.67.76.1
+Transferring frame from default_router to default: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to eth0: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to applesauce: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to eth2: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to cherrypie: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to uun3: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to dm42: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to dm43: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to hs4: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default_router to hs_router: dst=02:00:00:a1:b7:7e src=2e:40:b6:68:af:f0 type=ARP payload: opcode=REPLY, sender=2e:40:b6:68:af:f0/171.67.76.1, target=02:00:00:a1:b7:7e/171.67.76.46
+Transferring frame from default to default_router: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to eth0: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to applesauce: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to eth2: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to cherrypie: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to uun3: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to dm42: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to dm43: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to hs4: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
+Transferring frame from default to hs_router: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 319"
 [32;1m
 
 Success! Testing sending to the HS network and Internet.[m
 
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to default: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to default_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to eth0: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to eth2: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to uun3: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to dm42: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to dm43: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to hs4: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs4 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:b3:c2:f2 type=ARP payload: opcode=REQUEST, sender=02:00:00:b3:c2:f2/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
-Transferring frame from hs_router to default: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to default_router: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to eth0: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to applesauce: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to eth2: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to cherrypie: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to uun3: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to dm42: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to dm43: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs_router to hs4: dst=02:00:00:b3:c2:f2 src=ee:48:a9:7d:a8:76 type=ARP payload: opcode=REPLY, sender=ee:48:a9:7d:a8:76/143.195.0.1, target=02:00:00:b3:c2:f2/143.195.0.2
-Transferring frame from hs4 to default: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to default_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to eth0: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to applesauce: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to eth2: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to cherrypie: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to uun3: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to dm42: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to dm43: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Transferring frame from hs4 to hs_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 503"
-Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to default: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to default_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to eth0: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to applesauce: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to eth2: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to uun3: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to dm42: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to dm43: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to hs4: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from cherrypie to hs_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=30 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to default: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to default_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to eth0: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to applesauce: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to eth2: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to cherrypie: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to uun3: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to dm42: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to dm43: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Transferring frame from hs4 to hs_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=30 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 6"
-Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to default: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to default_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to eth0: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to applesauce: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to eth2: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to uun3: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to dm42: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to dm43: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to hs4: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from cherrypie to hs_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to default: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to default_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to eth0: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to applesauce: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to eth2: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to cherrypie: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to uun3: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to dm42: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to dm43: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Transferring frame from hs4 to hs_router: dst=ee:48:a9:7d:a8:76 src=02:00:00:b3:c2:f2 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 837"
-Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to default: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to default_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to eth0: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to applesauce: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to eth2: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to uun3: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to dm42: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to dm43: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to hs4: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from cherrypie to hs_router: dst=02:00:00:9c:b5:74 src=06:cb:74:aa:f1:65 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to default_router: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to eth0: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to applesauce: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to eth2: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to cherrypie: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to uun3: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to dm42: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to dm43: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to hs4: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
-Transferring frame from default to hs_router: dst=f6:75:59:92:c6:78 src=02:00:00:9c:18:77 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 898"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to default: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to default_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to eth0: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to eth2: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to uun3: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to dm42: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to dm43: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to hs4: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from applesauce to hs_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to uun3: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs4 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:2e:e9:7b type=ARP payload: opcode=REQUEST, sender=02:00:00:2e:e9:7b/143.195.0.2, target=00:00:00:00:00:00/143.195.0.1
+Transferring frame from hs_router to default: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to default_router: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to eth0: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to applesauce: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to eth2: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to cherrypie: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to uun3: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to dm42: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to dm43: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs_router to hs4: dst=02:00:00:2e:e9:7b src=0a:61:4a:99:9e:69 type=ARP payload: opcode=REPLY, sender=0a:61:4a:99:9e:69/143.195.0.1, target=02:00:00:2e:e9:7b/143.195.0.2
+Transferring frame from hs4 to default: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to default_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to eth0: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to applesauce: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to eth2: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to cherrypie: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to uun3: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to dm42: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to dm43: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Transferring frame from hs4 to hs_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=10.0.0.2 dst=143.195.131.17 payload="Cardinal 844"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to default: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to default_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to eth0: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to applesauce: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to eth2: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to uun3: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to dm42: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to dm43: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to hs4: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from cherrypie to hs_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to default: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to default_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to eth0: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to applesauce: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to eth2: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to cherrypie: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to uun3: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to dm42: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to dm43: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Transferring frame from hs4 to hs_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.193.52 payload="Cardinal 290"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to default: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to default_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to eth0: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to applesauce: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to eth2: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to uun3: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to dm42: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to dm43: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to hs4: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from cherrypie to hs_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to default: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to default_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to eth0: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to applesauce: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to eth2: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to cherrypie: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to uun3: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to dm42: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to dm43: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Transferring frame from hs4 to hs_router: dst=0a:61:4a:99:9e:69 src=02:00:00:2e:e9:7b type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.223.255 payload="Cardinal 476"
+Host cherrypie trying to send datagram (with next hop = 192.168.0.1): IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to default: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to default_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to eth0: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to applesauce: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to eth2: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to uun3: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to dm42: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to dm43: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to hs4: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from cherrypie to hs_router: dst=02:00:00:70:f1:4b src=fe:73:8d:e7:7b:d0 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to default_router: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to eth0: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to applesauce: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to eth2: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to cherrypie: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to uun3: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to dm42: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to dm43: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to hs4: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
+Transferring frame from default to hs_router: dst=2e:40:b6:68:af:f0 src=02:00:00:a1:b7:7e type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=192.168.0.2 dst=143.195.224.0 payload="Cardinal 407"
 [32;1m
 
 Success! Testing two hosts on the same network (dm42 to dm43)...[m
 
-Host dm42 trying to send datagram (with next hop = 198.178.229.1): IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to default: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to default_router: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to eth0: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to applesauce: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to eth2: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to uun3: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to dm43: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to hs4: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from dm42 to hs_router: dst=ff:ff:ff:ff:ff:ff src=22:8b:98:5e:23:48 type=ARP payload: opcode=REQUEST, sender=22:8b:98:5e:23:48/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
-Transferring frame from uun3 to default: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to default_router: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to eth0: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to applesauce: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to eth2: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to cherrypie: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to dm42: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to dm43: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to hs4: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from uun3 to hs_router: dst=22:8b:98:5e:23:48 src=02:00:00:43:a4:89 type=ARP payload: opcode=REPLY, sender=02:00:00:43:a4:89/198.178.229.1, target=22:8b:98:5e:23:48/198.178.229.42
-Transferring frame from dm42 to default: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to default_router: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to eth0: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to applesauce: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to eth2: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to cherrypie: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to uun3: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to dm43: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to hs4: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from dm42 to hs_router: dst=02:00:00:43:a4:89 src=22:8b:98:5e:23:48 type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from uun3 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:43:a4:89 type=ARP payload: opcode=REQUEST, sender=02:00:00:43:a4:89/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
-Transferring frame from dm43 to default: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to default_router: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to eth0: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to applesauce: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to eth2: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to cherrypie: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to uun3: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to dm42: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to hs4: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from dm43 to hs_router: dst=02:00:00:43:a4:89 src=86:11:2f:ad:58:f7 type=ARP payload: opcode=REPLY, sender=86:11:2f:ad:58:f7/198.178.229.43, target=02:00:00:43:a4:89/198.178.229.1
-Transferring frame from uun3 to default: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to default_router: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to eth0: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to applesauce: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to eth2: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to cherrypie: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to dm42: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to dm43: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to hs4: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
-Transferring frame from uun3 to hs_router: dst=86:11:2f:ad:58:f7 src=02:00:00:43:a4:89 type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 604"
+Host dm42 trying to send datagram (with next hop = 198.178.229.1): IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to default: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to default_router: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to eth0: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to applesauce: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to eth2: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to uun3: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to dm43: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to hs4: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from dm42 to hs_router: dst=ff:ff:ff:ff:ff:ff src=f2:77:64:1b:39:3a type=ARP payload: opcode=REQUEST, sender=f2:77:64:1b:39:3a/198.178.229.42, target=00:00:00:00:00:00/198.178.229.1
+Transferring frame from uun3 to default: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to default_router: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to eth0: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to applesauce: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to eth2: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to cherrypie: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to dm42: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to dm43: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to hs4: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from uun3 to hs_router: dst=f2:77:64:1b:39:3a src=02:00:00:d9:61:4c type=ARP payload: opcode=REPLY, sender=02:00:00:d9:61:4c/198.178.229.1, target=f2:77:64:1b:39:3a/198.178.229.42
+Transferring frame from dm42 to default: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to default_router: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to eth0: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to applesauce: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to eth2: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to cherrypie: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to uun3: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to dm43: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to hs4: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from dm42 to hs_router: dst=02:00:00:d9:61:4c src=f2:77:64:1b:39:3a type=IPv4 payload: IPv4 len=32 proto=144 ttl=64 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to default: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to default_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to eth0: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to applesauce: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to eth2: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to cherrypie: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to dm42: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to dm43: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to hs4: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from uun3 to hs_router: dst=ff:ff:ff:ff:ff:ff src=02:00:00:d9:61:4c type=ARP payload: opcode=REQUEST, sender=02:00:00:d9:61:4c/198.178.229.1, target=00:00:00:00:00:00/198.178.229.43
+Transferring frame from dm43 to default: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to default_router: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to eth0: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to applesauce: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to eth2: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to cherrypie: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to uun3: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to dm42: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to hs4: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from dm43 to hs_router: dst=02:00:00:d9:61:4c src=ee:45:99:e9:79:5d type=ARP payload: opcode=REPLY, sender=ee:45:99:e9:79:5d/198.178.229.43, target=02:00:00:d9:61:4c/198.178.229.1
+Transferring frame from uun3 to default: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to default_router: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to eth0: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to applesauce: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to eth2: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to cherrypie: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to dm42: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to dm43: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to hs4: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
+Transferring frame from uun3 to hs_router: dst=ee:45:99:e9:79:5d src=02:00:00:d9:61:4c type=IPv4 payload: IPv4 len=32 proto=144 ttl=63 src=198.178.229.42 dst=198.178.229.43 payload="Cardinal 870"
 [32;1m
 
 Success! Testing TTL expiration...[m
 
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to default: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to default_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to eth0: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to eth2: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to uun3: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to dm42: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to dm43: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to hs4: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 640"
-Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to default: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to default_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to eth0: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to eth2: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to cherrypie: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to uun3: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to dm42: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to dm43: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to hs4: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
-Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3:8c:b1:b6:31 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 707"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to default: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to default_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to eth0: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to eth2: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to uun3: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to dm42: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to dm43: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to hs4: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Transferring frame from applesauce to hs_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=1 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 724"
+Host applesauce trying to send datagram (with next hop = 10.0.0.1): IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to default: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to default_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to eth0: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to eth2: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to cherrypie: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to uun3: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to dm42: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to dm43: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to hs4: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+Transferring frame from applesauce to hs_router: dst=02:00:00:47:20:26 src=9e:79:58:cc:d8:28 type=IPv4 payload: IPv4 len=32 proto=144 ttl=0 src=10.0.0.2 dst=1.2.3.4 payload="Cardinal 123"
+[32;1m
+
+Success! Testing network with no default route...[m
+
+DEBUG: Network interface has Ethernet address 02:00:00:d3:51:c7 and IP address 18.241.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:e3:58:32 and IP address 10.0.0.1
+DEBUG: Network interface has Ethernet address 02:00:00:4f:95:b1 and IP address 192.168.0.1
+DEBUG: adding route 10.0.0.0/8 => (direct) on interface 1
 
 
 [32;1mCongratulations! All datagrams were routed successfully.[m
@@ -490,23 +923,23 @@ Transferring frame from applesauce to hs_router: dst=02:00:00:d1:45:7d src=02:e3
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"router" end time: May 26 23:56 CST
+"router" end time: May 27 10:55 CST
 "router" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-37/40 Testing: no_skip
-37/40 Test: no_skip
+36/36 Testing: no_skip
+36/36 Test: no_skip
 Command: "/home/yukinisakuhana/program/cs144/cmake-build/tests/no_skip_sanitized"
 Directory: /home/yukinisakuhana/program/cs144/cmake-build
-"no_skip" start time: May 26 23:56 CST
+"no_skip" start time: May 27 10:55 CST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"no_skip" end time: May 26 23:56 CST
+"no_skip" end time: May 27 10:55 CST
 "no_skip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 26 23:56 CST
+End testing: May 27 10:55 CST

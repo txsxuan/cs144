@@ -44,7 +44,13 @@
 			"id" : "tidy_apps__bidirectional_stream_copy.hh::@6890427a1f51a3e7e1df"
 		},
 		{
+			"id" : "tidy_apps__endtoend.cc::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "tidy_apps__ip_raw.cc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "tidy_apps__iptest.cc::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "tidy_apps__tcp_ipv4.cc::@6890427a1f51a3e7e1df"

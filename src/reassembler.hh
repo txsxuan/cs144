@@ -3,6 +3,7 @@
 #include "byte_stream.hh"
 #include <cstdint>
 #include <map>
+#include <optional>
 class Reassembler
 {
 public:
@@ -44,8 +45,7 @@ public:
   // uint64_t getacknum() const{return acknum;}
 private:
   ByteStream output_;
-  //   uint64_t acknum {};
-  bool haslastSubstr {};
+  std::optional<uint64_t> last{};
   std::map<uint64_t, std::string> unassembled;
   bool newinserthelp( uint64_t first_index, std::string& data );
 };
